@@ -1,0 +1,178 @@
+
+/*
+* {
+    margin: 0;
+    padding: 0;
+}
+*/
+
+body {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1142px;
+    margin: 0 auto;
+}
+
+/* vvvvvvv */
+/* header */
+.header {
+    height: 100px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
+    border: 1px solid #ececec;
+}
+
+.logo {
+  width: 59px;
+  height: 51px;
+}
+.header_top {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav_flex {
+    display: flex;
+    justify-content: center;
+    height: 51px;
+    align-items: center;
+}
+
+.nav_flex li {
+    margin: 0 10px;
+}
+
+.nav_flex a {
+    padding: 19px 10px;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    color: #222222;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.nav_flex .link_active {
+    padding-bottom: 17px;
+    border-bottom: 3px solid #ef5b70;
+}
+
+.nav_flex a:hover {
+    padding-bottom: 17px;
+    border-bottom: 3px solid #ef5b70;
+    text-decoration: none;
+}
+/* header */
+/* ^^^^^^^ */
+
+/* vvvvvvvvvvvvvvvvvvvvv */
+/* слайдер титульной страницы */
+.slider {
+    height: 613px;
+    background-color: #e8e8e8;
+    margin-top: 4px;
+}
+
+.slider_flex {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    background: url(../img/slider-man.jpg) 0 -51px;
+}
+
+.slider_text {
+    height: 92px;
+    border-left: 12px solid #ef5b70;
+    color: #222222;
+    font-family: Lato;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.slider_text h3 {
+    font-family: Lato;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 55px;
+    letter-spacing: 1.5px;
+    margin-left: 12px;
+}
+
+.slider_text p {
+    margin-left: 12px;
+}
+
+.slider_text span {
+    color: #ef5b70;
+}
+/* слайдер титульной страницы */
+/* ^^^^^^^^^^^^^^^^ */
+
+/* vvvvvvvvvvvvvvvvv */
+/* титульная страница */
+/* раздел категорий */
+.category {
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category > div > div:first-child {
+    margin-bottom: 20px;
+}
+
+.item {
+    width: 560px;
+    background-size: 100%;
+    padding-top: 26px;
+}
+.item-1 {
+    height: 542px;
+    background: url(../img/category-man.jpg) no-repeat;
+}
+
+.item-2 {
+    height: 261px;
+    background: url(../img/category-purse.jpg) no-repeat;
+}
+
+.item-3 {
+    height: 261px;
+    background: url(../img/category-girl.jpg) no-repeat;
+}
+.item-4 {
+    height: 542px;
+    background: url(../img/category-kid.jpg) no-repeat;
+}
+
+.item div {
+    padding: 16px 18px;
+    background-color: #ffffff;
+/*    outline: 1px solid black;*/
+    display: inline-block;
+}
+
+.item p {
+    text-transform: uppercase;
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    color: #222222;
+}
+
+.item span {
+    font-size: 30px;
+    letter-spacing: 0.8px;
+    color: #ef5b70;
+    margin-top: 10px;
+    display: block;
+}
+/* титульная страница */
+/* раздел категорий */
+/* ^^^^^^^^^^^^^^^^ */
