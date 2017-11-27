@@ -86,7 +86,7 @@ body {
 .slider_text {
     height: 92px;
     border-left: 12px solid #ef5b70;
-    color: #222222;
+    color: #222;
     font-size: 40px;
     line-height: 40px;
     font-weight: 900;
@@ -153,7 +153,7 @@ body {
 
 .item a {
     padding: 16px 18px;
-    background-color: #ffffff;
+    background-color: #fff;
     text-decoration: none;
 /*    outline: 1px solid black;*/
     display: inline-block;
@@ -169,7 +169,7 @@ body {
     font-size: 18px;
     font-weight: 900;
     letter-spacing: 0.5px;
-    color: #222222;
+    color: #222;
 }
 
 .item span {
@@ -187,7 +187,7 @@ body {
 /* титульная страница */
 /* раздел рекомендуемые */
 .fetured {
-  color: #222222;
+  color: #222;
 }
 
 .fetured h2 {
@@ -232,7 +232,7 @@ body {
     margin-left: 15px;
     font-weight: 900;
     text-align: left;
-    color: #222222;
+    color: #222;
 }
 
 .fetured_item .red {
@@ -273,7 +273,7 @@ body {
     line-height: 48px;
     letter-spacing: 0.4px;
     text-align: center;
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -291,11 +291,14 @@ body {
 /* титульная страница */
 /* ^^^^^^^^^^^^^^^^ */
 
+/* титульная страница */
+/* раздел FOR WOMAN */
+/* vvvvvvvvvvvvvvvvv */
 .special_offer {
     margin-top: 113px;
+    margin-bottom: 97px;
     height: 529px;
     display: flex;
-
 }
 
 .special_foto {
@@ -305,38 +308,72 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
 }
-.special_text {
+
+.special_box {
     width: 375px;
     height: 529px;
-  background-color: #222224;
-    
+    background-color: rgb(34, 34, 36);
+/*    background-color: #222224;*/
 }
+
 .special_foto div {
     margin-top: 145px;
     margin-left: 40px;
-    color: #ffffff;
+    color: #fff;
     display: inline-block;
 }
+
 .special_foto p {
     font-size: 32.2px;
     line-height: 32.2px;
     letter-spacing: 0.8px;
-    color: #ffffff;
+    color: #fff;
 }
 
 .special_foto h3 {
     font-size: 53.6px;
     line-height: 53.6px;
     letter-spacing: 1.3px;
-    color: #ffffff;
+    color: #fff;
 }
 
 .special_foto span {
     color: #ef5b70;
 }
-.special_text div {
-/*    padding: 55px 43px 55px 30px;*/
+
+.special_box div {
     margin-left: 30px;
     margin-top: 48px;
 }
+
+.special_box img {
+    float: left;
+}
+
+.special_text .special_text {
+    float: right;
+}
+
+.special_text h3 {
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 27px;
+    letter-spacing: 0.5px;
+    color: #fff;
+    margin-left: 33px;
+}
+
+.special_text p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 23px;
+    letter-spacing: 0.4px;
+    color: #fff;
+    margin-left: 33px;
+    margin-top: 17px;
+    margin-right: 43px;
+}
+/* раздел FOR WOMAN */
+/* титульная страница */
+/* ^^^^^^^^^^^^^^^^ */
 
