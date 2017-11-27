@@ -7,6 +7,7 @@
 */
 
 body {
+  font-family: Lato;
     box-sizing: border-box;
 }
 
@@ -46,7 +47,6 @@ body {
 
 .nav_flex a {
     padding: 19px 10px;
-    font-family: Lato;
     font-size: 14px;
     font-weight: bold;
     text-align: left;
@@ -87,7 +87,6 @@ body {
     height: 92px;
     border-left: 12px solid #ef5b70;
     color: #222222;
-    font-family: Lato;
     font-size: 40px;
     line-height: 40px;
     font-weight: 900;
@@ -131,35 +130,42 @@ body {
     background-size: 100%;
     padding-top: 26px;
 }
-.item-1 {
+
+.item_1 {
     height: 542px;
     background: url(../img/category-man.jpg) no-repeat;
 }
 
-.item-2 {
+.item_2 {
     height: 261px;
     background: url(../img/category-purse.jpg) no-repeat;
 }
 
-.item-3 {
+.item_3 {
     height: 261px;
     background: url(../img/category-girl.jpg) no-repeat;
 }
-.item-4 {
+
+.item_4 {
     height: 542px;
     background: url(../img/category-kid.jpg) no-repeat;
 }
 
-.item div {
+.item a {
     padding: 16px 18px;
     background-color: #ffffff;
+    text-decoration: none;
 /*    outline: 1px solid black;*/
     display: inline-block;
 }
 
+.item a:hover {
+    border-left: 5px solid #ef5b70;
+    padding-left: 13px;
+}
+
 .item p {
     text-transform: uppercase;
-    font-family: Lato;
     font-size: 18px;
     font-weight: 900;
     letter-spacing: 0.5px;
@@ -173,6 +179,164 @@ body {
     margin-top: 10px;
     display: block;
 }
-/* титульная страница */
 /* раздел категорий */
+/* титульная страница */
 /* ^^^^^^^^^^^^^^^^ */
+
+/* vvvvvvvvvvvvvvvvv */
+/* титульная страница */
+/* раздел рекомендуемые */
+.fetured {
+  color: #222222;
+}
+
+.fetured h2 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 30px;
+    letter-spacing: 0.8px;
+    text-align: center;
+}
+
+.fetured p {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: #9f9f9f;
+}
+
+.fetured_items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    position: relative;
+}
+
+.fetured_item {
+    width: 263px;
+    height: 364px;
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+.fetured_item img {
+    width: 263px;
+    height: 280px;
+}
+
+.fetured_item p {
+    font-size: 13px;
+    margin-left: 15px;
+    font-weight: 900;
+    text-align: left;
+    color: #222222;
+}
+
+.fetured_item .red {
+    color: #ef5b70;
+}
+
+.fetured_item .dark {
+    position: absolute;
+    width: 263px;
+    height: 364px;
+}
+
+.fetured_item .dark div {
+    height: 280px;
+}
+
+.fetured_item:hover {
+    box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16);
+}
+
+.fetured_item .dark div:hover {
+    background-color: rgba(58, 56, 56, 0.83);
+}
+
+.all_products {
+    display: flex;
+    justify-content: center;
+    margin-top: 58px;
+}
+
+.all_products a {
+    display: block;
+    width: 212px;
+    height: 48px;
+    background-color: #f16d7f;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 48px;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.all_products a:hover {
+    text-decoration: underline;
+    
+}
+
+.all_products a:active {
+    position: relative;
+    top: 3px;
+    left: 3px;
+}
+/* раздел рекомендуемые */
+/* титульная страница */
+/* ^^^^^^^^^^^^^^^^ */
+
+.special_offer {
+    margin-top: 113px;
+    height: 529px;
+    display: flex;
+
+}
+
+.special_foto {
+    width: 767px;
+    height: 529px;
+    background-image: url(../img/OFFER_FOR_WOMEN.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.special_text {
+    width: 375px;
+    height: 529px;
+  background-color: #222224;
+    
+}
+.special_foto div {
+    margin-top: 145px;
+    margin-left: 40px;
+    color: #ffffff;
+    display: inline-block;
+}
+.special_foto p {
+    font-size: 32.2px;
+    line-height: 32.2px;
+    letter-spacing: 0.8px;
+    color: #ffffff;
+}
+
+.special_foto h3 {
+    font-size: 53.6px;
+    line-height: 53.6px;
+    letter-spacing: 1.3px;
+    color: #ffffff;
+}
+
+.special_foto span {
+    color: #ef5b70;
+}
+.special_text div {
+/*    padding: 55px 43px 55px 30px;*/
+    margin-left: 30px;
+    margin-top: 48px;
+}
+
