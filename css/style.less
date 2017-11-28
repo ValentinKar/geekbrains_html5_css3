@@ -227,7 +227,6 @@ body {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 20px;
-    position: relative;
 }
 
 /* предлагаемое изделие */
@@ -235,7 +234,18 @@ body {
     width: @product_width;
     height: @product_height;
     margin-top: 40px;
-    text-transform: uppercase;
+    position: relative;
+    
+    a {
+        width: @product_width;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .fetured_product {
+        height: @product_height;
+        text-transform: uppercase;
+    }
     
     img {
         width: @product_width;
@@ -254,23 +264,30 @@ body {
         color: @color_red;
     }
     
-    .dark {
+    .add_basket {
         position: absolute;
-        width: @product_width;
-        height: @product_height;
+        top: 100px;
+        left: 60px;
+        border: 1px solid white;
+        padding: 10px 10px;
+        color: white;
+        width: 123px;
+        text-align: center;
+        display: none;
     }
-    
-    .dark div {
-        height: @product_im_height;
-    }
-    
-    :hover {
-        box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16);
-    }
-    
-    .dark div:hover {
-        background-color: rgba(58, 56, 56, 0.83);
-    }
+}
+
+.fetured_item:hover {
+    box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16);
+}
+.fetured_item:hover img {
+    filter: brightness(50%);
+}
+.fetured_item:hover .add_basket {
+    display: block;
+}
+.fetured_item .add_basket:hover {
+    text-decoration: underline;
 }
 
 /* розовая кнопка */
