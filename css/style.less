@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+@color_red: #ef5b70;
+@color_gray: #e8e8e8;
+@color_black: #222;
+@img_slider: url(../img/slider-man.jpg);
+@img_home_fetured_1: url(../img/category-man.jpg);
+@img_home_fetured_2: url(../img/category-purse.jpg);
+@img_home_fetured_3: url(../img/category-girl.jpg);
+@img_home_fetured_4: url(../img/category-kid.jpg);
+@img_home_offer: url(../img/OFFER_FOR_WOMEN.jpg);
+@product_width: 263px;
+@product_height: 364px;
+@product_im_height: 280px;
+
+/*
+* {
+    margin: 0;
+    padding: 0;
+}
+*/
+
+body {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    width: 1142px;
+    margin: 0 auto;
+}
+
+/* vvvvvvv */
+/* header */
+.header {
+    height: 100px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
+    border: 1px solid #ececec;
+}
+
+.logo {
+  width: 59px;
+  height: 51px;
+}
+
+.header_top {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav_flex {
+    display: flex;
+    justify-content: center;
+    height: 51px;
+    align-items: center;
+}
+
+.nav_flex li {
+    margin: 0 10px;
+}
+
+.nav_flex a {
+    padding: 19px 10px;
+    font-size: 14px;
+    font-weight: 900;
+    text-align: left;
+    color: @color_black;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.nav_flex .link_active {
+    padding-bottom: 17px;
+    border-bottom: 3px solid @color_red;
+}
+
+.nav_flex a:hover {
+    padding-bottom: 17px;
+    border-bottom: 3px solid @color_red;
+    text-decoration: none;
+}
+/* header */
+/* ^^^^^^^ */
+
+/* vvvvvvvvvvvvvvvvvvvvv */
+/* слайдер титульной страницы */
+.slider {
+    height: 613px;
+    background-color: @color_gray;
+    margin-top: 4px;
+}
+
+.slider_flex {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    background: @img_slider 0 -51px;
+}
+
+.slider_text {
+    height: 92px;
+    border-left: 12px solid @color_red;
+    color: @color_black;
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.slider_text h3 {
+    font-family: Lato;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 55px;
+    letter-spacing: 1.5px;
+    margin-left: 12px;
+}
+
+.slider_text p {
+    margin-left: 12px;
+}
+
+.slider_text span {
+    color: @color_red;
+}
+/* слайдер титульной страницы */
+/* ^^^^^^^^^^^^^^^^ */
+
+/* vvvvvvvvvvvvvvvvv */
+/* титульная страница */
+/* раздел категорий */
+.category {
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category > div > div:first-child {
+    margin-bottom: 20px;
+}
+
+.item {
+    width: 560px;
+    background-size: 100%;
+    padding-top: 26px;
+}
+
+.item_1 {
+    height: 542px;
+    background: @img_home_fetured_1 no-repeat;
+}
+
+.item_2 {
+    height: 261px;
+    background: @img_home_fetured_2 no-repeat;
+}
+
+.item_3 {
+    height: 261px;
+    background: @img_home_fetured_3 no-repeat;
+}
+
+.item_4 {
+    height: 542px;
+    background: @img_home_fetured_4 no-repeat;
+}
+
+.item a {
+    padding: 16px 18px;
+    background-color: white;
+    text-decoration: none;
+/*    outline: 1px solid black;*/
+    display: inline-block;
+}
+
+.item a:hover {
+    border-left: 5px solid @color_red;
+    padding-left: 13px;
+}
+
+.item p {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    color: @color_black;
+}
+
+.item span {
+    font-size: 30px;
+    letter-spacing: 0.8px;
+    color: @color_red;
+    margin-top: 10px;
+    display: block;
+}
+/* раздел категорий */
+/* титульная страница */
+/* ^^^^^^^^^^^^^^^^ */
+
+/* vvvvvvvvvvvvvvvvv */
+/* титульная страница */
+/* раздел рекомендуемые */
+.fetured {
+    color: @color_black;
+    
+    h2 {
+        font-size: 30px;
+        font-weight: 900;
+        line-height: 30px;
+        letter-spacing: 0.8px;
+        text-align: center;
+    }
+    
+    p {
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: 0.4px;
+        text-align: center;
+        color: #9f9f9f;
+    }
+}
+
+/* блок с предлагаемыми изделиями */
+.fetured_items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    position: relative;
+}
+
+/* предлагаемое изделие */
+.fetured_item {
+    width: @product_width;
+    height: @product_height;
+    margin-top: 40px;
+    text-transform: uppercase;
+    
+    img {
+        width: @product_width;
+        height: @product_im_height;
+    }
+    
+    p {
+        font-size: 13px;
+        margin-left: 15px;
+        font-weight: 900;
+        text-align: left;
+        color: @color_black;
+    }
+    
+    .red {
+        color: @color_red;
+    }
+    
+    .dark {
+        position: absolute;
+        width: @product_width;
+        height: @product_height;
+    }
+    
+    .dark div {
+        height: @product_im_height;
+    }
+    
+    :hover {
+        box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16);
+    }
+    
+    .dark div:hover {
+        background-color: rgba(58, 56, 56, 0.83);
+    }
+}
+
+/* розовая кнопка */
+.all_products {
+    display: flex;
+    justify-content: center;
+    margin-top: 58px;
+    
+    a {
+        display: block;
+        width: 212px;
+        height: 48px;
+        background-color: @color_red;
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 48px;
+        letter-spacing: 0.4px;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+    a:active {
+        position: relative;
+        top: 3px;
+        left: 3px;
+    }
+}
+/* раздел рекомендуемые */
+/* титульная страница */
+/* ^^^^^^^^^^^^^^^^ */
+
+/* титульная страница */
+/* раздел FOR WOMAN */
+/* vvvvvvvvvvvvvvvvv */
+.special_offer {
+    margin-top: 113px;
+    margin-bottom: 97px;
+    height: 529px;
+    display: flex;
+}
+
+/* блок с фото */
+.special_foto {
+    width: 767px;
+    height: 529px;
+    background-image: @img_home_offer;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+    div {
+        margin-top: 145px;
+        margin-left: 40px;
+        color: white;
+        display: inline-block;
+    }
+    
+    p {
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        color: white;
+    }
+
+    h3 {
+        font-size: 50px;
+        line-height: 50px;
+        font-weight: 400;
+        letter-spacing: 1.3px;
+        color: white;
+    }
+
+    span {
+        color: @color_red;
+    }
+}
+
+/* блок справа от фото */
+.special_box {
+    width: 375px;
+    height: 529px;
+    background-color: @color_black;
+/*    background-color: rgb(34, 34, 36);*/
+/*    background-color: #222224;*/
+    
+    div {
+        margin-left: 30px;
+        margin-top: 48px;
+    }
+    
+    img {
+        float: left;
+    }
+    
+    h3 {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 27px;
+        letter-spacing: 0.5px;
+        color: white;
+        margin-left: 33px;
+    }
+    
+    p {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 23px;
+        letter-spacing: 0.4px;
+        color: white;
+        margin-left: 33px;
+        margin-top: 17px;
+        margin-right: 43px;
+    }
+}
+/* раздел FOR WOMAN */
+/* титульная страница */
+/* ^^^^^^^^^^^^^^^^ */
+
