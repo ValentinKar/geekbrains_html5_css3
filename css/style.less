@@ -2,6 +2,8 @@
 @color_red: #ef5b70;
 @color_gray: #e8e8e8;
 @color_gray_2: #e6e6e6;
+/*@color_gray_3: #f2f2f2;c4
+@color_gray_3: #c4c4c4;*/
 @color_black: #222;
 @img_slider: url(../img/slider-man.jpg);
 @img_home_fetured_1: url(../img/category-man.jpg);
@@ -9,6 +11,7 @@
 @img_home_fetured_3: url(../img/category-girl.jpg);
 @img_home_fetured_4: url(../img/category-kid.jpg);
 @img_home_offer: url(../img/OFFER_FOR_WOMEN.jpg);
+@img_subscribe: url(../img/subscribe-1.jpg);
 @product_width: 263px; /* ширина затемнения */
 @product_height: 364px; /* высота блока с затемнением */
 @product_im_height: 280px; /* высота затемнения */
@@ -308,7 +311,6 @@ body {
         }
      }
 }
-
 
 .nav_flex {
     display: flex;
@@ -673,4 +675,95 @@ body {
 /* раздел FOR WOMAN */
 /* титульная страница */
 /* ^^^^^^^^^^^^^^^^ */
+
+
+/* подвал сайта */
+/* vvvvvvvvvvvv */
+.subscribe {
+    height: 438px;
+    background-color: @color_gray_2;
+    display: flex;
+    justify-content: center;
+    
+}
+.sub_container {
+    width: 1600px;
+    height: 100%;
+    background-image: @img_subscribe;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.sub {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub_slider {
+    margin-top: 111px;
+    margin-left: 0;
+    height: 300px;
+    display: flex;
+    img {
+        width: 82px;
+        height: 82px;
+        border-radius: 41px;
+        float: left;
+    }
+    
+    .comment {
+        width: 368px;
+        margin-left: 28px;
+        padding-top: 10px;
+        font-size: 14px;
+        font-style: italic;
+        line-height: 1.63;
+        letter-spacing: 0.4px;
+        color: @color_black;
+        float:right;
+    }
+    
+    .name {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 16px;
+        letter-spacing: 0.4px;
+        font-style: normal;
+        color: @color_red;
+    }
+
+    span {
+        font-size: 12px;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 12px;
+        letter-spacing: 0.3px;
+        color: @color_black;
+    }
+    
+    .scrol {
+        display: flex;
+        div {
+            width: 38px;
+            margin-right: 13px;
+            margin-top: 40px;
+            border-bottom: 4px solid @color_gray_2;
+        }
+        .active {
+            border-bottom: 4px solid @color_red;
+        }
+    }
+    
+    a:hover {
+        filter: contrast(70%);
+    }
+}
+
+.sub_form {
+    width: 50%;
+    height: 200px;
+    outline: 1px solid black;
+}
+
 
