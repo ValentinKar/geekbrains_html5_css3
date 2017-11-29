@@ -2,8 +2,8 @@
 @color_red: #ef5b70;
 @color_gray: #e8e8e8;
 @color_gray_2: #e6e6e6;
-/*@color_gray_3: #f2f2f2;c4
-@color_gray_3: #c4c4c4;*/
+/*@color_gray_3: #f2f2f2;c4*/
+@color_gray_3: #898989;
 @color_black: #222;
 @img_slider: url(../img/slider-man.jpg);
 @img_home_fetured_1: url(../img/category-man.jpg);
@@ -676,16 +676,20 @@ body {
 /* титульная страница */
 /* ^^^^^^^^^^^^^^^^ */
 
-
 /* подвал сайта */
 /* vvvvvvvvvvvv */
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
 .subscribe {
     height: 438px;
     background-color: @color_gray_2;
-    display: flex;
-    justify-content: center;
+
     
 }
+
 .sub_container {
     width: 1600px;
     height: 100%;
@@ -763,7 +767,160 @@ body {
 .sub_form {
     width: 50%;
     height: 200px;
-    outline: 1px solid black;
+    padding-top: 148px;
+    
+    h3 {
+        text-align: center; 
+        font-size: 24px;
+        line-height: 2.25;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        color: @color_black;   
+    }
+    
+    p {
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.4px;
+        text-align: center;
+        color: @color_black;
+    }
+    
+    div {
+        display: flex;
+        justify-content: center;
+        margin-top: 35px;
+    }
+    
+    input[type="email"] {
+        margin: 0;
+        height: 46px;
+        width: 278px;
+        border: none;
+        background-color: @color_gray_2;
+        border-radius: 23px 0 0 23px;
+        padding: 0 28px;
+        opacity: 0.67;
+        font-size: 14px;
+        line-height: 3.86;
+        letter-spacing: 0.4px;
+        color: @color_black;
+    }
+    
+    input[type="email"]:focus {
+        outline: none;
+        font-size: 18px;
+    }
+    
+    input[type="submit"] {
+        margin: 0;
+        height: 47px;
+        width: 104px;
+        border: none;
+        background-color: @color_red;
+        border-radius: 0 23.5px 23.5px 0;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.4px;
+        text-align: center;
+        color: white;
+    }
+    
+    input[type="submit"]:focus {
+        outline: none;
+        color: @color_gray_2;
+    }
 }
 
+.footer_inform {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 109px;
+    padding-bottom: 90px;
+
+    h3 {
+        margin-top: 14px;
+        margin-bottom: 35px;
+        font-size: 18px;
+        font-weight: 900;
+        line-height: 18px;
+        letter-spacing: 0.5px;
+        color: @color_red;
+    }
+    
+    a {
+
+        font-size: 16px;
+        line-height: 2.63;
+        letter-spacing: 0.4px;
+        color: @color_gray_3;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.footer_brand {
+    width: 427px;
+    height: 100%;
+    margin: 0;
+
+    img {
+        margin-right: 10px;
+    }
+    
+    span {
+        font-size: 27px;
+        font-weight: 300;
+        line-height: 1.19;
+        letter-spacing: 0.7px;
+        color: @color_black;
+    }
+
+    .red {
+        font-weight: 900;
+        color: @color_red;
+    }
+    
+    p {
+        margin-top: 30px;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.71;
+        letter-spacing: 0.4px;
+        color: @color_gray_3;
+    }
+}
+
+.footer_down {
+    background-color: @color_gray_2;
+}
+
+.footer_right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+    
+    p {
+        font-size: 16px;
+        line-height: 2.63;
+        letter-spacing: 0.4px;
+        color: @color_gray_3;
+    }
+    
+    aside {
+        display: flex;
+        
+        a {
+            display: block;
+            margin-left: 8px;
+            width: 32px;
+            height: 32px;
+            outline: 1px solid black;
+        }
+    }
+}
 
