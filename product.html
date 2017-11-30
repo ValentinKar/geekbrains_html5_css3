@@ -169,11 +169,41 @@
         
         <div class="container product_general">
             <div class="product_left_menu">
-                
+                <details>
+                   <summary>
+                       <span>Category</span>
+                    </summary>
+                    <ul>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Bags</a></li>
+                        <li><a href="#">Denim</a></li>
+                        <li><a href="#">Hoodies & Sweatshirts</a></li>
+                        <li><a href="#">Jackets & Coats</a></li>
+                        <li><a href="#">Pants</a></li>
+                        <li><a href="#">Polos</a></li>
+                        <li><a href="#">Shirts</a></li>
+                        <li><a href="#">Shoes</a></li>
+                        <li><a href="#">Shorts</a></li>
+                        <li><a href="#">Sweaters & Knits</a></li>
+                        <li><a href="#">T-Shirts</a></li>
+                        <li><a href="#">Tanks</a></li>
+                    </ul>
+                </details>
+                <details>
+                   <summary>
+                       <span>BRAND</span>
+                    </summary>
+                </details>
+                <details>
+                   <summary>
+                       <span>dESIGNER</span>
+                    </summary>
+                </details>
             </div>
+            
             <div class="product_content">
-                <div class="product_choose">
-                    <div class="product_trending">
+                <form class="product_choose" action="">
+                    <fieldset class="product_trending">
                         <h3>Trending now</h3>
                         <ul class="product_brands">
                             <li>
@@ -195,14 +225,72 @@
                                 <a href="#">Bohemian</a>
                             </li>
                         </ul>
-                    </div>
-                    <div class="size">
-                        
-                    </div>
-                    <div class="price">
-                        
-                    </div>
-                </div>
+                    </fieldset>
+                    <fieldset class="product_size">
+                        <h3>Size</h3>
+                        <table>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox">
+                                        XXS
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                        <input type="checkbox">
+                                        XS
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                        <input type="checkbox">
+                                        S
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                        <input type="checkbox">
+                                        M
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <input type="checkbox">
+                                        L
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                        <input type="checkbox">
+                                        XL
+                                    </label>
+                                </td>
+                                <td>
+                                    <label>
+                                        <input type="checkbox">
+                                        XXL
+                                    </label>
+                                </td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <fieldset class="price">
+                       
+                        <label><h3>pRICE</h3>
+                        <input id="range" type="range" value="100" step="5">
+                        <p>
+                            <output name="price_row" for="range"></output>
+                        </p>
+                        </label>
+                       
+                    </fieldset>
+                </form> 
             </div>
         </div>
         
