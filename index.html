@@ -86,7 +86,7 @@
                             Browse
                         </option>
                     </select>
-                    <input type="text" placeholder="Search for Item...">
+                    <input type="text" placeholder="Search for Item..." pattern="^[0-9a-zA-Z\s]+$" title="eng + numb">
                     <input type="submit" value="">
                </form>
                
@@ -131,8 +131,8 @@
         </div>
     </header>
     
-    <nav>
-        <div class="container">
+    <article>
+        <nav class="container">
             <ul class="nav_flex">
                 <li><a class="link_active" href="#">Home</a></li>
                 <li><a href="#">Man</a></li>
@@ -142,180 +142,179 @@
                 <li><a href="#">Featured</a></li> 
                 <li><a href="#">Hot Deals</a></li>
             </ul>
-        </div>
-    </nav>
-    
-    <div class="slider">
-        <div class="container slider_flex">
-            <div class="slider_text">
-                <h3>THE BRAND</h3>
-                <p>OF LUXERIOUS 
-                <span>FASHION</span></p>
+        </nav>
+
+        <section class="slider">
+            <div class="container slider_flex">
+                <div class="slider_text">
+                    <h3>THE BRAND</h3>
+                    <p>OF LUXERIOUS 
+                    <span>FASHION</span></p>
+                </div>
             </div>
-        </div>
-    </div>
-    
-    <div class="container category">
-        <div>
-            <div class="item item_1">
-                <a href="#">
-                    <p>hOT dEAL</p>
-                    <p><span>FOR MEN</span></p>
-                </a>
-            </div>
-            <div class="item item_2">
-                <a href="#">
-                    <p>LUXIROUS & trendy</p>
-                    <p><span>ACCESORIES</span></p>
-                </a>
-            </div>
-        </div>
-        <div>
-            <div class="item item_3">
-                <a href="#">
-                    <p>30% offer</p>
-                    <p><span>women</span></p>
-                </a>
-            </div>
-            <div class="item item_4">
-                <a href="#">
-                    <p>new arrivals</p>
-                    <p><span>FOR kids</span></p>
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    <div class="container fetured">
-        <h2>Fetured Items</h2>
-        <p>Shop for items based on what we featured in this week</p>
-        <div class="fetured_items">
-            <figure class="fetured_item">
-                <a href="#" class="fetured_product">
-                    <img src="img/product-1.jpg" alt="">
-                    <p>Mango  People  T-shirt</p>
-                    <p class="red">$52.00</p>
-                </a>
-               <a href="#" class="add_basket">
-                   Add to Cart
-               </a>
-            </figure>
-            
-            <figure class="fetured_item">
-                <a href="#" class="fetured_product">
-                    <img src="img/product-2.jpg" alt="">
-                    <p>Mango  People  T-shirt</p>
-                    <p class="red">$52.00</p>    
-                </a>
-               <a href="#" class="add_basket">
-                   Add to Cart
-               </a>
-            </figure>
-            
-            <figure class="fetured_item">
-                <a href="#" class="fetured_product">
-                    <img src="img/product-3.jpg" alt="">
-                    <p>Mango  People  T-shirt</p>
-                    <p class="red">$52.00</p>    
-                </a>
-               <a href="#" class="add_basket">
-                   Add to Cart
-               </a> 
-            </figure>
-            
-            <figure class="fetured_item">
-                <a href="#" class="fetured_product">
-                    <img src="img/product-4.jpg" alt="">
-                    <p>Mango  People  T-shirt</p>
-                    <p class="red">$52.00</p>    
-                </a>
-               <a href="#" class="add_basket">
-                   Add to Cart
-               </a> 
-            </figure>
-            
-            <figure class="fetured_item">
-                <a href="#" class="fetured_product">
-                    <img src="img/product-5.jpg" alt="">
-                    <p>Mango  People  T-shirt</p>
-                    <p class="red">$52.00</p>    
-                </a>
-               <a href="#" class="add_basket">
-                   Add to Cart
-               </a>  
-            </figure>
-            
-            <figure class="fetured_item">
-                <a href="#" class="fetured_product">
-                    <img src="img/product-6.jpg" alt="">
-                    <p>Mango  People  T-shirt</p>
-                    <p class="red">$52.00</p>    
-                </a>
-               <a href="#" class="add_basket">
-                   Add to Cart
-               </a>  
-            </figure>
-            
-            <figure class="fetured_item">
-                <a href="#" class="fetured_product">
-                    <img src="img/product-7.jpg" alt="">
-                    <p>Mango  People  T-shirt</p>
-                    <p class="red">$52.00</p>    
-                </a>
-               <a href="#" class="add_basket">
-                   Add to Cart
-               </a> 
-            </figure>
-            
-            <figure class="fetured_item">
-                <a href="#" class="fetured_product">
-                    <img src="img/product-8.jpg" alt="">
-                    <p>Mango  People  T-shirt</p>
-                    <p class="red">$52.00</p>    
-                </a>
-               <a href="#" class="add_basket">
-                   Add to Cart
-               </a>   
-            </figure>
-        </div>
-        
-        <div class="all_products">
-            <a href="#">Browse All Product &#8594</a>
-        </div>
-    </div>
-    
-    <div class="container special_offer">
-        <div class="special_foto">
-            <div> 
-                <h3>30% <span>OFFER</span></h3>
-                <p>FOR WOMEN</p>
-            </div>
-        </div>
-        <div class="special_box">
+        </section>
+
+        <section class="container category">
             <div>
-                <img src="img/car.png" alt="">
-                <div>
-                    <h3>Free Delivery</h3>
-                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                <div class="item item_1">
+                    <a href="#">
+                        <p>hOT dEAL</p>
+                        <p><span>FOR MEN</span></p>
+                    </a>
+                </div>
+                <div class="item item_2">
+                    <a href="#">
+                        <p>LUXIROUS & trendy</p>
+                        <p><span>ACCESORIES</span></p>
+                    </a>
                 </div>
             </div>
             <div>
-                <img src="img/sales.png" alt="">
-                <div>
-                    <h3>Sales & discounts</h3>
-                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                <div class="item item_3">
+                    <a href="#">
+                        <p>30% offer</p>
+                        <p><span>women</span></p>
+                    </a>
+                </div>
+                <div class="item item_4">
+                    <a href="#">
+                        <p>new arrivals</p>
+                        <p><span>FOR kids</span></p>
+                    </a>
                 </div>
             </div>
-            <div>
-                <img src="img/quality.png" alt="">
-                <div>
-                    <h3>Quality assurance</h3>
-                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+        </section>
+
+        <section class="container fetured">
+            <h2>Fetured Items</h2>
+            <p>Shop for items based on what we featured in this week</p>
+            <div class="fetured_items">
+                <figure class="fetured_item">
+                    <a href="#" class="fetured_product">
+                        <img src="img/product-1.jpg" alt="">
+                        <p>Mango  People  T-shirt</p>
+                        <p class="red">$52.00</p>
+                    </a>
+                   <a href="#" class="add_basket">
+                       Add to Cart
+                   </a>
+                </figure>
+
+                <figure class="fetured_item">
+                    <a href="#" class="fetured_product">
+                        <img src="img/product-2.jpg" alt="">
+                        <p>Mango  People  T-shirt</p>
+                        <p class="red">$52.00</p>    
+                    </a>
+                   <a href="#" class="add_basket">
+                       Add to Cart
+                   </a>
+                </figure>
+
+                <figure class="fetured_item">
+                    <a href="#" class="fetured_product">
+                        <img src="img/product-3.jpg" alt="">
+                        <p>Mango  People  T-shirt</p>
+                        <p class="red">$52.00</p>    
+                    </a>
+                   <a href="#" class="add_basket">
+                       Add to Cart
+                   </a> 
+                </figure>
+
+                <figure class="fetured_item">
+                    <a href="#" class="fetured_product">
+                        <img src="img/product-4.jpg" alt="">
+                        <p>Mango  People  T-shirt</p>
+                        <p class="red">$52.00</p>    
+                    </a>
+                   <a href="#" class="add_basket">
+                       Add to Cart
+                   </a> 
+                </figure>
+
+                <figure class="fetured_item">
+                    <a href="#" class="fetured_product">
+                        <img src="img/product-5.jpg" alt="">
+                        <p>Mango  People  T-shirt</p>
+                        <p class="red">$52.00</p>    
+                    </a>
+                   <a href="#" class="add_basket">
+                       Add to Cart
+                   </a>  
+                </figure>
+
+                <figure class="fetured_item">
+                    <a href="#" class="fetured_product">
+                        <img src="img/product-6.jpg" alt="">
+                        <p>Mango  People  T-shirt</p>
+                        <p class="red">$52.00</p>    
+                    </a>
+                   <a href="#" class="add_basket">
+                       Add to Cart
+                   </a>  
+                </figure>
+
+                <figure class="fetured_item">
+                    <a href="#" class="fetured_product">
+                        <img src="img/product-7.jpg" alt="">
+                        <p>Mango  People  T-shirt</p>
+                        <p class="red">$52.00</p>    
+                    </a>
+                   <a href="#" class="add_basket">
+                       Add to Cart
+                   </a> 
+                </figure>
+
+                <figure class="fetured_item">
+                    <a href="#" class="fetured_product">
+                        <img src="img/product-8.jpg" alt="">
+                        <p>Mango  People  T-shirt</p>
+                        <p class="red">$52.00</p>    
+                    </a>
+                   <a href="#" class="add_basket">
+                       Add to Cart
+                   </a>   
+                </figure>
+            </div>
+
+            <div class="all_products">
+                <a href="#">Browse All Product &#8594</a>
+            </div>
+        </section>
+
+        <section class="container special_offer">
+            <div class="special_foto">
+                <div> 
+                    <h3>30% <span>OFFER</span></h3>
+                    <p>FOR WOMEN</p>
                 </div>
             </div>
-        </div>
-    </div>
-    
+            <div class="special_box">
+                <div>
+                    <img src="img/car.png" alt="">
+                    <div>
+                        <h3>Free Delivery</h3>
+                        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/sales.png" alt="">
+                    <div>
+                        <h3>Sales & discounts</h3>
+                        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/quality.png" alt="">
+                    <div>
+                        <h3>Quality assurance</h3>
+                        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
 
     <footer class="footer subscribe">
         <div class="sub_container">
