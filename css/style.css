@@ -8,6 +8,8 @@
 /* отступ ссылки внутри затемнения */
 /* отступ ссылки внутри затемнения */
 /* верх. отступ в верхнем слайдере под header-м */
+/* 35-7 */
+/* 64-7 */
 /*
 * {
     margin: 0;
@@ -763,7 +765,7 @@ body {
   /*    background-color: rgb(34, 34, 36);*/
   /*    background-color: #222224;*/
 }
-.special_box div {
+.special_box article {
   margin-left: 30px;
   margin-top: 48px;
 }
@@ -877,4 +879,35 @@ body {
 }
 .product_size td {
   width: 56px;
+}
+.price_range {
+  position: relative;
+  width: 262px;
+  height: 6px;
+  background-color: #e6e6e6;
+  margin-top: 24px;
+}
+.price_range .range {
+  height: 100%;
+  margin-left: 35px;
+  margin-right: 64px;
+  background-color: #ef5b70;
+}
+.price_range .min {
+  position: absolute;
+  top: -4px;
+  width: 14px;
+  height: 14px;
+  background-color: #ef5b70;
+  left: 28px;
+  border-radius: 7px;
+}
+.price_range .max {
+  position: absolute;
+  top: -4px;
+  width: 14px;
+  height: 14px;
+  background-color: #ef5b70;
+  right: 57px;
+  border-radius: 7px;
 }

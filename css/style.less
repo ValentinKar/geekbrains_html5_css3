@@ -20,6 +20,11 @@
 @product_link_top: 100px; /* отступ ссылки внутри затемнения */
 @product_link_left: 60px; /* отступ ссылки внутри затемнения */
 @header_slider_marg_t: 4px; /* верх. отступ в верхнем слайдере под header-м */
+@margin_top_price: 24px;
+@price_min_and: 35px;
+@price_max_and: 64px;
+@price_min: 28px; /* 35-7 */
+@price_max: 57px; /* 64-7 */
 
 
 /*
@@ -900,7 +905,7 @@ body {
 /*    background-color: rgb(34, 34, 36);*/
 /*    background-color: #222224;*/
     
-    div {
+    article {
         margin-left: 30px;
         margin-top: 48px;
     }
@@ -1034,5 +1039,36 @@ body {
 .product_size {
     td {
         width: 56px;
+    }
+}
+.price_range {
+    position: relative; 
+    width: 262px;
+    height: 6px;
+    background-color: @color_gray_2;
+    margin-top: @margin_top_price;
+    .range {
+        height: 100%;
+        margin-left: @price_min_and;
+        margin-right: @price_max_and;
+        background-color: @color_red;
+    }
+    .min {
+        position: absolute;
+        top: -4px;
+        width: 14px;
+        height: 14px;
+        background-color: @color_red;
+        left: @price_min;
+        border-radius: 7px;
+    }
+    .max {
+        position: absolute;
+        top: -4px;
+        width: 14px;
+        height: 14px;
+        background-color: @color_red;
+        right: @price_max;
+        border-radius: 7px;
     }
 }
