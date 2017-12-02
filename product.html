@@ -201,102 +201,106 @@
                 </details>
             </div>
             
-            <div class="product_content">
-                <form class="product_choose" action="">
+            <form class="product_content" action="">
+                <section class="product_choose">
                     <fieldset class="product_trending">
                         <h3>Trending now</h3>
                         <ul class="product_brands">
                             <li>
                                 <a href="#">Bohemian</a>
+                                &nbsp;|&nbsp;
                             </li>
                             <li>
                                 <a href="#">Floral</a>
+                                &nbsp;|&nbsp;
                             </li>
                             <li>
                                 <a href="#">Lace</a>
+                                &nbsp;|&nbsp;
                             </li>
                             <li>
                                 <a href="#">Floral</a>
+                                &nbsp;|&nbsp;
                             </li>
                             <li>
                                 <a href="#">Lace</a>
+                                &nbsp;|&nbsp;
                             </li>
                             <li>
                                 <a href="#">Bohemian</a>
+                                &nbsp;|&nbsp;
                             </li>
                         </ul>
                     </fieldset>
+                    
                     <fieldset class="product_size">
                         <h3>Size</h3>
-                        <table>
-                            <tr>
-                                <td>
-                                    <label>
-                                        <input type="checkbox">
-                                        XXS
-                                    </label>
-                                </td>
-                                <td>
-                                    <label>
-                                        <input type="checkbox">
-                                        XS
-                                    </label>
-                                </td>
-                                <td>
-                                    <label>
-                                        <input type="checkbox">
-                                        S
-                                    </label>
-                                </td>
-                                <td>
-                                    <label>
-                                        <input type="checkbox">
-                                        M
-                                    </label>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <label>
-                                        <input type="checkbox">
-                                        L
-                                    </label>
-                                </td>
-                                <td>
-                                    <label>
-                                        <input type="checkbox">
-                                        XL
-                                    </label>
-                                </td>
-                                <td>
-                                    <label>
-                                        <input type="checkbox">
-                                        XXL
-                                    </label>
-                                </td>
-                                <td>
-                                    
-                                </td>
-                            </tr>
-                        </table>
+                        <div>
+                            <label>
+                                <input type="checkbox">
+                                XXS
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                XS
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                S
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                M
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                L
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                XL
+                            </label>
+                            <label>
+                                <input type="checkbox">
+                                XXL
+                            </label>
+                        </div>
                     </fieldset>
+                    
                     <fieldset class="price">
-                       
                         <label><h3>pRICE</h3>
-
                            <div class="price_range">
-                              <div class="range"></div>
+                               <div class="range"></div>
                                <div class="min"></div>
                                <div class="max"></div>
+                               
                            </div>
+                           <div class="price_bottom price_min">
+                               $52
+                            </div>
+                           <div class="price_bottom price_max">
+                               $400
+                            </div>
+                           
                         <p>
                             <output name="price_row" for="range"></output>
                         </p>
                         </label>
                        
                     </fieldset>
-                </form> 
-            </div>
+                </section>
+                
+                <fieldset class="product_sort">
+                    <input type="submit" name="sort" value="Sort By">
+                    <select name="sort" id="">
+                        <option value="">Name</option>
+                    </select>
+                    <input type="submit" name="show" value="Show">
+                    <select name="show" id="">
+                        <option value="">09</option>
+                    </select>
+                </fieldset>
+            </form>
         </div>
         
 

@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @color_red: #ef5b70;
 @color_gray: #e8e8e8;
 @color_gray_2: #e6e6e6;
 /*@color_gray_3: #f2f2f2;c4*/
 @color_gray_3: #898989;
+@color_gray_4: #6f6e6e;
 @color_black: #222;
 @color_red_gray: #f8f3f4;
 @img_slider: url(../img/slider-man.jpg);
@@ -20,7 +22,6 @@
 @product_link_top: 100px; /* отступ ссылки внутри затемнения */
 @product_link_left: 60px; /* отступ ссылки внутри затемнения */
 @header_slider_marg_t: 4px; /* верх. отступ в верхнем слайдере под header-м */
-@margin_top_price: 24px;
 @price_min_and: 35px;
 @price_max_and: 64px;
 @price_min: 28px; /* 35-7 */
@@ -962,15 +963,15 @@ body {
     }
     
     ul {
-        font-size: 14px;
-        font-weight: 300;
-        line-height: 1.43;
-        color: @color_gray_3;
         display: flex;
     }
     
     a {
         text-decoration: none;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.43;
+        color: @color_gray_3;
     }
     
     .active {
@@ -986,11 +987,11 @@ body {
 .product_general {
     display: flex;
     justify-content: space-between;
+    padding-top: 59px;
+    padding-bottom: 110px;
 }
 
 .product_left_menu {
-    width: 243px; /* удалить */
-    outline: 1px solid black;
 
     span {
         display: inline-block;
@@ -1011,19 +1012,21 @@ body {
 
 
 .product_content {
-    width: 846px; /* удалить */
-    height: 400px; /* удалить */
-    outline: 1px solid black;
+    width: 846px; 
 }
 
 .product_choose {
-    height: 120px; /* удалить */
-    outline: 1px solid black;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 35px;
     
     h3 {
         text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 14px;
+        color: @color_gray_4;
+        margin-bottom: 24px;
     }
 }
 
@@ -1032,27 +1035,52 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    input[type="range"] {
-        
+    font-size: 14px;
+    line-height: 20px;
+    color: @color_gray;
+    
+    a {
+        color: @color_gray_4;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
     }
 }
+
 .product_size {
-    td {
+    margin-left: 100px;
+    width: 235px;
+    
+    div {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    label {
+        margin-bottom: 5px;
         width: 56px;
+        font-size: 14px;
+        line-height: 14px;
+        color: @color_gray_4;
     }
 }
+
 .price_range {
     position: relative; 
     width: 262px;
     height: 6px;
+    margin-bottom: 12px;
     background-color: @color_gray_2;
-    margin-top: @margin_top_price;
+    
     .range {
         height: 100%;
         margin-left: @price_min_and;
         margin-right: @price_max_and;
         background-color: @color_red;
     }
+    
     .min {
         position: absolute;
         top: -4px;
@@ -1062,6 +1090,7 @@ body {
         left: @price_min;
         border-radius: 7px;
     }
+    
     .max {
         position: absolute;
         top: -4px;
@@ -1072,3 +1101,72 @@ body {
         border-radius: 7px;
     }
 }
+
+
+.price_bottom {
+    font-family: OpenSans;
+    font-size: 14px;
+    line-height: 1.86;
+    color: @color_gray_4;
+}
+
+.price_min {
+    float: left;
+}
+
+.price_max {
+    float: right;
+}
+
+.product_sort  {
+    width: 100%;
+    height: 30px;
+    background-color: @color_gray;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    input {
+        height: 100%;
+        border: solid 1px #ebebeb;
+        background-color: white;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.86;
+        color: @color_gray_4;
+    }
+    
+    input:focus {
+        outline: none;
+    }
+    
+    select {
+        height: 100%;
+        border: solid 1px #ebebeb;
+        background-color: white;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.86;
+        color: @color_gray_4;
+    }
+    
+    select:hover {
+        outline: none;
+    }
+    
+    input[name="sort"] {
+        margin-right: -3px;
+        width: 66px;
+    }
+    
+    input[name="show"] {
+        margin-right: -3px;
+    }
+    
+    select[name="sort"] {
+        margin-right: 10px;
+        width: 86px;
+        padding-left: 10px;
+    }
+}
+
