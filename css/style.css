@@ -25,6 +25,73 @@ body {
   width: 1142px;
   margin: 0 auto;
 }
+/* vvvvvvvvvvvvvvvvvvvv */
+/* кнопки изменяют цвет */
+/* красная кнопка светлеет */
+.red_button a {
+  display: block;
+  background-color: #ef5b70;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 48px;
+  letter-spacing: 0.4px;
+  color: white;
+  text-decoration: none;
+}
+.red_button a:hover {
+  background-color: white;
+  outline: 1px solid #ef5b70;
+  color: #ef5b70;
+}
+.red_button a:active {
+  position: relative;
+  top: 3px;
+  left: 3px;
+}
+/* светло-красная кнопка */
+/* краснеет */
+.white_button a {
+  display: block;
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: 900;
+  color: #ef5b70;
+  outline: 1px solid #ef5b70;
+  text-decoration: none;
+}
+.white_button a:hover {
+  background-color: #ef5b70;
+  outline: none;
+  color: white;
+}
+.white_button a:active {
+  position: relative;
+  top: 3px;
+  left: 3px;
+}
+/* светло-серая кнопка */
+/* темнеет */
+.black_button a {
+  display: block;
+  line-height: 50px;
+  font-size: 14px;
+  font-weight: 900;
+  color: #222222;
+  outline: 1px solid #e8e8e8;
+  text-decoration: none;
+}
+.black_button a:hover {
+  background-color: #e8e8e8;
+  outline: none;
+  color: white;
+}
+.black_button a:active {
+  position: relative;
+  top: 3px;
+  left: 3px;
+}
+/* кнопки изменяют цвет */
+/* ^^^^^^^^^^^^^^^^^^^^ */
 /* vvvvvvv */
 /* header */
 .header {
@@ -125,21 +192,15 @@ body {
 .header_my_account {
   display: flex;
   align-items: center;
+  z-index: 10;
 }
 .header_my_account .my_account {
   display: block;
   width: 130px;
   height: 38px;
-  background-color: #ef5b70;
-  color: white;
-  text-decoration: none;
   font-size: 15px;
-  line-height: 36px;
-  letter-spacing: 0.4px;
+  line-height: 38px;
   padding-left: 19px;
-}
-.header_my_account .my_account:hover {
-  text-decoration: underline;
 }
 .my_basket > li:hover .full_basket {
   display: block;
@@ -218,37 +279,17 @@ body {
   flex-direction: column;
 }
 .full_basket .checkout {
-  display: block;
+  text-align: center;
   height: 50px;
   width: 100%;
   text-transform: uppercase;
-  line-height: 50px;
-  font-size: 14px;
-  font-weight: 900;
-  text-align: center;
-  color: #ef5b70;
-  border: 1px solid #ef5b70;
-  text-decoration: none;
-}
-.full_basket .checkout:hover {
-  text-decoration: underline;
 }
 .full_basket .go_to_cart {
-  display: block;
   height: 50px;
   width: 100%;
   text-transform: uppercase;
-  line-height: 50px;
-  font-size: 14px;
-  font-weight: 900;
   text-align: center;
-  color: #222222;
-  border: 1px solid #e8e8e8;
-  text-decoration: none;
   margin-top: 10px;
-}
-.full_basket .go_to_cart:hover {
-  text-decoration: underline;
 }
 .full_basket li:nth-last-child(2) {
   border-bottom: none;
@@ -695,25 +736,9 @@ body {
   margin-top: 58px;
 }
 .all_products a {
-  display: block;
   width: 212px;
   height: 48px;
-  background-color: #ef5b70;
-  font-size: 16px;
-  font-weight: 900;
-  line-height: 48px;
-  letter-spacing: 0.4px;
   text-align: center;
-  color: white;
-  text-decoration: none;
-}
-.all_products a:hover {
-  text-decoration: underline;
-}
-.all_products a:active {
-  position: relative;
-  top: 3px;
-  left: 3px;
 }
 /* раздел рекомендуемые */
 /* титульная страница */
@@ -766,12 +791,17 @@ body {
   /*    background-color: rgb(34, 34, 36);*/
   /*    background-color: #222224;*/
 }
+.special_box div {
+  clear: both;
+}
 .special_box article {
-  margin-left: 30px;
-  margin-top: 48px;
+  float: right;
+  width: 268px;
 }
 .special_box img {
   float: left;
+  margin-left: 35px;
+  margin-top: 48px;
 }
 .special_box h3 {
   font-size: 20px;
@@ -779,7 +809,7 @@ body {
   line-height: 27px;
   letter-spacing: 0.5px;
   color: white;
-  margin-left: 33px;
+  margin-top: 48px;
 }
 .special_box p {
   font-size: 14px;
@@ -787,7 +817,6 @@ body {
   line-height: 23px;
   letter-spacing: 0.4px;
   color: white;
-  margin-left: 33px;
   margin-top: 17px;
   margin-right: 43px;
 }
