@@ -249,10 +249,13 @@ body {
   color: #222222;
 }
 .full_basket .stars {
+  color: #e4af48;
   margin-top: 12px;
   margin-left: 14px;
-  width: 56px;
   height: 12px;
+}
+.full_basket .stars i {
+  margin-right: -2px;
 }
 .full_basket span {
   margin-top: 12px;
@@ -709,11 +712,11 @@ body {
 .fetured_item .add_basket {
   position: absolute;
   top: 100px;
-  left: 60px;
+  left: 70px;
   border: 1px solid white;
   padding: 10px 10px;
   color: white;
-  width: 123px;
+  width: 103px;
   text-align: center;
   display: none;
 }
@@ -867,22 +870,109 @@ body {
   padding-top: 59px;
   padding-bottom: 110px;
 }
+/* левое меню */
+.product_left_menu details {
+  margin-bottom: 18px;
+}
+.product_left_menu summary:focus {
+  outline: none;
+}
 .product_left_menu span {
   display: inline-block;
-  width: 120px;
+  width: 232px;
   text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 37px;
+  color: #ef5b70;
+  border-bottom: 1px solid #e6e6e6;
+  padding-left: 11px;
+  border-left: 3px solid #ef5b70;
 }
 .product_left_menu details summary::-webkit-details-marker {
   display: none;
 }
 .product_left_menu details summary:after {
+  position: relative;
+  right: 15px;
   content: "\25bc";
+  color: #ef5b70;
 }
 .product_left_menu details[open] summary:after {
+  position: relative;
+  right: 15px;
   content: "\25b2";
+  color: #ef5b70;
 }
+.product_left_menu ul {
+  margin-top: 20px;
+}
+.product_left_menu a {
+  margin-left: 12px;
+  font-size: 14px;
+  line-height: 2.36;
+  text-align: left;
+  color: #898989;
+  text-decoration: none;
+}
+.product_left_menu a:hover {
+  text-decoration: underline;
+}
+/* выбор товаров */
 .product_content {
   width: 846px;
+}
+.product_content .recicle {
+  position: absolute;
+  top: 144px;
+  left: 70px;
+  border: 1px solid white;
+  padding: 10px 10px;
+  color: white;
+  width: 37px;
+  text-align: center;
+  display: none;
+}
+.product_content .fetured_item:hover .recicle {
+  display: block;
+}
+.product_content .fetured_item .recicle:hover {
+  font-size: 18px;
+  /* padding-bottom: 9px; */
+}
+.product_content .like {
+  position: absolute;
+  top: 144px;
+  left: 137px;
+  border: 1px solid white;
+  padding: 10px 10px;
+  color: white;
+  width: 37px;
+  text-align: center;
+  display: none;
+}
+.product_content .fetured_item:hover .like {
+  display: block;
+}
+.product_content .fetured_item .like:hover {
+  font-size: 18px;
+  /* padding-bottom: 9px; */
+}
+.product_stars {
+  display: block;
+  width: 90px;
+  height: 26px;
+  float: right;
+}
+.product_stars .img {
+  height: 14px;
+  margin-top: 12px;
+  display: none;
+  font-size: 12px;
+  color: #e4af48;
+}
+.fetured_item:hover .img {
+  display: block;
 }
 .product_choose {
   display: flex;
@@ -971,6 +1061,7 @@ body {
 .price_max {
   float: right;
 }
+/* кнопка sort by и др. */
 .product_sort {
   width: 100%;
   height: 30px;
@@ -1004,14 +1095,89 @@ body {
   outline: none;
 }
 .product_sort input[name="sort"] {
-  margin-right: -3px;
   width: 66px;
 }
-.product_sort input[name="show"] {
-  margin-right: -3px;
+.product_sort select {
+  position: relative;
+  right: 3px;
 }
 .product_sort select[name="sort"] {
   margin-right: 10px;
   width: 86px;
   padding-left: 10px;
 }
+.product_fetured {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 44px;
+  margin-top: 43px;
+}
+.product_fetured .view_all {
+  height: 100%;
+  width: 150px;
+  text-align: center;
+  line-height: 43px;
+}
+/* кнопки с цифрами страниц */
+.product_list {
+  display: flex;
+  outline: 1px solid #e8e8e8;
+}
+.product_list a {
+  display: block;
+  width: 25px;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  color: #898989;
+  text-decoration: none;
+}
+.product_list a:hover {
+  color: #ef5b70;
+  background-color: #e8e8e8;
+}
+.product_list li:first-child a,
+.product_list li:last-child a {
+  font-weight: 900;
+}
+.product_actions {
+  background-color: #222222;
+}
+/* нижний черный блок */
+.product_footer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 90px;
+  padding-bottom: 114px;
+  text-align: center;
+}
+.product_footer article {
+  flex: 1;
+  height: 100%;
+}
+.product_footer article:first-child {
+  margin-top: 5px;
+}
+.product_footer article:last-child {
+  margin-top: 3px;
+}
+.product_footer h3 {
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: white;
+  margin-top: 20px;
+}
+.product_footer p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.71;
+  letter-spacing: 0.3px;
+  color: white;
+  margin-top: 14px;
+}
+/* страница product */
+/* ^^^^^^^^^^^^^^^^ */

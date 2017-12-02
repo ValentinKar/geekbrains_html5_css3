@@ -8,6 +8,7 @@
 @color_gray_4: #6f6e6e;
 @color_black: #222;
 @color_red_gray: #f8f3f4;
+@color_yellow: #e4af48;
 @img_slider: url(../img/slider-man.jpg);
 @img_home_fetured_1: url(../img/category-man.jpg);
 @img_home_fetured_2: url(../img/category-purse.jpg);
@@ -18,9 +19,11 @@
 @product_width: 263px; /* ширина затемнения */
 @product_height: 364px; /* высота блока с затемнением */
 @product_im_height: 280px; /* высота затемнения */
-@product_link_width: 123px; /* ширина ссылки внутри затемнения */
+@product_link_width: 103px; /* ширина ссылки внутри затемнения */
 @product_link_top: 100px; /* отступ ссылки внутри затемнения */
-@product_link_left: 60px; /* отступ ссылки внутри затемнения */
+@product_links_top: 144px;
+@product_link_left: 70px; /* отступ ссылки внутри затемнения */
+@product_link_3_left: 137px;
 @header_slider_marg_t: 4px; /* верх. отступ в верхнем слайдере под header-м */
 @price_min_and: 35px;
 @price_max_and: 64px;
@@ -308,10 +311,14 @@ body {
     }
     
     .stars {
+        color: @color_yellow;
         margin-top: 12px;
         margin-left: 14px;
-        width: 56px;
         height: 12px;
+        
+        i {
+            margin-right: -2px;
+        }
     }
 
     span {
@@ -859,12 +866,15 @@ body {
 .fetured_item:hover {
     box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16);
 }
+
 .fetured_item:hover img {
     filter: brightness(50%);
 }
+
 .fetured_item:hover .add_basket {
     display: block;
 }
+
 .fetured_item .add_basket:hover {
     text-decoration: underline;
 }
@@ -1028,28 +1038,129 @@ body {
     padding-bottom: 110px;
 }
 
+/* левое меню */
 .product_left_menu {
-
+    details {
+        margin-bottom: 18px;
+    }
+    
+    summary:focus {
+        outline: none;
+    }
+    
     span {
         display: inline-block;
-        width: 120px;
+        width: 232px;
         text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 37px;
+        color: @color_red;
+        border-bottom: 1px solid @color_gray_2;
+        padding-left: 11px;
+        border-left: 3px solid @color_red;
     }
+    
     details summary::-webkit-details-marker {
         display: none;
     }
+    
     details summary:after {
+        position: relative;
+        right: 15px;
         content: "\25bc";
+        color: @color_red;
     }
-    details[open] summary:after  {
+    
+    details[open] summary:after {
+        position: relative;
+        right: 15px;
         content: "\25b2";
+        color: @color_red;
+    }
+    
+    ul {
+        margin-top: 20px;
+    }
+    
+    a {
+        margin-left: 12px;
+        font-size: 14px;
+        line-height: 2.36;
+        text-align: left;
+        color: @color_gray_3;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
     }
 }
 
-
-
+/* выбор товаров */
 .product_content {
     width: 846px; 
+    
+    .recicle {
+        position: absolute;
+        top: @product_links_top;
+        left: @product_link_left;
+        border: 1px solid white;
+        padding: 10px 10px;
+        color: white;
+        width: 37px;
+        text-align: center;
+        display: none;
+    }
+    
+    .fetured_item:hover .recicle {
+        display: block;
+    }
+    
+    .fetured_item .recicle:hover {
+        font-size: 18px;
+        /* padding-bottom: 9px; */
+    }
+    
+    .like {
+        position: absolute;
+        top: @product_links_top;
+        left: @product_link_3_left;
+        border: 1px solid white;
+        padding: 10px 10px;
+        color: white;
+        width: 37px;
+        text-align: center;
+        display: none;
+    }
+    
+    .fetured_item:hover .like {
+        display: block;
+    }
+    
+    .fetured_item .like:hover {
+        font-size: 18px;
+        /* padding-bottom: 9px; */
+    }
+}
+
+.product_stars {
+    display: block;
+    width: 90px;
+    height: 26px;
+    float: right;
+
+    .img {
+        height: 14px;
+        margin-top: 12px;
+        display: none;
+        font-size: 12px;
+        color: @color_yellow;
+    }
+}
+
+.fetured_item:hover .img {
+    display: block;
 }
 
 .product_choose {
@@ -1139,7 +1250,6 @@ body {
     }
 }
 
-
 .price_bottom {
     font-family: OpenSans;
     font-size: 14px;
@@ -1155,6 +1265,7 @@ body {
     float: right;
 }
 
+/* кнопка sort by и др. */
 .product_sort  {
     width: 100%;
     height: 30px;
@@ -1192,12 +1303,12 @@ body {
     }
     
     input[name="sort"] {
-        margin-right: -3px;
         width: 66px;
     }
     
-    input[name="show"] {
-        margin-right: -3px;
+    select {
+        position: relative;
+        right: 3px;
     }
     
     select[name="sort"] {
@@ -1207,3 +1318,90 @@ body {
     }
 }
 
+.product_fetured {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 44px;
+    margin-top: 43px;
+    
+    .view_all {
+        height: 100%;
+        width: 150px;
+        text-align: center;
+        line-height: 43px;
+    }
+}
+
+/* кнопки с цифрами страниц */
+.product_list {
+    display: flex;
+    outline: 1px solid @color_gray;
+
+    a {
+        display: block;
+        width: 25px;
+        height: 100%;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 40px;
+        text-align: center;
+        color: @color_gray_3;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color: @color_red;
+        background-color: @color_gray;
+    }
+    
+    li:first-child a,
+    li:last-child a {
+        font-weight: 900;
+    }
+}
+
+.product_actions {
+    background-color: @color_black;
+}
+
+/* нижний черный блок */
+.product_footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 90px;
+    padding-bottom: 114px;
+    text-align: center;
+    
+    article {
+        flex: 1;
+        height: 100%;
+    }
+    
+    article:first-child {
+        margin-top: 5px;
+    }
+    
+    article:last-child {
+        margin-top: 3px;
+    }
+    
+    h3 {
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        color: white;
+        margin-top: 20px;    
+    }
+    
+    p {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.71;
+        letter-spacing: 0.3px;
+        color: white;
+        margin-top: 14px;
+    }
+}
+/* страница product */
+/* ^^^^^^^^^^^^^^^^ */

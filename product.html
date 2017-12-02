@@ -5,6 +5,7 @@
     <title>Product</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -100,7 +101,13 @@
                                         <img src="img/Layer-43.jpg" alt="">
                                         <div>
                                             <p>Rebox Zane</p>
-                                            <img class="stars" src="img/basket-star.jpg" alt="">
+                                            <span class="stars">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                            </span>
                                             <span>1 &nbsp; x &nbsp; $250</span>
                                         </div>
                                         <a class="miss"  href="#">x</a>
@@ -109,7 +116,13 @@
                                         <img src="img/Layer-44.jpg" alt="">
                                         <div>
                                             <p>Rebox Zane</p>
-                                            <img class="stars" src="img/basket-star.jpg" alt="">
+                                            <span class="stars">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                            </span>
                                             <span>1 &nbsp; x &nbsp; $250</span>
                                         </div>
                                         <a class="miss" href="#">x</a>
@@ -209,113 +222,416 @@
                 </details>
             </div>
             
-            <form class="product_content" action="">
-                <section class="product_choose">
-                    <fieldset class="product_trending">
-                        <h3>Trending now</h3>
-                        <ul class="product_brands">
-                            <li>
-                                <a href="#">Bohemian</a>
-                                &nbsp;|&nbsp;
-                            </li>
-                            <li>
-                                <a href="#">Floral</a>
-                                &nbsp;|&nbsp;
-                            </li>
-                            <li>
-                                <a href="#">Lace</a>
-                                &nbsp;|&nbsp;
-                            </li>
-                            <li>
-                                <a href="#">Floral</a>
-                                &nbsp;|&nbsp;
-                            </li>
-                            <li>
-                                <a href="#">Lace</a>
-                                &nbsp;|&nbsp;
-                            </li>
-                            <li>
-                                <a href="#">Bohemian</a>
-                                &nbsp;|&nbsp;
-                            </li>
-                        </ul>
-                    </fieldset>
-                    
-                    <fieldset class="product_size">
-                        <h3>Size</h3>
-                        <div>
-                            <label>
-                                <input type="checkbox">
-                                XXS
-                            </label>
-                            <label>
-                                <input type="checkbox">
-                                XS
-                            </label>
-                            <label>
-                                <input type="checkbox">
-                                S
-                            </label>
-                            <label>
-                                <input type="checkbox">
-                                M
-                            </label>
-                            <label>
-                                <input type="checkbox">
-                                L
-                            </label>
-                            <label>
-                                <input type="checkbox">
-                                XL
-                            </label>
-                            <label>
-                                <input type="checkbox">
-                                XXL
-                            </label>
-                        </div>
-                    </fieldset>
-                    
-                    <fieldset class="price">
-                        <label><h3>pRICE</h3>
-                           <div class="price_range">
-                               <div class="range"></div>
-                               <div class="min"></div>
-                               <div class="max"></div>
-                               
-                           </div>
-                           <div class="price_bottom price_min">
-                               $52
-                            </div>
-                           <div class="price_bottom price_max">
-                               $400
-                            </div>
-                           
-                        <p>
-                            <output name="price_row" for="range"></output>
-                        </p>
-                        </label>
-                       
-                    </fieldset>
-                </section>
-                
-                <fieldset class="product_sort">
-                    <input type="submit" name="sort" value="Sort By">
-                    <select name="sort" id="">
-                        <option value="">Name</option>
-                    </select>
-                    <input type="submit" name="show" value="Show">
-                    <select name="show" id="">
-                        <option value="">09</option>
-                    </select>
-                </fieldset>
-            </form>
-        </div>
-        
+            <div class="product_content">
+                <form action="">
+                    <section class="product_choose">
+                        <fieldset class="product_trending">
+                            <h3>Trending now</h3>
+                            <ul class="product_brands">
+                                <li>
+                                    <a href="#">Bohemian</a>
+                                    &nbsp;|&nbsp;
+                                </li>
+                                <li>
+                                    <a href="#">Floral</a>
+                                    &nbsp;|&nbsp;
+                                </li>
+                                <li>
+                                    <a href="#">Lace</a>
+                                    &nbsp;|&nbsp;
+                                </li>
+                                <li>
+                                    <a href="#">Floral</a>
+                                    &nbsp;|&nbsp;
+                                </li>
+                                <li>
+                                    <a href="#">Lace</a>
+                                    &nbsp;|&nbsp;
+                                </li>
+                                <li>
+                                    <a href="#">Bohemian</a>
+                                    &nbsp;|&nbsp;
+                                </li>
+                            </ul>
+                        </fieldset>
 
-        
+                        <fieldset class="product_size">
+                            <h3>Size</h3>
+                            <div>
+                                <label>
+                                    <input type="checkbox">
+                                    XXS
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    XS
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    S
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    M
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    L
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    XL
+                                </label>
+                                <label>
+                                    <input type="checkbox">
+                                    XXL
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="price">
+                            <label><h3>pRICE</h3>
+                               <div class="price_range">
+                                   <div class="range"></div>
+                                   <div class="min"></div>
+                                   <div class="max"></div>
+
+                               </div>
+                               <div class="price_bottom price_min">
+                                   $52
+                                </div>
+                               <div class="price_bottom price_max">
+                                   $400
+                                </div>
+
+                            <p>
+                                <output name="price_row" for="range"></output>
+                            </p>
+                            </label>
+
+                        </fieldset>
+                    </section>
+
+                    <fieldset class="product_sort">
+                        <input type="submit" name="sort" value="Sort By">
+                        <select name="sort" id="">
+                            <option value="">Name</option>
+                        </select>
+                        <input type="submit" name="show" value="Show">
+                        <select name="show" id="">
+                            <option value="">09</option>
+                        </select>
+                    </fieldset>
+                </form>
+                
+                <section class="fetured">
+                    <div class="fetured_items">
+                        <figure class="fetured_item">
+                            <a href="single-page.html" class="fetured_product">
+                                <img src="img/product/1.jpg" alt="">
+                                <p>Mango  People  T-shirt</p>
+                                <span class="product_stars">
+                                    <span class="img">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                    </span>
+                                </span>
+                                <p class="red">$52.00</p>
+                            </a>
+                           <a href="#" class="add_basket ">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                               Add to Cart
+                           </a>
+                           <a href="#" class="recicle">
+                               <i class="fa fa-retweet" aria-hidden="true"></i>
+                           </a>
+                           <a href="#" class="like">
+                               <i class="fa fa-heart-o" aria-hidden="true"></i>
+                           </a>
+                        </figure>
+
+                        <figure class="fetured_item">
+                            <a href="single-page.html" class="fetured_product">
+                                <img src="img/product/2.jpg" alt="">
+                                <p>Mango  People  T-shirt</p>
+                                <span class="product_stars">
+                                    <span class="img">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                    </span>
+                                </span>
+                                <p class="red">$52.00</p>
+                            </a>
+                           <a href="#" class="add_basket ">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                               Add to Cart
+                           </a>
+                           <a href="#" class="recicle">
+                               <i class="fa fa-retweet" aria-hidden="true"></i>
+                           </a>
+                           <a href="#" class="like">
+                               <i class="fa fa-heart-o" aria-hidden="true"></i>
+                           </a>
+                        </figure>
+
+                        <figure class="fetured_item">
+                            <a href="single-page.html" class="fetured_product">
+                                <img src="img/product/3.jpg" alt="">
+                                <p>Mango  People  T-shirt</p>
+                                <span class="product_stars">
+                                    <span class="img">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                    </span>
+                                </span>
+                                <p class="red">$52.00</p>
+                            </a>
+                           <a href="#" class="add_basket ">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                               Add to Cart
+                           </a>
+                           <a href="#" class="recicle">
+                               <i class="fa fa-retweet" aria-hidden="true"></i>
+                           </a>
+                           <a href="#" class="like">
+                               <i class="fa fa-heart-o" aria-hidden="true"></i>
+                           </a>
+                        </figure>
+
+                        <figure class="fetured_item">
+                            <a href="single-page.html" class="fetured_product">
+                                <img src="img/product/4.jpg" alt="">
+                                <p>Mango  People  T-shirt</p>
+                                <span class="product_stars">
+                                    <span class="img">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                    </span>
+                                </span>
+                                <p class="red">$52.00</p>
+                            </a>
+                           <a href="#" class="add_basket ">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                               Add to Cart
+                           </a>
+                           <a href="#" class="recicle">
+                               <i class="fa fa-retweet" aria-hidden="true"></i>
+                           </a>
+                           <a href="#" class="like">
+                               <i class="fa fa-heart-o" aria-hidden="true"></i>
+                           </a>
+                        </figure>
+
+                        <figure class="fetured_item">
+                            <a href="single-page.html" class="fetured_product">
+                                <img src="img/product/5.jpg" alt="">
+                                <p>Mango  People  T-shirt</p>
+                                <span class="product_stars">
+                                    <span class="img">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                    </span>
+                                </span>
+                                <p class="red">$52.00</p>
+                            </a>
+                           <a href="#" class="add_basket ">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                               Add to Cart
+                           </a>
+                           <a href="#" class="recicle">
+                               <i class="fa fa-retweet" aria-hidden="true"></i>
+                           </a>
+                           <a href="#" class="like">
+                               <i class="fa fa-heart-o" aria-hidden="true"></i>
+                           </a>
+                        </figure>
+
+                        <figure class="fetured_item">
+                            <a href="single-page.html" class="fetured_product">
+                                <img src="img/product/6.jpg" alt="">
+                                <p>Mango  People  T-shirt</p>
+                                <span class="product_stars">
+                                    <span class="img">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                    </span>
+                                </span>
+                                <p class="red">$52.00</p>
+                            </a>
+                           <a href="#" class="add_basket ">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                               Add to Cart
+                           </a>
+                           <a href="#" class="recicle">
+                               <i class="fa fa-retweet" aria-hidden="true"></i>
+                           </a>
+                           <a href="#" class="like">
+                               <i class="fa fa-heart-o" aria-hidden="true"></i>
+                           </a>
+                        </figure>
+
+                        <figure class="fetured_item">
+                            <a href="single-page.html" class="fetured_product">
+                                <img src="img/product/7.jpg" alt="">
+                                <p>Mango  People  T-shirt</p>
+                                <span class="product_stars">
+                                    <span class="img">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                    </span>
+                                </span>
+                                <p class="red">$52.00</p>
+                            </a>
+                           <a href="#" class="add_basket ">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                               Add to Cart
+                           </a>
+                           <a href="#" class="recicle">
+                               <i class="fa fa-retweet" aria-hidden="true"></i>
+                           </a>
+                           <a href="#" class="like">
+                               <i class="fa fa-heart-o" aria-hidden="true"></i>
+                           </a>
+                        </figure>
+
+                        <figure class="fetured_item">
+                            <a href="single-page.html" class="fetured_product">
+                                <img src="img/product/8.jpg" alt="">
+                                <p>Mango  People  T-shirt</p>
+                                <span class="product_stars">
+                                    <span class="img">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                    </span>
+                                </span>
+                                <p class="red">$52.00</p>
+                            </a>
+                           <a href="#" class="add_basket ">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                               Add to Cart
+                           </a>
+                           <a href="#" class="recicle">
+                               <i class="fa fa-retweet" aria-hidden="true"></i>
+                           </a>
+                           <a href="#" class="like">
+                               <i class="fa fa-heart-o" aria-hidden="true"></i>
+                           </a>
+                        </figure>
+
+                        <figure class="fetured_item">
+                            <a href="single-page.html" class="fetured_product">
+                                <img src="img/product/9.jpg" alt="">
+                                <p>Mango  People  T-shirt</p>
+                                <span class="product_stars">
+                                    <span class="img">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                    </span>
+                                </span>
+                                <p class="red">$52.00</p>
+                            </a>
+                           <a href="#" class="add_basket ">
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                               Add to Cart
+                           </a>
+                           <a href="#" class="recicle">
+                               <i class="fa fa-retweet" aria-hidden="true"></i>
+                           </a>
+                           <a href="#" class="like">
+                               <i class="fa fa-heart-o" aria-hidden="true"></i>
+                           </a>
+                        </figure>
+
+                        <div class="product_fetured">
+                            <ul class="product_list">
+                                <li>
+                                    <a href="#">&lt;</a>
+                                </li>
+                                <li>
+                                    <a href="#">1</a>
+                                </li>
+                                <li>
+                                   <a href="#">2</a>
+                                </li>
+                                <li>
+                                   <a href="#">3</a>
+                                </li>
+                                <li>
+                                   <a href="#">4</a>
+                                </li>
+                                <li>
+                                   <a href="#">5</a>
+                                </li>
+                                <li>
+                                   <a href="#">6</a>
+                                </li>
+                                <li>
+                                   <a href="#">...</a>
+                                </li>
+                                <li>
+                                   <a href="#">20</a>
+                                </li>
+                                <li>
+                                    <a href="#">&gt;</a>
+                                </li>
+                            </ul>
+                            <div class="white_button">
+                                <a class="view_all" href="#">View All</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </article>
     
-
+    <section class="product_actions">
+       <div class="container product_footer">
+           <article>
+               <img src="img/car.png" alt="">
+               <h3>Free Delivery</h3>
+               <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+           </article>
+           <article>
+               <img src="img/sales.png" alt="">
+               <h3>Sales & discounts</h3>
+               <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+           </article>
+           <article>
+               <img src="img/quality.png" alt="">
+               <h3>Quality assurance</h3>
+               <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+           </article>
+       </div>
+    </section>
+    
     <footer>
         <div class="footer subscribe">
             <div class="sub_container">
@@ -405,18 +721,17 @@
                         <i class="fa fa-facebook" aria-hidden="true"></i>
                    </a>
                    <a class="social_link_tw" href="#">
-                       
-                   </a>
-                   <a class="social_link_in" href="#">
-                       
+                       <i class="fa fa-twitter" aria-hidden="true"></i>
                    </a>
                    <a class="social_link_p" href="#">
-                       
+                       <i class="fa fa-linkedin" aria-hidden="true"></i>
                    </a>
                    <a class="social_link_g" href="#">
-                       
+                       <i class="fa fa-pinterest-p" aria-hidden="true"></i>
                    </a>
-
+                   <a class="social_link_in" href="#">
+                       <i class="fa fa-google-plus-official" aria-hidden="true"></i>
+                   </a>                   
                 </aside>
             </div>
         </div>
