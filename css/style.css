@@ -548,7 +548,27 @@ body {
   margin-left: 8px;
   width: 32px;
   height: 32px;
-  outline: 1px solid black;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  background-color: white;
+}
+.footer_right aside .social_link_f {
+  color: #b2b2b2;
+}
+.footer_right aside .social_link_tw {
+  color: #f7f7f8;
+  background-color: #f16d7f;
+}
+.footer_right aside .social_link_in {
+  color: #b2b2b2;
+  background-color: #e8e8e8;
+}
+.footer_right aside .social_link_p {
+  color: #b2b2b2;
+}
+.footer_right aside .social_link_g {
+  color: #b2b2b2;
 }
 /* подвал сайта */
 /* ^^^^^^^^^^^^ */
