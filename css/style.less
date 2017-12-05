@@ -6,7 +6,9 @@
 /*@color_gray_3: #f2f2f2;c4*/
 @color_gray_3: #898989;
 @color_gray_4: #6f6e6e;
+@color_singe-page: #f7f7f7;
 @color_black: #222;
+@color_black_2: #4d4d4d;
 @color_red_gray: #f8f3f4;
 @color_yellow: #e4af48;
 @img_slider: url(../img/slider-man.jpg);
@@ -1122,7 +1124,7 @@ body {
     justify-content: space-between;
     text-transform: uppercase;
 
-    h1 {
+    h2 {
         font-size: 24px;
         font-weight: 900;
         line-height: 0.83;
@@ -1525,3 +1527,199 @@ body {
 }
 /* страница product */
 /* ^^^^^^^^^^^^^^^^ */
+
+
+
+
+
+.single-slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 777px;
+    background-color: @color_singe-page;
+}
+
+.single-img {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 11px;
+    
+    img {
+        height: 724px;
+        width: 597px;
+    }
+}
+
+.single-next {
+    display: block;
+    height: 47px;
+    width: 47px;
+    background-color: @color_gray_2;
+    font-size: 24px;
+    line-height: 47px;
+    text-align: center;
+    color: white;
+}
+
+.single-next:hover {
+    color: @color_red;
+}
+
+.single-center {
+    width: 1141px;
+    display: flex;
+    align-items: center;
+}
+
+.single-data {
+    position: relative;
+    top: -86px;
+    /* margin-bottom: 120px; */
+    margin-bottom: 34px;
+    width: 100%;
+    padding-bottom: 122px;
+    outline: 1px solid @color_gray;
+    background-color: white;
+    z-index: 5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    h2 {
+        font-size: 12px;
+        font-weight: 900;
+        line-height: 14px;
+        color: @color_red;
+        margin-top: 73px;
+        margin-bottom: 15px;
+    }
+    
+    .collection {
+        width: 147px;
+        display: flex;
+        justify-content: space-between;
+        
+        a {
+            display: block;
+            width: 49px;
+            border-bottom: 1px solid @color_gray;
+        }
+    }
+
+    .active {
+        width: 63px;
+        border-bottom: 2px solid @color_red;
+    }
+    
+    h3 {
+        font-size: 18px;
+        font-weight: 900;
+        line-height: 18px;
+        color: @color_black;
+        margin-top: 18px;
+        margin-bottom: 67px;
+    }
+
+    > p {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.71;
+        color: @color_gray_3;
+    }
+    
+    .box-text {
+        width: 334px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    span {
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 1.71;
+        text-align: center;
+        color: @color_gray;
+        margin-top: 28px;
+        margin-bottom: 37px;
+        
+        span {
+            color: @color_black_2;
+        }
+    }
+    
+    .price {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 24px;
+        color: @color_red;
+    }
+
+    .container-form {
+        width: 642px;
+    }
+    
+    .container-form__bottom {
+        width: 537px;
+    }
+    
+    .line {
+        margin-top: 43px;
+        margin-bottom: 63px;
+        height: 1px;
+        border-bottom: 1px solid @color_gray;
+    }
+    
+    .white_button a {
+        display: block;
+        width: 537px;
+        height: 55px;
+    }
+}
+
+.single-choose {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    
+    div {
+        width: 144px;
+    }
+    
+    h4 {
+        text-align: left;
+        font-size: 14px;
+        font-weight: 900;
+        line-height: 1.71;
+        color: @color_black_2;
+        margin-bottom: 16px;
+    }
+
+    input {
+        padding-left: 15px;
+        height: 35px;
+        background-color: white;
+        border: solid 1px @color_gray;
+        font-size: 13px;
+        line-height: 1.85;
+        color: @color_gray_3;
+    }
+    
+    select {
+        width: 100%;
+        padding-left: 15px;
+        height: 39px;
+        background-color: white;
+        border: solid 1px @color_gray;
+        font-size: 13px;
+        line-height: 1.85;
+        color: @color_gray_3;
+    }
+        
+    input[type="number"] {
+        width: 100%;
+    }
+    
+}
