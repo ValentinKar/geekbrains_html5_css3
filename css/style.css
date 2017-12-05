@@ -9,8 +9,6 @@
 /* отступ ссылки внутри затемнения */
 /* отступ ссылки внутри затемнения */
 /* верх. отступ в верхнем слайдере под header-м */
-/* @price_min: 28px;  35-7 */
-/* @price_max: 57px;  64-7 */
 /*
 * {
     margin: 0;
@@ -1011,7 +1009,10 @@ body {
 .product_content {
   width: 846px;
 }
-.product_content .recicle {
+/* внутрение затемненные */
+/* маленькие кнопки */
+/* .recicle .like */
+.fetured .recicle {
   position: absolute;
   top: 144px;
   left: 70px;
@@ -1022,14 +1023,14 @@ body {
   text-align: center;
   display: none;
 }
-.product_content .fetured_item:hover .recicle {
+.fetured .fetured_item:hover .recicle {
   display: block;
 }
-.product_content .fetured_item .recicle:hover {
+.fetured .fetured_item .recicle:hover {
   font-size: 18px;
   /* padding-bottom: 9px; */
 }
-.product_content .like {
+.fetured .like {
   position: absolute;
   top: 144px;
   left: 137px;
@@ -1040,10 +1041,10 @@ body {
   text-align: center;
   display: none;
 }
-.product_content .fetured_item:hover .like {
+.fetured .fetured_item:hover .like {
   display: block;
 }
-.product_content .fetured_item .like:hover {
+.fetured .fetured_item .like:hover {
   font-size: 18px;
   /* padding-bottom: 9px; */
 }
@@ -1433,4 +1434,17 @@ body {
 }
 .single-choose input[type="number"] {
   width: 100%;
+}
+.single .fetured {
+  padding-bottom: 73px;
+}
+.single h3 {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 24px;
+  line-height: 0.83;
+  text-align: center;
+  color: #222222;
+  margin-bottom: 72px;
+  text-transform: uppercase;
 }
