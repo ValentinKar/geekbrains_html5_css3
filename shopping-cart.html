@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>single</title>
+    <title>shopping cart</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -227,7 +227,6 @@
                                         <a href="#">Sweaters/Knits</a>
                                     </li>
                                 </ul>
-
                             </div>
 
                             <div class="mega-menu__list">
@@ -251,7 +250,7 @@
                         </div>
                     </div>
                 </li>
-                <li><a href="shopping-cart.html">Women</a></li>
+                <li><a class="link_active" href="shopping-cart.html">Women</a></li>
                 <li><a href="#">Kids</a></li>
                 <li><a href="#">Accoseriese</a></li>
                 <li><a href="#">Featured</a></li> 
@@ -259,11 +258,11 @@
             </ul>
         </nav>
     </header>
-    
-    <main class="single">
+
+    <main class="shopping">
         <section class="product_top">
             <div class="container product_h">
-                <h2>New Arrivals </h2>
+                <h2>New Arrivals</h2>
                 <nav>
                     <ul>
                         <li>
@@ -282,176 +281,113 @@
             </div>
         </section>
         
-        <div class="single-slider">
-            <a class="single-next" href="#">
-                <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            </a>
-            <div class="single-img">
-                <img src="img/single-girl.jpg" alt="">
+        <div class="container table-shopping">
+            <div class="table-row table-row__head">
+                <div>Product Details</div>
+                <div>unite Price</div>
+                <div>Quantity</div>
+                <div>shipping</div>
+                <div>Subtotal</div>
+                <div>ACTION</div>
 
             </div>
-            <a class="single-next" href="#">
-                <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            </a>
+
+            <div class="table-row">
+                <figure class="table-details">
+                    <a href="#">
+                        <img src="img/Product/1.jpg" alt="куртка с капюшоном">
+                    </a>
+                    <figcaption>
+                        <p class="name">Mango  People  T-shirt</p>
+                        <p><span>Color:</span>&nbsp; Red</p>
+                        <p><span>Size:</span>&nbsp; Xll</p>
+                    </figcaption>
+                </figure>
+
+                <div>
+                    $150
+                </div>
+                <div>
+                    <input type="number" value="2" min="1" max="">
+                </div>
+                <div>
+                    FREE
+                </div>
+                <div>
+                    $300
+                </div>
+                <div>
+                    <a class="miss" href="">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <figure class="table-details">
+                    <a href="#">
+                        <img src="img/Product/2.jpg" alt="пальто">
+                    </a>
+                    <figcaption>
+                        <p class="name">Mango  People  T-shirt</p>
+                        <p><span>Color:</span>&nbsp; Red</p>
+                        <p><span>Size:</span>&nbsp; Xll</p>
+                    </figcaption>
+                </figure>
+
+                <div>
+                    $150
+                </div>
+                <div>
+                    <input type="number" value="2" min="1" max="">
+                </div>
+                <div>
+                    FREE
+                </div>
+                <div>
+                    $300
+                </div>
+                <div>
+                    <a class="miss" href="">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <figure class="table-details">
+                    <a href="#">
+                        <img src="img/Product/8.jpg" alt="куртка">
+                    </a>
+                    <figcaption>
+                        <p class="name">Mango  People  T-shirt</p>
+                        <p><span>Color:</span>&nbsp; Red</p>
+                        <p><span>Size:</span>&nbsp; Xll</p>
+                    </figcaption>
+                </figure>
+
+                <div>
+                    $150
+                </div>
+                <div>
+                    <input type="number" value="2" min="1" max="">
+                </div>
+                <div>
+                    FREE
+                </div>
+                <div>
+                    $300
+                </div>
+                <div>
+                    <a class="miss" href="">
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        
-        <section class="container single-center">
-            <form class="single-data" action="">
-                <h2>WOMEN COLLECTION</h2>
-                <div class="collection">
-                    <a href="#"></a>
-                    <a class="active" href="#"></a>
-                    <a href="#"></a>
-                </div>
-                <h3>Moschino Cheap And Chic</h3>
-                <p class="container-form">Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.</p>
-                <div class="box-text">
-                    <span>MATERIAL: <span>COTTON</span></span>
-                    <span>DESIGNER: <span>BINBURHAN</span></span>
-                </div>
-                <p class="price">$561</p>
-                <div class="container-form__bottom line"></div>
-                <div class="container-form__bottom single-choose">
-                    <div>
-                        <h4>CHOOSE COLOR</h4>
-                        <select name="color">
-                            <option value="">Red</option>
-                        </select>
-                    </div>
-                    <div>
-                        <h4>CHOOSE SIZE</h4>
-                        <select name="size">
-                            <option value="">XXL</option>
-                        </select>
-                    </div>
-                    <div>
-                        <h4>QUANTITY</h4>
-                        <input type="number" value="2" step="1" min="1" max="10000">
-                    </div>                    
-                </div>
-
-                <div class="white_button">
-                   <a href="#">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i> &nbsp;
-                    Add to Cart
-                   </a>
-                </div>
-            </form>
-        </section>
-        
-        <section class="container fetured">
-            <h3>you may like also</h3>
-            <div class="fetured_items">
-                <figure class="fetured_item">
-                    <a href="single-page.html" class="fetured_product">
-                        <img src="img/SinglePage/1.jpg" alt="">
-                        <p>BLAZE LEGGINGS</p>
-                        <span class="product_stars">
-                            <span class="img">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                        <p class="red">$52.00</p>
-                    </a>
-                   <a href="#" class="add_basket ">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                       Add to Cart
-                   </a>
-                   <a href="#" class="recicle">
-                       <i class="fa fa-retweet" aria-hidden="true"></i>
-                   </a>
-                   <a href="#" class="like">
-                       <i class="fa fa-heart-o" aria-hidden="true"></i>
-                   </a>
-                </figure>
-
-                <figure class="fetured_item">
-                    <a href="single-page.html" class="fetured_product">
-                        <img src="img/SinglePage/2.jpg" alt="">
-                        <p>ALEXA SWEATER</p>
-                        <span class="product_stars">
-                            <span class="img">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                        <p class="red">$52.00</p>
-                    </a>
-                   <a href="#" class="add_basket ">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                       Add to Cart
-                   </a>
-                   <a href="#" class="recicle">
-                       <i class="fa fa-retweet" aria-hidden="true"></i>
-                   </a>
-                   <a href="#" class="like">
-                       <i class="fa fa-heart-o" aria-hidden="true"></i>
-                   </a>
-                </figure>
-
-                <figure class="fetured_item">
-                    <a href="single-page.html" class="fetured_product">
-                        <img src="img/SinglePage/3.jpg" alt="">
-                        <p>AGNES TOP</p>
-                        <span class="product_stars">
-                            <span class="img">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                        <p class="red">$52.00</p>
-                    </a>
-                   <a href="#" class="add_basket ">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                       Add to Cart
-                   </a>
-                   <a href="#" class="recicle">
-                       <i class="fa fa-retweet" aria-hidden="true"></i>
-                   </a>
-                   <a href="#" class="like">
-                       <i class="fa fa-heart-o" aria-hidden="true"></i>
-                   </a>
-                </figure>
-
-                <figure class="fetured_item">
-                    <a href="single-page.html" class="fetured_product">
-                        <img src="img/SinglePage/4.jpg" alt="">
-                        <p>SYLVA SWEATER</p>
-                        <span class="product_stars">
-                            <span class="img">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                        <p class="red">$52.00</p>
-                    </a>
-                   <a href="#" class="add_basket ">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                       Add to Cart
-                   </a>
-                   <a href="#" class="recicle">
-                       <i class="fa fa-retweet" aria-hidden="true"></i>
-                   </a>
-                   <a href="#" class="like">
-                       <i class="fa fa-heart-o" aria-hidden="true"></i>
-                   </a>
-                </figure>
-            </div>
-        </section>
     </main>
+    
+    
     
     <footer>
         <div class="footer subscribe">

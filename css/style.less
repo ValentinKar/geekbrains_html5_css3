@@ -31,7 +31,7 @@
 @price_max_and: 64px;
 @price_min: @price_min_and - 7px;
 @price_max: @price_max_and - 7px;
-
+@shopping_table_first: 450px;
 
 /*
 * {
@@ -129,8 +129,16 @@ body {
         left: 3px;
     }
 }
+
+.miss {
+    font-size: 16px;
+    text-align: right;
+    color: @color_gray;
+}
 /* кнопки изменяют цвет */
 /* ^^^^^^^^^^^^^^^^^^^^ */
+
+
 
 /* vvvvvvv */
 /* header */
@@ -350,19 +358,6 @@ body {
         font-size: 12px;
         color: @color_red;
     }
-    
-    .miss {
-        margin-top: 38px;
-        margin-left: 52px;
-        width: 12px;
-        height: 12px;
-        border-radius: 6px;
-        background-color: @color_gray_2;
-        color: white;
-        line-height: 8px;
-        text-align: center;
-        text-decoration: none;
-    }
         
     li:last-child {
         border-bottom: none;
@@ -399,6 +394,11 @@ body {
 
         }
      }
+    
+    .miss {
+        margin-top: 38px;
+        margin-left: 52px;
+    }    
 }
 
 .nav_flex {
@@ -1092,9 +1092,9 @@ body {
 /* титульная страница */
 /* ^^^^^^^^^^^^^^^^ */
 
+/* vvvvvvvvvvvvvvvvv */
 /* страница product */
 /* верхний заголовок */
-/* vvvvvvvvvvvvvvvvv */
 .product_top {
     display: flex;
     align-items: center;
@@ -1517,9 +1517,8 @@ body {
 /* страница product */
 /* ^^^^^^^^^^^^^^^^ */
 
-
-
-
+/* vvvvvvvvvvvvvvvvv */
+/* страница single-page */
 .single-slider {
     display: flex;
     justify-content: space-between;
@@ -1528,6 +1527,7 @@ body {
     background-color: @color_singe-page;
 }
 
+/* рисунок на слайдере */
 .single-img {
     height: 100%;
     display: flex;
@@ -1540,6 +1540,7 @@ body {
     }
 }
 
+/* стрелки на слайдере */
 .single-next {
     display: block;
     height: 47px;
@@ -1561,6 +1562,8 @@ body {
     align-items: center;
 }
 
+/* форма добавления */
+/* товара в корзину */
 .single-data {
     position: relative;
     top: -86px;
@@ -1667,6 +1670,8 @@ body {
     }
 }
 
+/* три поля выбота */
+/* цвет, размер, кол-во */
 .single-choose {
     display: flex;
     justify-content: space-between;
@@ -1709,9 +1714,10 @@ body {
     input[type="number"] {
         width: 100%;
     }
-    
 }
 
+/* нижний блок */
+/* you may like also */
 .single {
     .fetured {
         padding-bottom: 73px;
@@ -1726,5 +1732,109 @@ body {
         color: @color_black;
         margin-bottom: 72px;
         text-transform: uppercase;
+    }
+}
+/* страница single-page */
+/* ^^^^^^^^^^^^^^^^ */
+
+/* vvvvvvvvvvvvvvvvv */
+/* страница shopping-cart */
+.table-shopping {
+    padding: 90px 0 63px 0;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid @color_gray;
+    padding: 25px 0 25px 0;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.54;
+    text-align: left;
+    color: @color_gray_3;
+    
+    div {
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    div:nth-child(2) {
+        width: 150px;
+    }
+    
+    div:last-child {
+    width: 70px;
+    }
+    
+    input[type="number"] {
+        width: 34px;
+        height: 30px;
+        border: solid 1px @color_gray;
+        padding-left: 20px;
+        color: @color_gray_3;
+        font-weight: 700;
+    }
+}
+
+.table-row__head {
+    padding: 0 0 20px 0;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 13px;
+    letter-spacing: -0.2px;
+    color: @color_black;
+    text-transform: uppercase;
+    
+    div:first-child {
+        width: @shopping_table_first;
+        justify-content: flex-start;
+    }
+}
+
+.table-details {
+    width: @shopping_table_first;
+    height: 115px;
+    
+    img, 
+    a {
+        height: 115px;
+        width: 100px;
+    }
+    
+    a {
+        float: left;
+    }
+    
+    figcaption {
+        float: right;
+        width: @shopping_table_first - 121px;
+    }
+    
+    p {
+        font-size: 13px;
+        line-height: 1.54;
+        text-align: left;
+        font-weight: 300;
+        color: @color_gray_3;
+    }
+    
+    span {
+        font-weight: 700;
+        color: @color_gray_4;
+    }
+    
+    .name {
+        margin: 10px 0 30px 0;
+        text-transform: uppercase;
+        font-weight: 900;
+        color: @color_black;
+    }
+    
+    a:hover {
+        box-shadow: 3px -3px 4px 0 @color_gray;
+
     }
 }
