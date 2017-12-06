@@ -128,6 +128,31 @@ body {
         top: 3px;
         left: 3px;
     }
+    
+    input[type="submit"] {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        border: solid 1px @color_gray;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 50px;
+        text-transform: uppercase;
+        text-align: center;
+        color: @color_black;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: @color_gray;
+        color: white;
+    }
+    
+    input[type="submit"]:focus {
+        outline: none;
+        position: relative;
+        top: 3px;
+        left: 3px;
+    }
 }
 
 .miss {
@@ -1868,30 +1893,26 @@ body {
         text-transform: uppercase;
     }
     
-    input {
+    input[type="text"], 
+    input[type="number"], 
+    input[list="city"] {
         width: 315px;
         height: 45px;
         margin-bottom: 20px;
         border: solid 1px @color_gray;
         padding: 0 18px;
+        
+        :focus {
+            outline: none;
+            font-size: 18px;
+        }
     }
     
-    input:focus {
-        outline: none;
-        font-size: 18px;
-    }
-    
-    a {
+    input[type="submit"] {
         margin-top: 5px;
-        height: 35px;
         padding-left: 15px;
         padding-right: 15px;
-        display: inline-block;
         line-height: 35px;
-        font-size: 11px;
-        font-weight: 900;
-        text-align: center;
-        text-transform: uppercase;
     }
     
     p {
@@ -1913,6 +1934,8 @@ body {
     }
 
     a {
+        text-transform: uppercase;
+        text-align: center;
         height: 50px;
         width: 100%;
         padding: 0;
@@ -1937,5 +1960,7 @@ body {
     span {
         color: @color_red;
     }
-
 }
+/* страница shopping-cart */
+/* ^^^^^^^^^^^^^^^^^ */
+
