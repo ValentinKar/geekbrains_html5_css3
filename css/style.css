@@ -88,6 +88,33 @@ body {
   top: 3px;
   left: 3px;
 }
+.black_button input[type="submit"] {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  border: solid 1px #e8e8e8;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #222222;
+}
+.black_button input[type="submit"]:hover {
+  background-color: #e8e8e8;
+  color: white;
+}
+.black_button input[type="submit"]:focus {
+  outline: none;
+  position: relative;
+  top: 3px;
+  left: 3px;
+}
+.miss {
+  font-size: 16px;
+  text-align: right;
+  color: #e8e8e8;
+}
 /* кнопки изменяют цвет */
 /* ^^^^^^^^^^^^^^^^^^^^ */
 /* vvvvvvv */
@@ -281,18 +308,6 @@ body {
   font-size: 12px;
   color: #ef5b70;
 }
-.full_basket .miss {
-  margin-top: 38px;
-  margin-left: 52px;
-  width: 12px;
-  height: 12px;
-  border-radius: 6px;
-  background-color: #e6e6e6;
-  color: white;
-  line-height: 8px;
-  text-align: center;
-  text-decoration: none;
-}
 .full_basket li:last-child {
   border-bottom: none;
   display: flex;
@@ -323,6 +338,10 @@ body {
   line-height: 16px;
   font-weight: 900;
   color: #222222;
+}
+.full_basket .miss {
+  margin-top: 38px;
+  margin-left: 52px;
 }
 .nav_flex {
   display: flex;
@@ -913,9 +932,9 @@ body {
 /* раздел FOR WOMAN */
 /* титульная страница */
 /* ^^^^^^^^^^^^^^^^ */
+/* vvvvvvvvvvvvvvvvv */
 /* страница product */
 /* верхний заголовок */
-/* vvvvvvvvvvvvvvvvv */
 .product_top {
   display: flex;
   align-items: center;
@@ -1271,6 +1290,8 @@ body {
 }
 /* страница product */
 /* ^^^^^^^^^^^^^^^^ */
+/* vvvvvvvvvvvvvvvvv */
+/* страница single-page */
 .single-slider {
   display: flex;
   justify-content: space-between;
@@ -1278,6 +1299,7 @@ body {
   height: 777px;
   background-color: #f7f7f7;
 }
+/* рисунок на слайдере */
 .single-img {
   height: 100%;
   display: flex;
@@ -1288,6 +1310,7 @@ body {
   height: 724px;
   width: 597px;
 }
+/* стрелки на слайдере */
 .single-next {
   display: block;
   height: 47px;
@@ -1306,6 +1329,8 @@ body {
   display: flex;
   align-items: center;
 }
+/* форма добавления */
+/* товара в корзину */
 .single-data {
   position: relative;
   top: -86px;
@@ -1397,6 +1422,8 @@ body {
   width: 537px;
   height: 55px;
 }
+/* три поля выбота */
+/* цвет, размер, кол-во */
 .single-choose {
   display: flex;
   justify-content: space-between;
@@ -1435,6 +1462,8 @@ body {
 .single-choose input[type="number"] {
   width: 100%;
 }
+/* нижний блок */
+/* you may like also */
 .single .fetured {
   padding-bottom: 73px;
 }
@@ -1448,3 +1477,177 @@ body {
   margin-bottom: 72px;
   text-transform: uppercase;
 }
+/* страница single-page */
+/* ^^^^^^^^^^^^^^^^ */
+/* vvvvvvvvvvvvvvvvv */
+/* страница shopping-cart */
+.table-shopping {
+  padding: 90px 0 63px 0;
+}
+.table-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 25px 0 25px 0;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.54;
+  text-align: left;
+  color: #898989;
+}
+.table-row div {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.table-row div:nth-child(2) {
+  width: 150px;
+}
+.table-row div:last-child {
+  width: 70px;
+}
+.table-row input[type="number"] {
+  width: 34px;
+  height: 30px;
+  border: solid 1px #e8e8e8;
+  padding-left: 20px;
+  color: #898989;
+  font-weight: 700;
+}
+.table-row__head {
+  padding: 0 0 20px 0;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 13px;
+  letter-spacing: -0.2px;
+  color: #222222;
+  text-transform: uppercase;
+}
+.table-row__head div:first-child {
+  width: 450px;
+  justify-content: flex-start;
+}
+.table-details {
+  width: 450px;
+  height: 115px;
+}
+.table-details img,
+.table-details a {
+  height: 115px;
+  width: 100px;
+}
+.table-details a {
+  float: left;
+}
+.table-details figcaption {
+  float: right;
+  width: 329px;
+}
+.table-details p {
+  font-size: 13px;
+  line-height: 1.54;
+  text-align: left;
+  font-weight: 300;
+  color: #898989;
+}
+.table-details span {
+  font-weight: 700;
+  color: #6f6e6e;
+}
+.table-details .name {
+  margin: 10px 0 30px 0;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #222222;
+}
+.table-details a:hover {
+  box-shadow: 3px -3px 4px 0 #e8e8e8;
+}
+.table-shopping__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 44px;
+}
+.table-shopping__bottom a {
+  text-transform: uppercase;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.shopping-form {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 80px;
+}
+.shopping-form fieldset {
+  flex: 1;
+}
+.shopping-form h2 {
+  font-size: 16px;
+  font-weight: 900;
+  color: #222222;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+.shopping-form input[type="text"],
+.shopping-form input[type="number"],
+.shopping-form input[list="city"] {
+  width: 315px;
+  height: 45px;
+  margin-bottom: 20px;
+  border: solid 1px #e8e8e8;
+  padding: 0 18px;
+}
+.shopping-form input[type="text"] :focus,
+.shopping-form input[type="number"] :focus,
+.shopping-form input[list="city"] :focus {
+  outline: none;
+  font-size: 18px;
+}
+.shopping-form input[type="submit"] {
+  margin-top: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 35px;
+}
+.shopping-form p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #222222;
+  margin-bottom: 24px;
+}
+.shopping-total {
+  padding: 40px 44px 42px 44px;
+  text-align: right;
+  background-color: #f8f3f4;
+}
+.shopping-total hr {
+  border: solid 1px #e6e6e6;
+  margin: 22px 0 17px 0;
+}
+.shopping-total a {
+  text-transform: uppercase;
+  text-align: center;
+  height: 50px;
+  width: 100%;
+  padding: 0;
+  font-size: 16px;
+  line-height: 50px;
+  font-weight: 700;
+}
+.shopping-total p {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #6f6e6e;
+}
+.shopping-total .grand {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222222;
+}
+.shopping-total span {
+  color: #ef5b70;
+}
+/* страница shopping-cart */
+/* ^^^^^^^^^^^^^^^^^ */

@@ -31,7 +31,7 @@
 @price_max_and: 64px;
 @price_min: @price_min_and - 7px;
 @price_max: @price_max_and - 7px;
-
+@shopping_table_first: 450px;
 
 /*
 * {
@@ -128,9 +128,42 @@ body {
         top: 3px;
         left: 3px;
     }
+    
+    input[type="submit"] {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        border: solid 1px @color_gray;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 50px;
+        text-transform: uppercase;
+        text-align: center;
+        color: @color_black;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: @color_gray;
+        color: white;
+    }
+    
+    input[type="submit"]:focus {
+        outline: none;
+        position: relative;
+        top: 3px;
+        left: 3px;
+    }
+}
+
+.miss {
+    font-size: 16px;
+    text-align: right;
+    color: @color_gray;
 }
 /* кнопки изменяют цвет */
 /* ^^^^^^^^^^^^^^^^^^^^ */
+
+
 
 /* vvvvvvv */
 /* header */
@@ -350,19 +383,6 @@ body {
         font-size: 12px;
         color: @color_red;
     }
-    
-    .miss {
-        margin-top: 38px;
-        margin-left: 52px;
-        width: 12px;
-        height: 12px;
-        border-radius: 6px;
-        background-color: @color_gray_2;
-        color: white;
-        line-height: 8px;
-        text-align: center;
-        text-decoration: none;
-    }
         
     li:last-child {
         border-bottom: none;
@@ -399,6 +419,11 @@ body {
 
         }
      }
+    
+    .miss {
+        margin-top: 38px;
+        margin-left: 52px;
+    }    
 }
 
 .nav_flex {
@@ -1092,9 +1117,9 @@ body {
 /* титульная страница */
 /* ^^^^^^^^^^^^^^^^ */
 
+/* vvvvvvvvvvvvvvvvv */
 /* страница product */
 /* верхний заголовок */
-/* vvvvvvvvvvvvvvvvv */
 .product_top {
     display: flex;
     align-items: center;
@@ -1517,9 +1542,8 @@ body {
 /* страница product */
 /* ^^^^^^^^^^^^^^^^ */
 
-
-
-
+/* vvvvvvvvvvvvvvvvv */
+/* страница single-page */
 .single-slider {
     display: flex;
     justify-content: space-between;
@@ -1528,6 +1552,7 @@ body {
     background-color: @color_singe-page;
 }
 
+/* рисунок на слайдере */
 .single-img {
     height: 100%;
     display: flex;
@@ -1540,6 +1565,7 @@ body {
     }
 }
 
+/* стрелки на слайдере */
 .single-next {
     display: block;
     height: 47px;
@@ -1561,6 +1587,8 @@ body {
     align-items: center;
 }
 
+/* форма добавления */
+/* товара в корзину */
 .single-data {
     position: relative;
     top: -86px;
@@ -1667,6 +1695,8 @@ body {
     }
 }
 
+/* три поля выбота */
+/* цвет, размер, кол-во */
 .single-choose {
     display: flex;
     justify-content: space-between;
@@ -1709,9 +1739,10 @@ body {
     input[type="number"] {
         width: 100%;
     }
-    
 }
 
+/* нижний блок */
+/* you may like also */
 .single {
     .fetured {
         padding-bottom: 73px;
@@ -1728,3 +1759,208 @@ body {
         text-transform: uppercase;
     }
 }
+/* страница single-page */
+/* ^^^^^^^^^^^^^^^^ */
+
+/* vvvvvvvvvvvvvvvvv */
+/* страница shopping-cart */
+.table-shopping {
+    padding: 90px 0 63px 0;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid @color_gray;
+    padding: 25px 0 25px 0;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.54;
+    text-align: left;
+    color: @color_gray_3;
+    
+    div {
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    div:nth-child(2) {
+        width: 150px;
+    }
+    
+    div:last-child {
+        width: 70px;
+    }
+    
+    input[type="number"] {
+        width: 34px;
+        height: 30px;
+        border: solid 1px @color_gray;
+        padding-left: 20px;
+        color: @color_gray_3;
+        font-weight: 700;
+    }
+}
+
+.table-row__head {
+    padding: 0 0 20px 0;
+    font-size: 13px;
+    font-weight: 900;
+    line-height: 13px;
+    letter-spacing: -0.2px;
+    color: @color_black;
+    text-transform: uppercase;
+    
+    div:first-child {
+        width: @shopping_table_first;
+        justify-content: flex-start;
+    }
+}
+
+.table-details {
+    width: @shopping_table_first;
+    height: 115px;
+    
+    img, 
+    a {
+        height: 115px;
+        width: 100px;
+    }
+    
+    a {
+        float: left;
+    }
+    
+    figcaption {
+        float: right;
+        width: @shopping_table_first - 121px;
+    }
+    
+    p {
+        font-size: 13px;
+        line-height: 1.54;
+        text-align: left;
+        font-weight: 300;
+        color: @color_gray_3;
+    }
+    
+    span {
+        font-weight: 700;
+        color: @color_gray_4;
+    }
+    
+    .name {
+        margin: 10px 0 30px 0;
+        text-transform: uppercase;
+        font-weight: 900;
+        color: @color_black;
+    }
+    
+    a:hover {
+        box-shadow: 3px -3px 4px 0 @color_gray;
+
+    }
+}
+
+.table-shopping__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 44px;
+    
+    a {
+        text-transform: uppercase;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+.shopping-form {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 80px;
+    
+    fieldset {
+        flex: 1;
+    }
+    
+    h2 {
+        font-size: 16px;
+        font-weight: 900;
+        color: @color_black;
+        margin-bottom: 22px;
+        text-transform: uppercase;
+    }
+    
+    input[type="text"], 
+    input[type="number"], 
+    input[list="city"] {
+        width: 315px;
+        height: 45px;
+        margin-bottom: 20px;
+        border: solid 1px @color_gray;
+        padding: 0 18px;
+        
+        :focus {
+            outline: none;
+            font-size: 18px;
+        }
+    }
+    
+    input[type="submit"] {
+        margin-top: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        line-height: 35px;
+    }
+    
+    p {
+        font-size: 14px;
+        font-weight: 300;
+        color: @color_black;
+        margin-bottom: 24px;
+    }
+}
+
+.shopping-total {
+    padding: 40px 44px 42px 44px;
+    text-align: right;
+    background-color: @color_red_gray;
+    
+    hr {
+        border: solid 1px @color_gray_2;
+        margin: 22px 0 17px 0;
+    }
+
+    a {
+        text-transform: uppercase;
+        text-align: center;
+        height: 50px;
+        width: 100%;
+        padding: 0;
+        font-size: 16px;
+        line-height: 50px;
+        font-weight: 700;
+    }
+    
+    p {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: @color_gray_4;
+    }
+    
+    .grand {
+        font-size: 16px;
+        font-weight: 700;
+        color: @color_black;
+    }
+    
+    span {
+        color: @color_red;
+    }
+}
+/* страница shopping-cart */
+/* ^^^^^^^^^^^^^^^^^ */
+
