@@ -1542,3 +1542,88 @@ body {
 .table-details a:hover {
   box-shadow: 3px -3px 4px 0 #e8e8e8;
 }
+.table-shopping__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 44px;
+}
+.table-shopping__bottom a {
+  text-transform: uppercase;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.shopping-form {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 80px;
+}
+.shopping-form fieldset {
+  flex: 1;
+}
+.shopping-form h2 {
+  font-size: 16px;
+  font-weight: 900;
+  color: #222222;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+}
+.shopping-form input {
+  width: 315px;
+  height: 45px;
+  margin-bottom: 20px;
+  border: solid 1px #e8e8e8;
+  padding: 0 18px;
+}
+.shopping-form input:focus {
+  outline: none;
+  font-size: 18px;
+}
+.shopping-form a {
+  margin-top: 5px;
+  height: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: inline-block;
+  line-height: 35px;
+  font-size: 11px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+.shopping-form p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #222222;
+  margin-bottom: 24px;
+}
+.shopping-total {
+  padding: 40px 44px 42px 44px;
+  text-align: right;
+  background-color: #f8f3f4;
+}
+.shopping-total hr {
+  border: solid 1px #e6e6e6;
+  margin: 22px 0 17px 0;
+}
+.shopping-total a {
+  height: 50px;
+  width: 100%;
+  padding: 0;
+  font-size: 16px;
+  line-height: 50px;
+  font-weight: 700;
+}
+.shopping-total p {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #6f6e6e;
+}
+.shopping-total .grand {
+  font-size: 16px;
+  font-weight: 700;
+  color: #222222;
+}
+.shopping-total span {
+  color: #ef5b70;
+}

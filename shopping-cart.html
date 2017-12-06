@@ -289,7 +289,6 @@
                 <div>shipping</div>
                 <div>Subtotal</div>
                 <div>ACTION</div>
-
             </div>
 
             <div class="table-row">
@@ -308,7 +307,7 @@
                     $150
                 </div>
                 <div>
-                    <input type="number" value="2" min="1" max="">
+                    <input type="number" value="2" min="1" max="10000">
                 </div>
                 <div>
                     FREE
@@ -339,7 +338,7 @@
                     $150
                 </div>
                 <div>
-                    <input type="number" value="2" min="1" max="">
+                    <input type="number" value="2" min="1" max="10000">
                 </div>
                 <div>
                     FREE
@@ -370,7 +369,7 @@
                     $150
                 </div>
                 <div>
-                    <input type="number" value="2" min="1" max="">
+                    <input type="number" value="2" min="1" max="10000">
                 </div>
                 <div>
                     FREE
@@ -384,11 +383,57 @@
                     </a>
                 </div>
             </div>
+            
+            <div class="table-shopping__bottom">
+                <div class="black_button">
+                    <a href="#">
+                        cLEAR SHOPPING CART
+                    </a>
+                </div>
+                <div class="black_button">
+                    <a href="#">
+                        cONTINUE sHOPPING
+                    </a>
+                </div>
+            </div>
         </div>
+        
+        <form class="container shopping-form">
+            <fieldset>
+                <h2>Shipping Adress</h2>
+                <input list="city" placeholder="Bangladesh">
+                <datalist id="city">
+                    <option label="Бангладеш" value="Bangladesh"></option>
+                </datalist>
+                <input type="text" placeholder="State" pattern="^[0-9a-zA-Z\s]+$" title="eng + numb">
+                <input type="number" placeholder="Postcode / Zip">
+                <div class="black_button">
+                    <a href="#">get a quote</a>
+                </div>
+            </fieldset>
+            <fieldset>
+                <h2>coupon  discount</h2>
+                <p>Enter your coupon code if you have one</p>
+                <input type="text" placeholder="State" pattern="^[0-9a-zA-Z\s]+$" title="eng + numb">
+                <div class="black_button">
+                    <a href="#">Apply coupon</a>
+                </div>
+            </fieldset>
+            <fieldset>
+                <div class="shopping-total">
+                    <p>Sub total &nbsp;&nbsp;&nbsp; $900</p>         
+                    <p class="grand">
+                        GRAND TOTAL &nbsp;&nbsp;&nbsp; <span>$900</span>
+                    </p>
+                    <hr>
+                    <div class="red_button">
+                        <a href="#">proceed to checkout</a>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
     </main>
-    
-    
-    
+
     <footer>
         <div class="footer subscribe">
             <div class="sub_container">

@@ -1766,7 +1766,7 @@ body {
     }
     
     div:last-child {
-    width: 70px;
+        width: 70px;
     }
     
     input[type="number"] {
@@ -1837,4 +1837,105 @@ body {
         box-shadow: 3px -3px 4px 0 @color_gray;
 
     }
+}
+
+.table-shopping__bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 44px;
+    
+    a {
+        text-transform: uppercase;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+.shopping-form {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 80px;
+    
+    fieldset {
+        flex: 1;
+    }
+    
+    h2 {
+        font-size: 16px;
+        font-weight: 900;
+        color: @color_black;
+        margin-bottom: 22px;
+        text-transform: uppercase;
+    }
+    
+    input {
+        width: 315px;
+        height: 45px;
+        margin-bottom: 20px;
+        border: solid 1px @color_gray;
+        padding: 0 18px;
+    }
+    
+    input:focus {
+        outline: none;
+        font-size: 18px;
+    }
+    
+    a {
+        margin-top: 5px;
+        height: 35px;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: inline-block;
+        line-height: 35px;
+        font-size: 11px;
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    
+    p {
+        font-size: 14px;
+        font-weight: 300;
+        color: @color_black;
+        margin-bottom: 24px;
+    }
+}
+
+.shopping-total {
+    padding: 40px 44px 42px 44px;
+    text-align: right;
+    background-color: @color_red_gray;
+    
+    hr {
+        border: solid 1px @color_gray_2;
+        margin: 22px 0 17px 0;
+    }
+
+    a {
+        height: 50px;
+        width: 100%;
+        padding: 0;
+        font-size: 16px;
+        line-height: 50px;
+        font-weight: 700;
+    }
+    
+    p {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: @color_gray_4;
+    }
+    
+    .grand {
+        font-size: 16px;
+        font-weight: 700;
+        color: @color_black;
+    }
+    
+    span {
+        color: @color_red;
+    }
+
 }
