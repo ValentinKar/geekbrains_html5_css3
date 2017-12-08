@@ -46,8 +46,8 @@ body {
 }
 
 .container {
-    width: 1142px;
     margin: 0 auto;
+    width: 1142px;
 }
 
 /* vvvvvvvvvvvvvvvvvvvv */
@@ -55,26 +55,26 @@ body {
 /* красная кнопка светлеет */
 .red_button {
     a {
-        display: block;
         background-color: @color_red;
+        color: white;
+        display: block;
         font-size: 16px;
         font-weight: 900;
-        line-height: 48px;
         letter-spacing: 0.4px;
-        color: white;
+        line-height: 48px;
         text-decoration: none;
     }
     
     a:hover {
         background-color: white;
-        outline: 1px solid @color_red;
         color: @color_red;
+        outline: 1px solid @color_red;
     }
     
     a:active {
+        left: 3px;
         position: relative;
         top: 3px;
-        left: 3px;
     }
 }
 
@@ -82,25 +82,25 @@ body {
 /* краснеет */
 .white_button {
     a {
+        color: @color_red;
         display: block;
-        line-height: 50px;
         font-size: 14px;
         font-weight: 900;
-        color: @color_red;
+        line-height: 50px;
         outline: 1px solid @color_red;
         text-decoration: none;
     }
     
     a:hover {
         background-color: @color_red;
-        outline: none;
         color: white;
+        outline: none;
     }
     
     a:active {
+        left: 3px;
         position: relative;
         top: 3px;
-        left: 3px;
     }
 }
 
@@ -108,38 +108,38 @@ body {
 /* темнеет */
 .black_button {
     a {
+        color: @color_black;
         display: block;
-        line-height: 50px;
         font-size: 14px;
         font-weight: 900;
-        color: @color_black;
+        line-height: 50px;
         outline: 1px solid @color_gray;
         text-decoration: none;
     }
     
     a:hover {
         background-color: @color_gray;
-        outline: none;
         color: white;
+        outline: none;
     }
     
     a:active {
+        left: 3px;
         position: relative;
         top: 3px;
-        left: 3px;
     }
     
     input[type="submit"] {
         background-color: white;
-        margin: 0;
-        padding: 0;
         border: solid 1px @color_gray;
+        color: @color_black;
         font-size: 11px;
         font-weight: 700;
         line-height: 50px;
-        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
         text-align: center;
-        color: @color_black;
+        text-transform: uppercase;
     }
     
     input[type="submit"]:hover {
@@ -148,17 +148,17 @@ body {
     }
     
     input[type="submit"]:focus {
+        left: 3px;
         outline: none;
         position: relative;
         top: 3px;
-        left: 3px;
     }
 }
 
 .miss {
+    color: @color_gray;
     font-size: 16px;
     text-align: right;
-    color: @color_gray;
 }
 /* кнопки изменяют цвет */
 /* ^^^^^^^^^^^^^^^^^^^^ */
@@ -168,33 +168,33 @@ body {
 /* vvvvvvv */
 /* header */
 .header {
-    height: 100px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
     border: 1px solid #ececec;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
+    height: 100px;
 }
 
 .logo {
-  width: 59px;
   height: 51px;
+  width: 59px;
 }
 
 .header_top {
-    display: flex;
     align-items: center;
+    display: flex;
     height: 100%;
     
     p {
+        color: @color_black;
         font-size: 27px;
         font-weight: 300;
-        line-height: 1.19;
         letter-spacing: 0.7px;
-        color: @color_black;
+        line-height: 1.19;
         margin-left: 37px;
     }
 
     span {
-        font-weight: 900;
         color: @color_red;
+        font-weight: 900;
     }
 }
 
@@ -1766,6 +1766,18 @@ body {
 /* страница shopping-cart */
 .table-shopping {
     padding: 90px 0 63px 0;
+    
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 44px;
+
+        a {
+            text-transform: uppercase;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
 }
 
 .table-row {
@@ -1802,20 +1814,19 @@ body {
         color: @color_gray_3;
         font-weight: 700;
     }
-}
+    &__head {
+        padding: 0 0 20px 0;
+        font-size: 13px;
+        font-weight: 900;
+        line-height: 13px;
+        letter-spacing: -0.2px;
+        color: @color_black;
+        text-transform: uppercase;
 
-.table-row__head {
-    padding: 0 0 20px 0;
-    font-size: 13px;
-    font-weight: 900;
-    line-height: 13px;
-    letter-spacing: -0.2px;
-    color: @color_black;
-    text-transform: uppercase;
-    
-    div:first-child {
-        width: @shopping_table_first;
-        justify-content: flex-start;
+        div:first-child {
+            width: @shopping_table_first;
+            justify-content: flex-start;
+        }
     }
 }
 
@@ -1860,19 +1871,6 @@ body {
     
     a:hover {
         box-shadow: 3px -3px 4px 0 @color_gray;
-
-    }
-}
-
-.table-shopping__bottom {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 44px;
-    
-    a {
-        text-transform: uppercase;
-        padding-left: 50px;
-        padding-right: 50px;
     }
 }
 
@@ -1901,11 +1899,13 @@ body {
         margin-bottom: 20px;
         border: solid 1px @color_gray;
         padding: 0 18px;
-        
-        :focus {
+    }
+    
+    input[type="text"]:focus, 
+    input[type="number"]:focus, 
+    input[list="city"]:focus {
             outline: none;
             font-size: 18px;
-        }
     }
     
     input[type="submit"] {
@@ -1964,3 +1964,67 @@ body {
 /* страница shopping-cart */
 /* ^^^^^^^^^^^^^^^^^ */
 
+
+
+
+
+.checkout-menu {
+    padding: 25px 0 93px 0;
+    
+    &__details summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    &__details summary {
+        color: @color_black;
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 64px;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    &__details summary:focus {
+        outline: none;
+    }
+
+    &__details div {
+        padding-bottom: 79px;
+    }
+    
+    hr {
+        border: solid 1px @color_gray;
+    }
+}
+
+.checkout-register {
+    display: flex;
+    padding-left: 35px;
+    
+    p {
+        font-size: 13px;
+        line-height: 13px;
+        color: @color_black;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    
+    span {
+        display: block;
+        font-size: 13px;
+        line-height: 13px;
+        color: @color_gray_3;
+    }
+
+    label {
+        display: block;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 900;
+        color: @color_black;
+    }
+    input[type="radio"] {
+        background-color: white;
+        border: solid 2px black;
+    }
+}
