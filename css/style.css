@@ -1651,8 +1651,10 @@ body {
 }
 /* страница shopping-cart */
 /* ^^^^^^^^^^^^^^^^^ */
+/* vvvvvvvvvvvvvvvvv */
+/* страница checkout */
 .checkout-menu {
-  padding: 25px 0 93px 0;
+  padding: 25px 0 79px 0;
 }
 .checkout-menu__details summary::-webkit-details-marker {
   display: none;
@@ -1668,19 +1670,71 @@ body {
 .checkout-menu__details summary:focus {
   outline: none;
 }
-.checkout-menu__details div {
-  padding-bottom: 79px;
-}
 .checkout-menu hr {
   border: solid 1px #e8e8e8;
 }
 .checkout-register {
   display: flex;
-  padding-left: 35px;
+  justify-content: space-between;
+  padding: 0 167px 79px 35px;
+  /*
+    .radio {
+        vertical-align: top;
+        width: 17px;
+        height: 17px;
+        margin: 0 1px 0 0;
+    }
+
+    .radio + label {
+        cursor: pointer;
+    }
+
+    .radio:not(checked) {
+        position: absolute;
+        opacity: 0;
+    }
+
+    .radio:not(checked) + label {
+        position: relative;
+        padding: 0 0 0 35px;
+    }
+
+    .radio:not(checked) + label:before {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        border: 1px solid @color_black;
+        border-radius: 50%;
+        background: white;
+    }
+
+    .radio:not(checked) + label:after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 3px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: @color_black;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .5);
+        opacity: 0;
+        transition: all .2s;
+    }
+
+    .radio:checked + label:after {
+        opacity: 1;
+    }
+    */
 }
 .checkout-register p {
   font-size: 13px;
   line-height: 13px;
+  margin-top: 13px;
+  margin-bottom: 15px;
   color: #222222;
   font-weight: 900;
   text-transform: uppercase;
@@ -1690,6 +1744,7 @@ body {
   font-size: 13px;
   line-height: 13px;
   color: #898989;
+  margin-bottom: 30px;
 }
 .checkout-register label {
   display: block;
@@ -1697,8 +1752,70 @@ body {
   font-size: 12px;
   font-weight: 900;
   color: #222222;
+  margin-bottom: 15px;
 }
 .checkout-register input[type="radio"] {
-  background-color: white;
+  background: white;
   border: solid 2px black;
 }
+.checkout-register input[type="submit"] {
+  width: 180px;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  float: left;
+}
+.checkout-register .fast {
+  margin-bottom: 15px;
+}
+.checkout-register .register {
+  margin-bottom: 33px;
+}
+.checkout-register .red {
+  display: inline;
+  color: #ef5b70;
+  font-size: 13px;
+  line-height: 1.54;
+  text-transform: none;
+  font-weight: 400;
+}
+.checkout-register .input {
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 20px;
+  margin-bottom: 14px;
+}
+.checkout-register input[type="email"],
+.checkout-register input[type="password"] {
+  width: 330px;
+  height: 45px;
+  border: solid 1px #e8e8e8;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.checkout-register input[type="email"]:focus {
+  outline: none;
+}
+.checkout-register input[type="password"]:focus {
+  outline: none;
+}
+.checkout-register .log {
+  margin-bottom: 0;
+}
+.checkout-register form {
+  position: relative;
+}
+.checkout-register .forgot {
+  position: absolute;
+  bottom: 18px;
+  right: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #222222;
+  text-decoration: none;
+}
+.checkout-register .forgot:hover {
+  text-decoration: underline;
+}
+/* страница checkout */
+/* ^^^^^^^^^^^^^^^^^ */

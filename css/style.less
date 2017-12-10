@@ -1814,6 +1814,7 @@ body {
         color: @color_gray_3;
         font-weight: 700;
     }
+    
     &__head {
         padding: 0 0 20px 0;
         font-size: 13px;
@@ -1964,12 +1965,10 @@ body {
 /* страница shopping-cart */
 /* ^^^^^^^^^^^^^^^^^ */
 
-
-
-
-
+/* vvvvvvvvvvvvvvvvv */
+/* страница checkout */
 .checkout-menu {
-    padding: 25px 0 93px 0;
+    padding: 25px 0 79px 0;
     
     &__details summary::-webkit-details-marker {
         display: none;
@@ -1987,10 +1986,6 @@ body {
     &__details summary:focus {
         outline: none;
     }
-
-    &__details div {
-        padding-bottom: 79px;
-    }
     
     hr {
         border: solid 1px @color_gray;
@@ -1999,11 +1994,14 @@ body {
 
 .checkout-register {
     display: flex;
-    padding-left: 35px;
+    justify-content: space-between;
+    padding: 0 167px 79px 35px;
     
     p {
         font-size: 13px;
         line-height: 13px;
+        margin-top: 13px;
+        margin-bottom: 15px;
         color: @color_black;
         font-weight: 900;
         text-transform: uppercase;
@@ -2014,6 +2012,7 @@ body {
         font-size: 13px;
         line-height: 13px;
         color: @color_gray_3;
+        margin-bottom: 30px;
     }
 
     label {
@@ -2022,9 +2021,138 @@ body {
         font-size: 12px;
         font-weight: 900;
         color: @color_black;
+        margin-bottom: 15px;
     }
+    
     input[type="radio"] {
-        background-color: white;
+        background: white;
         border: solid 2px black;
     }
+    
+    input[type="submit"] {
+        width: 180px;
+        height: 50px;
+        font-size: 14px;
+        font-weight: 700;
+        float: left;
+    }
+    
+    .fast {
+        margin-bottom: 15px;
+    }
+    
+    .register {
+        margin-bottom: 33px;
+    }
+    
+    .red {
+        display: inline;
+        color: @color_red;
+        font-size: 13px;
+        line-height: 1.54;
+        text-transform: none;
+        font-weight: 400;
+    }
+    
+    .input {
+        font-size: 12px;
+        line-height: 12px;
+        margin-top: 20px;
+        margin-bottom: 14px;
+
+    }
+    
+    input[type="email"],
+    input[type="password"] {
+        width: 330px;
+        height: 45px;
+        border: solid 1px @color_gray;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    input[type="email"]:focus {
+        outline: none;
+    }
+    
+    input[type="password"]:focus {
+        outline: none;
+    }
+    
+    .log {
+        margin-bottom: 0;
+    }
+    
+    form {
+        position: relative;
+    }
+    
+    .forgot {
+        position: absolute;
+        bottom: 18px;
+        right: 40px;
+        font-size: 14px;
+        font-weight: 700;
+        color: @color_black;
+        text-decoration: none;
+    }
+    
+    .forgot:hover {
+        text-decoration: underline;
+    }
+    
+    /*
+    .radio {
+        vertical-align: top;
+        width: 17px;
+        height: 17px;
+        margin: 0 1px 0 0;
+    }
+
+    .radio + label {
+        cursor: pointer;
+    }
+
+    .radio:not(checked) {
+        position: absolute;
+        opacity: 0;
+    }
+
+    .radio:not(checked) + label {
+        position: relative;
+        padding: 0 0 0 35px;
+    }
+
+    .radio:not(checked) + label:before {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        border: 1px solid @color_black;
+        border-radius: 50%;
+        background: white;
+    }
+
+    .radio:not(checked) + label:after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 3px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: @color_black;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .5);
+        opacity: 0;
+        transition: all .2s;
+    }
+
+    .radio:checked + label:after {
+        opacity: 1;
+    }
+    */
 }
+/* страница checkout */
+/* ^^^^^^^^^^^^^^^^^ */
