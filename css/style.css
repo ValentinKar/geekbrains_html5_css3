@@ -35,11 +35,13 @@ body {
   letter-spacing: 0.4px;
   line-height: 48px;
   text-decoration: none;
+  transition: transform .5s ease;
 }
 .red_button a:hover {
   background-color: white;
   color: #ef5b70;
   outline: 1px solid #ef5b70;
+  transform: translateY(3px) scale(1.05, 1.25);
 }
 .red_button a:active {
   left: 3px;
@@ -56,11 +58,14 @@ body {
   line-height: 50px;
   outline: 1px solid #ef5b70;
   text-decoration: none;
+  text-transform: uppercase;
+  transition: transform .5s ease;
 }
 .white_button a:hover {
   background-color: #ef5b70;
   color: white;
   outline: none;
+  transform: translateY(3px) scale(1.05, 1.25);
 }
 .white_button a:active {
   left: 3px;
@@ -77,11 +82,13 @@ body {
   line-height: 50px;
   outline: 1px solid #e8e8e8;
   text-decoration: none;
+  transition: transform .5s ease;
 }
 .black_button a:hover {
   background-color: #e8e8e8;
   color: white;
   outline: none;
+  transform: translateY(3px) scale(1.05, 1.25);
 }
 .black_button a:active {
   left: 3px;
@@ -99,10 +106,12 @@ body {
   padding: 0;
   text-align: center;
   text-transform: uppercase;
+  transition: transform .5s ease;
 }
 .black_button input[type="submit"]:hover {
   background-color: #e8e8e8;
   color: white;
+  transform: translateY(3px) scale(1.05, 1.25);
 }
 .black_button input[type="submit"]:focus {
   left: 3px;
@@ -114,6 +123,11 @@ body {
   color: #e8e8e8;
   font-size: 16px;
   text-align: right;
+  display: block;
+}
+.miss :hover {
+  transform: scale(2) rotate(180deg);
+  transition: transform .5s ease;
 }
 /* кнопки изменяют цвет */
 /* ^^^^^^^^^^^^^^^^^^^^ */
@@ -127,6 +141,10 @@ body {
 .logo {
   height: 51px;
   width: 59px;
+}
+.logo :hover {
+  transform: scale(1.1) rotate(360deg);
+  transition: transform .5s ease;
 }
 .header_top {
   align-items: center;
@@ -1656,6 +1674,14 @@ body {
 .checkout-menu {
   padding: 25px 0 79px 0;
 }
+.checkout-menu__details {
+  transition: background-color 0.5s ease;
+  transition: transform .5s ease;
+}
+.checkout-menu__details:hover {
+  background-color: #f5f5f5;
+  transform: scale(1.1);
+}
 .checkout-menu__details summary::-webkit-details-marker {
   display: none;
 }
@@ -1666,12 +1692,18 @@ body {
   line-height: 64px;
   text-align: left;
   text-transform: uppercase;
+  transition: transform .5s ease;
+}
+.checkout-menu__details:hover summary {
+  transform: skew(-15deg) translateX(50px);
 }
 .checkout-menu__details summary:focus {
   outline: none;
 }
 .checkout-menu hr {
   border: solid 1px #e8e8e8;
+  margin: 0;
+  padding: 0;
 }
 .checkout-register {
   display: flex;

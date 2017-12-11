@@ -63,12 +63,14 @@ body {
         letter-spacing: 0.4px;
         line-height: 48px;
         text-decoration: none;
+        transition: transform .5s ease;
     }
     
     a:hover {
         background-color: white;
         color: @color_red;
         outline: 1px solid @color_red;
+        transform: translateY(3px) scale(1.05, 1.25);
     }
     
     a:active {
@@ -89,12 +91,15 @@ body {
         line-height: 50px;
         outline: 1px solid @color_red;
         text-decoration: none;
+        text-transform: uppercase;
+        transition: transform .5s ease;
     }
     
     a:hover {
         background-color: @color_red;
         color: white;
         outline: none;
+        transform: translateY(3px) scale(1.05, 1.25);
     }
     
     a:active {
@@ -115,12 +120,14 @@ body {
         line-height: 50px;
         outline: 1px solid @color_gray;
         text-decoration: none;
+        transition: transform .5s ease;
     }
     
     a:hover {
         background-color: @color_gray;
         color: white;
         outline: none;
+        transform: translateY(3px) scale(1.05, 1.25);
     }
     
     a:active {
@@ -140,11 +147,13 @@ body {
         padding: 0;
         text-align: center;
         text-transform: uppercase;
+        transition: transform .5s ease;
     }
     
     input[type="submit"]:hover {
         background-color: @color_gray;
         color: white;
+        transform: translateY(3px) scale(1.05, 1.25);
     }
     
     input[type="submit"]:focus {
@@ -159,10 +168,14 @@ body {
     color: @color_gray;
     font-size: 16px;
     text-align: right;
+    display: block;
+    :hover {
+        transform: scale(2) rotate(180deg);
+        transition: transform .5s ease;
+    }
 }
 /* кнопки изменяют цвет */
 /* ^^^^^^^^^^^^^^^^^^^^ */
-
 
 
 /* vvvvvvv */
@@ -174,8 +187,12 @@ body {
 }
 
 .logo {
-  height: 51px;
-  width: 59px;
+    height: 51px;
+    width: 59px;
+    :hover {
+        transform: scale(1.1) rotate(360deg);
+        transition: transform .5s ease;
+    }
 }
 
 .header_top {
@@ -1970,6 +1987,16 @@ body {
 .checkout-menu {
     padding: 25px 0 79px 0;
     
+    &__details {
+        transition: background-color .5s ease;  
+        transition: transform .5s ease;  
+    }
+    
+    &__details:hover {
+        background-color:#f5f5f5;  
+        transform: scale(1.1);
+    }
+    
     &__details summary::-webkit-details-marker {
         display: none;
     }
@@ -1981,6 +2008,11 @@ body {
         line-height: 64px;
         text-align: left;
         text-transform: uppercase;
+        transition: transform .5s ease;  
+    }
+    
+    &__details:hover summary {
+        transform: skew(-15deg) translateX(50px); 
     }
 
     &__details summary:focus {
@@ -1989,6 +2021,8 @@ body {
     
     hr {
         border: solid 1px @color_gray;
+        margin: 0;
+        padding: 0;
     }
 }
 
