@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>single</title>
+    <title>checkout</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -251,7 +251,7 @@
                         </div>
                     </div>
                 </li>
-                <li><a href="shopping-cart.html">Women</a></li>
+                <li><a class="link_active" href="shopping-cart.html">Women</a></li>
                 <li><a href="#">Kids</a></li>
                 <li><a href="#">Accoseriese</a></li>
                 <li><a href="#">Featured</a></li> 
@@ -259,11 +259,11 @@
             </ul>
         </nav>
     </header>
-    
-    <main class="single">
+
+    <main class="checkout">
         <section class="product_top">
             <div class="container product_h">
-                <h2>New Arrivals </h2>
+                <h2>New Arrivals</h2>
                 <nav>
                     <ul>
                         <li>
@@ -282,177 +282,105 @@
             </div>
         </section>
         
-        <div class="single-slider">
-            <a class="single-next" href="#">
-                <i class="fa fa-chevron-left" aria-hidden="true"></i>
-            </a>
-            <div class="single-img">
-                <img src="img/single-girl.jpg" alt="">
-
+        <div class="container checkout-menu">
+            <details class="checkout-menu__details">
+               <summary>
+                   01. &nbsp; Shipping Adress
+                </summary>
+            <div class="checkout-register">
+                <form action="#">
+                    <p>Check as a guest or register</p>
+                    <span>Register with us for future convenience</span>
+                    <label>
+                        <input name="register-type" type="radio">
+                        checkout as guest
+                    </label>
+<!--
+                    <input type="radio" class="radio" id="radio" />
+                    <label for="radio">checkout as guest</label>
+-->
+                    <label class="register">
+                        <input name="register-type" type="radio" checked>
+                        register
+                    </label>
+                    <p>register and save time!</p>
+                    <span>Register with us for future convenience</span>
+                    <span class="fast">
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        Fast and easy checkout
+                    </span>
+                    <span>
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        Easy access to your order history and status
+                    </span>
+                    <div class="black_button">
+                        <input type="submit" value="Continue">
+                    </div>
+                </form>
+                <form action="#">
+                    <p>Already registed?</p>
+                    <span class="log">Please log in below</span>
+                    <p class="input">
+                        EMAIL ADDRESS
+                        <span class="red">*</span>
+                    </p>
+                    <input type="email">
+                    <p class="input">
+                        PASSWORD
+                        <span class="red">*</span>
+                    </p>
+                    <input type="password">
+                    <p>
+                        <span class="red">* Required Fileds</span>
+                    </p>
+                    <div class="black_button">
+                        <input type="submit" value="Log in">
+                    </div>
+                    <a href="#" class="forgot">
+                        Forgot Password ?
+                    </a>
+                </form>
             </div>
-            <a class="single-next" href="#">
-                <i class="fa fa-chevron-right" aria-hidden="true"></i>
-            </a>
+            </details>
+            <hr>
+            <details class="checkout-menu__details">
+               <summary>
+                   02. &nbsp; BILLING INFORMATION
+                </summary>
+            <div class="checkout-register"></div>
+            </details>
+            <hr>
+            <details class="checkout-menu__details">
+               <summary>
+                   03. &nbsp; SHIPPING INFORMATION
+                </summary>
+            <div class="checkout-register"></div>
+            </details>
+            <hr>
+            <details class="checkout-menu__details">
+               <summary>
+                   04. &nbsp; SHIPPING METHOD
+                </summary>
+            <div class="checkout-register"></div>
+            </details>
+            <hr>
+            <details class="checkout-menu__details">
+               <summary>
+                   05. &nbsp; PAYMENT METHOD
+                </summary>
+            <div class="checkout-register"></div>
+            </details>
+            <hr>
+            <details class="checkout-menu__details">
+               <summary>
+                   06. &nbsp; ORDER REVIEW
+                </summary>
+            <div class="checkout-register"></div>
+            </details>
+            <hr>
         </div>
-        
-        <section class="container single-center">
-            <form class="single-data" action="#">
-                <h2>WOMEN COLLECTION</h2>
-                <div class="collection">
-                    <a href="#"></a>
-                    <a class="active" href="#"></a>
-                    <a href="#"></a>
-                </div>
-                <h3>Moschino Cheap And Chic</h3>
-                <p class="container-form">Compellingly actualize fully researched processes before proactive outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely visualize parallel core competencies rather than exceptional portals.</p>
-                <div class="box-text">
-                    <span>MATERIAL: <span>COTTON</span></span>
-                    <span>DESIGNER: <span>BINBURHAN</span></span>
-                </div>
-                <p class="price">$561</p>
-                <div class="container-form__bottom line"></div>
-                <div class="container-form__bottom single-choose">
-                    <div>
-                        <h4>CHOOSE COLOR</h4>
-                        <select name="color">
-                            <option value="">Red</option>
-                        </select>
-                    </div>
-                    <div>
-                        <h4>CHOOSE SIZE</h4>
-                        <select name="size">
-                            <option value="">XXL</option>
-                        </select>
-                    </div>
-                    <div>
-                        <h4>QUANTITY</h4>
-                        <input type="number" value="2" step="1" min="1" max="10000">
-                    </div>                    
-                </div>
-
-                <div class="white_button">
-                   <a href="#">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i> &nbsp;
-                    Add to Cart
-                   </a>
-                </div>
-            </form>
-        </section>
-        
-        <section class="container fetured">
-            <h3>you may like also</h3>
-            <div class="fetured_items">
-                <figure class="fetured_item">
-                    <a href="single-page.html" class="fetured_product">
-                        <img src="img/SinglePage/1.jpg" alt="">
-                        <p>BLAZE LEGGINGS</p>
-                        <span class="product_stars">
-                            <span class="img">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                        <p class="red">$52.00</p>
-                    </a>
-                   <a href="#" class="add_basket ">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                       Add to Cart
-                   </a>
-                   <a href="#" class="recicle">
-                       <i class="fa fa-retweet" aria-hidden="true"></i>
-                   </a>
-                   <a href="#" class="like">
-                       <i class="fa fa-heart-o" aria-hidden="true"></i>
-                   </a>
-                </figure>
-
-                <figure class="fetured_item">
-                    <a href="single-page.html" class="fetured_product">
-                        <img src="img/SinglePage/2.jpg" alt="">
-                        <p>ALEXA SWEATER</p>
-                        <span class="product_stars">
-                            <span class="img">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                        <p class="red">$52.00</p>
-                    </a>
-                   <a href="#" class="add_basket ">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                       Add to Cart
-                   </a>
-                   <a href="#" class="recicle">
-                       <i class="fa fa-retweet" aria-hidden="true"></i>
-                   </a>
-                   <a href="#" class="like">
-                       <i class="fa fa-heart-o" aria-hidden="true"></i>
-                   </a>
-                </figure>
-
-                <figure class="fetured_item">
-                    <a href="single-page.html" class="fetured_product">
-                        <img src="img/SinglePage/3.jpg" alt="">
-                        <p>AGNES TOP</p>
-                        <span class="product_stars">
-                            <span class="img">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                        <p class="red">$52.00</p>
-                    </a>
-                   <a href="#" class="add_basket ">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                       Add to Cart
-                   </a>
-                   <a href="#" class="recicle">
-                       <i class="fa fa-retweet" aria-hidden="true"></i>
-                   </a>
-                   <a href="#" class="like">
-                       <i class="fa fa-heart-o" aria-hidden="true"></i>
-                   </a>
-                </figure>
-
-                <figure class="fetured_item">
-                    <a href="single-page.html" class="fetured_product">
-                        <img src="img/SinglePage/4.jpg" alt="">
-                        <p>SYLVA SWEATER</p>
-                        <span class="product_stars">
-                            <span class="img">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                        <p class="red">$52.00</p>
-                    </a>
-                   <a href="#" class="add_basket ">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                       Add to Cart
-                   </a>
-                   <a href="#" class="recicle">
-                       <i class="fa fa-retweet" aria-hidden="true"></i>
-                   </a>
-                   <a href="#" class="like">
-                       <i class="fa fa-heart-o" aria-hidden="true"></i>
-                   </a>
-                </figure>
-            </div>
-        </section>
     </main>
-    
+   
     <footer>
         <div class="footer subscribe">
             <div class="sub_container">
@@ -552,7 +480,7 @@
                    </a>
                    <a href="#">
                        <i class="fa fa-google-plus-official" aria-hidden="true"></i>
-                   </a>                   
+                   </a>                  
                 </aside>
             </div>
         </div>

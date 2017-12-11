@@ -20,130 +20,148 @@ body {
   font-family: 'Lato', sans-serif;
 }
 .container {
-  width: 1142px;
   margin: 0 auto;
+  width: 1142px;
 }
 /* vvvvvvvvvvvvvvvvvvvv */
 /* кнопки изменяют цвет */
 /* красная кнопка светлеет */
 .red_button a {
-  display: block;
   background-color: #ef5b70;
+  color: white;
+  display: block;
   font-size: 16px;
   font-weight: 900;
-  line-height: 48px;
   letter-spacing: 0.4px;
-  color: white;
+  line-height: 48px;
   text-decoration: none;
+  transition: transform .5s ease;
 }
 .red_button a:hover {
   background-color: white;
-  outline: 1px solid #ef5b70;
   color: #ef5b70;
+  outline: 1px solid #ef5b70;
+  transform: translateY(3px) scale(1.05, 1.25);
 }
 .red_button a:active {
+  left: 3px;
   position: relative;
   top: 3px;
-  left: 3px;
 }
 /* светло-красная кнопка */
 /* краснеет */
 .white_button a {
+  color: #ef5b70;
   display: block;
-  line-height: 50px;
   font-size: 14px;
   font-weight: 900;
-  color: #ef5b70;
+  line-height: 50px;
   outline: 1px solid #ef5b70;
   text-decoration: none;
+  text-transform: uppercase;
+  transition: transform .5s ease;
 }
 .white_button a:hover {
   background-color: #ef5b70;
-  outline: none;
   color: white;
+  outline: none;
+  transform: translateY(3px) scale(1.05, 1.25);
 }
 .white_button a:active {
+  left: 3px;
   position: relative;
   top: 3px;
-  left: 3px;
 }
 /* светло-серая кнопка */
 /* темнеет */
 .black_button a {
+  color: #222222;
   display: block;
-  line-height: 50px;
   font-size: 14px;
   font-weight: 900;
-  color: #222222;
+  line-height: 50px;
   outline: 1px solid #e8e8e8;
   text-decoration: none;
+  transition: transform .5s ease;
 }
 .black_button a:hover {
   background-color: #e8e8e8;
-  outline: none;
   color: white;
+  outline: none;
+  transform: translateY(3px) scale(1.05, 1.25);
 }
 .black_button a:active {
+  left: 3px;
   position: relative;
   top: 3px;
-  left: 3px;
 }
 .black_button input[type="submit"] {
   background-color: white;
-  margin: 0;
-  padding: 0;
   border: solid 1px #e8e8e8;
+  color: #222222;
   font-size: 11px;
   font-weight: 700;
   line-height: 50px;
-  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  color: #222222;
+  text-transform: uppercase;
+  transition: transform .5s ease;
 }
 .black_button input[type="submit"]:hover {
   background-color: #e8e8e8;
   color: white;
+  transform: translateY(3px) scale(1.05, 1.25);
 }
 .black_button input[type="submit"]:focus {
+  left: 3px;
   outline: none;
   position: relative;
   top: 3px;
-  left: 3px;
 }
 .miss {
+  color: #e8e8e8;
   font-size: 16px;
   text-align: right;
-  color: #e8e8e8;
+  display: block;
+}
+.miss :hover {
+  transform: scale(2) rotate(180deg);
+  transition: transform .5s ease;
 }
 /* кнопки изменяют цвет */
 /* ^^^^^^^^^^^^^^^^^^^^ */
 /* vvvvvvv */
 /* header */
 .header {
-  height: 100px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
   border: 1px solid #ececec;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
+  height: 100px;
 }
 .logo {
-  width: 59px;
   height: 51px;
+  width: 59px;
+}
+.logo :hover {
+  transform: scale(1.1) rotate(360deg);
+  transition: transform .5s ease;
 }
 .header_top {
-  display: flex;
   align-items: center;
+  display: flex;
   height: 100%;
 }
 .header_top p {
+  color: #222222;
   font-size: 27px;
   font-weight: 300;
-  line-height: 1.19;
   letter-spacing: 0.7px;
-  color: #222222;
+  line-height: 1.19;
   margin-left: 37px;
 }
 .header_top span {
-  font-weight: 900;
   color: #ef5b70;
+  font-weight: 900;
 }
 .header_forms {
   display: flex;
@@ -1484,6 +1502,16 @@ body {
 .table-shopping {
   padding: 90px 0 63px 0;
 }
+.table-shopping__bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 44px;
+}
+.table-shopping__bottom a {
+  text-transform: uppercase;
+  padding-left: 50px;
+  padding-right: 50px;
+}
 .table-row {
   display: flex;
   justify-content: space-between;
@@ -1564,16 +1592,6 @@ body {
 .table-details a:hover {
   box-shadow: 3px -3px 4px 0 #e8e8e8;
 }
-.table-shopping__bottom {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 44px;
-}
-.table-shopping__bottom a {
-  text-transform: uppercase;
-  padding-left: 50px;
-  padding-right: 50px;
-}
 .shopping-form {
   display: flex;
   justify-content: space-between;
@@ -1598,9 +1616,9 @@ body {
   border: solid 1px #e8e8e8;
   padding: 0 18px;
 }
-.shopping-form input[type="text"] :focus,
-.shopping-form input[type="number"] :focus,
-.shopping-form input[list="city"] :focus {
+.shopping-form input[type="text"]:focus,
+.shopping-form input[type="number"]:focus,
+.shopping-form input[list="city"]:focus {
   outline: none;
   font-size: 18px;
 }
@@ -1650,4 +1668,186 @@ body {
   color: #ef5b70;
 }
 /* страница shopping-cart */
+/* ^^^^^^^^^^^^^^^^^ */
+/* vvvvvvvvvvvvvvvvv */
+/* страница checkout */
+.checkout-menu {
+  padding: 25px 0 79px 0;
+}
+.checkout-menu__details {
+  transition: background-color 0.5s ease;
+  transition: transform .5s ease;
+}
+.checkout-menu__details:hover {
+  background-color: #f5f5f5;
+  transform: scale(1.1);
+}
+.checkout-menu__details summary::-webkit-details-marker {
+  display: none;
+}
+.checkout-menu__details summary {
+  color: #222222;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 64px;
+  text-align: left;
+  text-transform: uppercase;
+  transition: transform .5s ease;
+}
+.checkout-menu__details:hover summary {
+  transform: skew(-15deg) translateX(50px);
+}
+.checkout-menu__details summary:focus {
+  outline: none;
+}
+.checkout-menu hr {
+  border: solid 1px #e8e8e8;
+  margin: 0;
+  padding: 0;
+}
+.checkout-register {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 167px 79px 35px;
+  /*
+    .radio {
+        vertical-align: top;
+        width: 17px;
+        height: 17px;
+        margin: 0 1px 0 0;
+    }
+
+    .radio + label {
+        cursor: pointer;
+    }
+
+    .radio:not(checked) {
+        position: absolute;
+        opacity: 0;
+    }
+
+    .radio:not(checked) + label {
+        position: relative;
+        padding: 0 0 0 35px;
+    }
+
+    .radio:not(checked) + label:before {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        border: 1px solid @color_black;
+        border-radius: 50%;
+        background: white;
+    }
+
+    .radio:not(checked) + label:after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 3px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: @color_black;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .5);
+        opacity: 0;
+        transition: all .2s;
+    }
+
+    .radio:checked + label:after {
+        opacity: 1;
+    }
+    */
+}
+.checkout-register p {
+  font-size: 13px;
+  line-height: 13px;
+  margin-top: 13px;
+  margin-bottom: 15px;
+  color: #222222;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.checkout-register span {
+  display: block;
+  font-size: 13px;
+  line-height: 13px;
+  color: #898989;
+  margin-bottom: 30px;
+}
+.checkout-register label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 900;
+  color: #222222;
+  margin-bottom: 15px;
+}
+.checkout-register input[type="radio"] {
+  background: white;
+  border: solid 2px black;
+}
+.checkout-register input[type="submit"] {
+  width: 180px;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  float: left;
+}
+.checkout-register .fast {
+  margin-bottom: 15px;
+}
+.checkout-register .register {
+  margin-bottom: 33px;
+}
+.checkout-register .red {
+  display: inline;
+  color: #ef5b70;
+  font-size: 13px;
+  line-height: 1.54;
+  text-transform: none;
+  font-weight: 400;
+}
+.checkout-register .input {
+  font-size: 12px;
+  line-height: 12px;
+  margin-top: 20px;
+  margin-bottom: 14px;
+}
+.checkout-register input[type="email"],
+.checkout-register input[type="password"] {
+  width: 330px;
+  height: 45px;
+  border: solid 1px #e8e8e8;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.checkout-register input[type="email"]:focus {
+  outline: none;
+}
+.checkout-register input[type="password"]:focus {
+  outline: none;
+}
+.checkout-register .log {
+  margin-bottom: 0;
+}
+.checkout-register form {
+  position: relative;
+}
+.checkout-register .forgot {
+  position: absolute;
+  bottom: 18px;
+  right: 40px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #222222;
+  text-decoration: none;
+}
+.checkout-register .forgot:hover {
+  text-decoration: underline;
+}
+/* страница checkout */
 /* ^^^^^^^^^^^^^^^^^ */

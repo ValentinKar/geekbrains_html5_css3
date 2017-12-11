@@ -46,8 +46,8 @@ body {
 }
 
 .container {
-    width: 1142px;
     margin: 0 auto;
+    width: 1142px;
 }
 
 /* vvvvvvvvvvvvvvvvvvvv */
@@ -55,26 +55,28 @@ body {
 /* красная кнопка светлеет */
 .red_button {
     a {
-        display: block;
         background-color: @color_red;
+        color: white;
+        display: block;
         font-size: 16px;
         font-weight: 900;
-        line-height: 48px;
         letter-spacing: 0.4px;
-        color: white;
+        line-height: 48px;
         text-decoration: none;
+        transition: transform .5s ease;
     }
     
     a:hover {
         background-color: white;
-        outline: 1px solid @color_red;
         color: @color_red;
+        outline: 1px solid @color_red;
+        transform: translateY(3px) scale(1.05, 1.25);
     }
     
     a:active {
+        left: 3px;
         position: relative;
         top: 3px;
-        left: 3px;
     }
 }
 
@@ -82,25 +84,28 @@ body {
 /* краснеет */
 .white_button {
     a {
+        color: @color_red;
         display: block;
-        line-height: 50px;
         font-size: 14px;
         font-weight: 900;
-        color: @color_red;
+        line-height: 50px;
         outline: 1px solid @color_red;
         text-decoration: none;
+        text-transform: uppercase;
+        transition: transform .5s ease;
     }
     
     a:hover {
         background-color: @color_red;
-        outline: none;
         color: white;
+        outline: none;
+        transform: translateY(3px) scale(1.05, 1.25);
     }
     
     a:active {
+        left: 3px;
         position: relative;
         top: 3px;
-        left: 3px;
     }
 }
 
@@ -108,93 +113,105 @@ body {
 /* темнеет */
 .black_button {
     a {
+        color: @color_black;
         display: block;
-        line-height: 50px;
         font-size: 14px;
         font-weight: 900;
-        color: @color_black;
+        line-height: 50px;
         outline: 1px solid @color_gray;
         text-decoration: none;
+        transition: transform .5s ease;
     }
     
     a:hover {
         background-color: @color_gray;
-        outline: none;
         color: white;
+        outline: none;
+        transform: translateY(3px) scale(1.05, 1.25);
     }
     
     a:active {
+        left: 3px;
         position: relative;
         top: 3px;
-        left: 3px;
     }
     
     input[type="submit"] {
         background-color: white;
-        margin: 0;
-        padding: 0;
         border: solid 1px @color_gray;
+        color: @color_black;
         font-size: 11px;
         font-weight: 700;
         line-height: 50px;
-        text-transform: uppercase;
+        margin: 0;
+        padding: 0;
         text-align: center;
-        color: @color_black;
+        text-transform: uppercase;
+        transition: transform .5s ease;
     }
     
     input[type="submit"]:hover {
         background-color: @color_gray;
         color: white;
+        transform: translateY(3px) scale(1.05, 1.25);
     }
     
     input[type="submit"]:focus {
+        left: 3px;
         outline: none;
         position: relative;
         top: 3px;
-        left: 3px;
     }
 }
 
 .miss {
+    color: @color_gray;
     font-size: 16px;
     text-align: right;
-    color: @color_gray;
+    display: block;
+    :hover {
+        transform: scale(2) rotate(180deg);
+        transition: transform .5s ease;
+    }
 }
 /* кнопки изменяют цвет */
 /* ^^^^^^^^^^^^^^^^^^^^ */
 
 
-
 /* vvvvvvv */
 /* header */
 .header {
-    height: 100px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
     border: 1px solid #ececec;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
+    height: 100px;
 }
 
 .logo {
-  width: 59px;
-  height: 51px;
+    height: 51px;
+    width: 59px;
+    :hover {
+        transform: scale(1.1) rotate(360deg);
+        transition: transform .5s ease;
+    }
 }
 
 .header_top {
-    display: flex;
     align-items: center;
+    display: flex;
     height: 100%;
     
     p {
+        color: @color_black;
         font-size: 27px;
         font-weight: 300;
-        line-height: 1.19;
         letter-spacing: 0.7px;
-        color: @color_black;
+        line-height: 1.19;
         margin-left: 37px;
     }
 
     span {
-        font-weight: 900;
         color: @color_red;
+        font-weight: 900;
     }
 }
 
@@ -1766,6 +1783,18 @@ body {
 /* страница shopping-cart */
 .table-shopping {
     padding: 90px 0 63px 0;
+    
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 44px;
+
+        a {
+            text-transform: uppercase;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
 }
 
 .table-row {
@@ -1802,20 +1831,20 @@ body {
         color: @color_gray_3;
         font-weight: 700;
     }
-}
-
-.table-row__head {
-    padding: 0 0 20px 0;
-    font-size: 13px;
-    font-weight: 900;
-    line-height: 13px;
-    letter-spacing: -0.2px;
-    color: @color_black;
-    text-transform: uppercase;
     
-    div:first-child {
-        width: @shopping_table_first;
-        justify-content: flex-start;
+    &__head {
+        padding: 0 0 20px 0;
+        font-size: 13px;
+        font-weight: 900;
+        line-height: 13px;
+        letter-spacing: -0.2px;
+        color: @color_black;
+        text-transform: uppercase;
+
+        div:first-child {
+            width: @shopping_table_first;
+            justify-content: flex-start;
+        }
     }
 }
 
@@ -1860,19 +1889,6 @@ body {
     
     a:hover {
         box-shadow: 3px -3px 4px 0 @color_gray;
-
-    }
-}
-
-.table-shopping__bottom {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 44px;
-    
-    a {
-        text-transform: uppercase;
-        padding-left: 50px;
-        padding-right: 50px;
     }
 }
 
@@ -1901,11 +1917,13 @@ body {
         margin-bottom: 20px;
         border: solid 1px @color_gray;
         padding: 0 18px;
-        
-        :focus {
+    }
+    
+    input[type="text"]:focus, 
+    input[type="number"]:focus, 
+    input[list="city"]:focus {
             outline: none;
             font-size: 18px;
-        }
     }
     
     input[type="submit"] {
@@ -1964,3 +1982,211 @@ body {
 /* страница shopping-cart */
 /* ^^^^^^^^^^^^^^^^^ */
 
+/* vvvvvvvvvvvvvvvvv */
+/* страница checkout */
+.checkout-menu {
+    padding: 25px 0 79px 0;
+    
+    &__details {
+        transition: background-color .5s ease;  
+        transition: transform .5s ease;  
+    }
+    
+    &__details:hover {
+        background-color:#f5f5f5;  
+        transform: scale(1.1);
+    }
+    
+    &__details summary::-webkit-details-marker {
+        display: none;
+    }
+    
+    &__details summary {
+        color: @color_black;
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 64px;
+        text-align: left;
+        text-transform: uppercase;
+        transition: transform .5s ease;  
+    }
+    
+    &__details:hover summary {
+        transform: skew(-15deg) translateX(50px); 
+    }
+
+    &__details summary:focus {
+        outline: none;
+    }
+    
+    hr {
+        border: solid 1px @color_gray;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.checkout-register {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 167px 79px 35px;
+    
+    p {
+        font-size: 13px;
+        line-height: 13px;
+        margin-top: 13px;
+        margin-bottom: 15px;
+        color: @color_black;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+    
+    span {
+        display: block;
+        font-size: 13px;
+        line-height: 13px;
+        color: @color_gray_3;
+        margin-bottom: 30px;
+    }
+
+    label {
+        display: block;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 900;
+        color: @color_black;
+        margin-bottom: 15px;
+    }
+    
+    input[type="radio"] {
+        background: white;
+        border: solid 2px black;
+    }
+    
+    input[type="submit"] {
+        width: 180px;
+        height: 50px;
+        font-size: 14px;
+        font-weight: 700;
+        float: left;
+    }
+    
+    .fast {
+        margin-bottom: 15px;
+    }
+    
+    .register {
+        margin-bottom: 33px;
+    }
+    
+    .red {
+        display: inline;
+        color: @color_red;
+        font-size: 13px;
+        line-height: 1.54;
+        text-transform: none;
+        font-weight: 400;
+    }
+    
+    .input {
+        font-size: 12px;
+        line-height: 12px;
+        margin-top: 20px;
+        margin-bottom: 14px;
+
+    }
+    
+    input[type="email"],
+    input[type="password"] {
+        width: 330px;
+        height: 45px;
+        border: solid 1px @color_gray;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    input[type="email"]:focus {
+        outline: none;
+    }
+    
+    input[type="password"]:focus {
+        outline: none;
+    }
+    
+    .log {
+        margin-bottom: 0;
+    }
+    
+    form {
+        position: relative;
+    }
+    
+    .forgot {
+        position: absolute;
+        bottom: 18px;
+        right: 40px;
+        font-size: 14px;
+        font-weight: 700;
+        color: @color_black;
+        text-decoration: none;
+    }
+    
+    .forgot:hover {
+        text-decoration: underline;
+    }
+    
+    /*
+    .radio {
+        vertical-align: top;
+        width: 17px;
+        height: 17px;
+        margin: 0 1px 0 0;
+    }
+
+    .radio + label {
+        cursor: pointer;
+    }
+
+    .radio:not(checked) {
+        position: absolute;
+        opacity: 0;
+    }
+
+    .radio:not(checked) + label {
+        position: relative;
+        padding: 0 0 0 35px;
+    }
+
+    .radio:not(checked) + label:before {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: 0;
+        width: 14px;
+        height: 14px;
+        border: 1px solid @color_black;
+        border-radius: 50%;
+        background: white;
+    }
+
+    .radio:not(checked) + label:after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 3px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: @color_black;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .5);
+        opacity: 0;
+        transition: all .2s;
+    }
+
+    .radio:checked + label:after {
+        opacity: 1;
+    }
+    */
+}
+/* страница checkout */
+/* ^^^^^^^^^^^^^^^^^ */
