@@ -32,6 +32,10 @@
 @price_min: @price_min_and - 7px;
 @price_max: @price_max_and - 7px;
 @shopping_table_first: 450px;
+@time_trnstn_1: .5s;
+@time_trnstn: .3s;
+@graph_trnstn: ease;
+@graph_trnstn_1: ease-in;
 
 /*
 * {
@@ -63,14 +67,13 @@ body {
         letter-spacing: 0.4px;
         line-height: 48px;
         text-decoration: none;
-        transition: transform .5s ease;
+        transition: all @time_trnstn_1 @graph_trnstn;
     }
     
     a:hover {
         background-color: white;
         color: @color_red;
         outline: 1px solid @color_red;
-        transform: translateY(3px) scale(1.05, 1.25);
     }
     
     a:active {
@@ -92,14 +95,13 @@ body {
         outline: 1px solid @color_red;
         text-decoration: none;
         text-transform: uppercase;
-        transition: transform .5s ease;
+        transition: all @time_trnstn_1 @graph_trnstn;
     }
     
     a:hover {
         background-color: @color_red;
         color: white;
         outline: none;
-        transform: translateY(3px) scale(1.05, 1.25);
     }
     
     a:active {
@@ -120,14 +122,13 @@ body {
         line-height: 50px;
         outline: 1px solid @color_gray;
         text-decoration: none;
-        transition: transform .5s ease;
+        transition: all @time_trnstn_1 @graph_trnstn;
     }
     
     a:hover {
         background-color: @color_gray;
         color: white;
         outline: none;
-        transform: translateY(3px) scale(1.05, 1.25);
     }
     
     a:active {
@@ -147,13 +148,13 @@ body {
         padding: 0;
         text-align: center;
         text-transform: uppercase;
-        transition: transform .5s ease;
+        transition: all @time_trnstn_1 @graph_trnstn;
     }
     
     input[type="submit"]:hover {
         background-color: @color_gray;
         color: white;
-        transform: translateY(3px) scale(1.05, 1.25);
+        /* transform: translateY(3px) scale(1.05, 1.25); */
     }
     
     input[type="submit"]:focus {
@@ -170,8 +171,9 @@ body {
     text-align: right;
     display: block;
     :hover {
-        transform: scale(2) rotate(180deg);
-        transition: transform .5s ease;
+        /* transform: scale(2) rotate(180deg); */
+        transform: scale(1.7);
+        transition: all @time_trnstn_1 @graph_trnstn;
     }
 }
 /* кнопки изменяют цвет */
@@ -189,10 +191,6 @@ body {
 .logo {
     height: 51px;
     width: 59px;
-    :hover {
-        transform: scale(1.1) rotate(360deg);
-        transition: transform .5s ease;
-    }
 }
 
 .header_top {
@@ -562,9 +560,7 @@ body {
 
 .subscribe {
     height: 438px;
-    background-color: @color_gray_2;
-
-    
+    background-color: @color_gray_2;    
 }
 
 .sub_container {
@@ -625,6 +621,7 @@ body {
     
     .scrol {
         display: flex;
+        
         a {
             display: block;
             width: 38px;
@@ -802,6 +799,7 @@ body {
             text-align: center;
             background-color: white;
             color: #b2b2b2;
+            transition: all @time_trnstn_1 @graph_trnstn;
         }
         
         a:hover {
@@ -968,6 +966,7 @@ body {
     height: @product_height;
     margin: 40px 0 0 0;
     position: relative;
+    transition: all @time_trnstn_1 @graph_trnstn;
     
     a {
         width: @product_width;
@@ -983,6 +982,7 @@ body {
     img {
         width: @product_width;
         height: @product_im_height;
+        transition: all @time_trnstn_1 @graph_trnstn;
     }
     
     p {
@@ -1021,10 +1021,12 @@ body {
 
 .fetured_item:hover .add_basket {
     display: block;
+    transition: all @time_trnstn @graph_trnstn_1;
 }
 
 .fetured_item .add_basket:hover {
     text-decoration: underline;
+    transform: scale(1.1);
 }
 
 /* розовая кнопка */
@@ -1264,14 +1266,17 @@ body {
         width: 37px;
         text-align: center;
         display: none;
+        transition: all @time_trnstn @graph_trnstn_1;
     }
     
     .fetured_item:hover .recicle {
         display: block;
+        
     }
-    
+
     .fetured_item .recicle:hover {
         font-size: 18px;
+        transform: scale(1.1);
         /* padding-bottom: 9px; */
     }
     
@@ -1285,6 +1290,7 @@ body {
         width: 37px;
         text-align: center;
         display: none;
+        transition: all @time_trnstn @graph_trnstn_1;
     }
     
     .fetured_item:hover .like {
@@ -1293,6 +1299,7 @@ body {
     
     .fetured_item .like:hover {
         font-size: 18px;
+        transform: scale(1.1);
         /* padding-bottom: 9px; */
     }
 }
@@ -1501,6 +1508,7 @@ body {
         text-align: center;
         color: @color_gray_3;
         text-decoration: none;
+        transition: all @time_trnstn @graph_trnstn;
     }
     
     a:hover {
@@ -1592,6 +1600,7 @@ body {
     line-height: 47px;
     text-align: center;
     color: white;
+    transition: all @time_trnstn @graph_trnstn;
 }
 
 .single-next:hover {
@@ -1856,6 +1865,7 @@ body {
     a {
         height: 115px;
         width: 100px;
+        transition: all @time_trnstn @graph_trnstn;
     }
     
     a {
@@ -1988,13 +1998,11 @@ body {
     padding: 25px 0 79px 0;
     
     &__details {
-        transition: background-color .5s ease;  
-        transition: transform .5s ease;  
+        transition: all @time_trnstn_1 @graph_trnstn;
     }
     
     &__details:hover {
         background-color:#f5f5f5;  
-        transform: scale(1.1);
     }
     
     &__details summary::-webkit-details-marker {
@@ -2008,11 +2016,12 @@ body {
         line-height: 64px;
         text-align: left;
         text-transform: uppercase;
-        transition: transform .5s ease;  
+        transition: all @time_trnstn_1 @graph_trnstn; 
     }
     
     &__details:hover summary {
-        transform: skew(-15deg) translateX(50px); 
+        /* transform: translateX(30px); */ 
+        margin-left: 30px;
     }
 
     &__details summary:focus {

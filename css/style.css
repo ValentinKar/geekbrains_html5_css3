@@ -35,13 +35,12 @@ body {
   letter-spacing: 0.4px;
   line-height: 48px;
   text-decoration: none;
-  transition: transform .5s ease;
+  transition: all 0.5s ease;
 }
 .red_button a:hover {
   background-color: white;
   color: #ef5b70;
   outline: 1px solid #ef5b70;
-  transform: translateY(3px) scale(1.05, 1.25);
 }
 .red_button a:active {
   left: 3px;
@@ -59,13 +58,12 @@ body {
   outline: 1px solid #ef5b70;
   text-decoration: none;
   text-transform: uppercase;
-  transition: transform .5s ease;
+  transition: all 0.5s ease;
 }
 .white_button a:hover {
   background-color: #ef5b70;
   color: white;
   outline: none;
-  transform: translateY(3px) scale(1.05, 1.25);
 }
 .white_button a:active {
   left: 3px;
@@ -82,13 +80,12 @@ body {
   line-height: 50px;
   outline: 1px solid #e8e8e8;
   text-decoration: none;
-  transition: transform .5s ease;
+  transition: all 0.5s ease;
 }
 .black_button a:hover {
   background-color: #e8e8e8;
   color: white;
   outline: none;
-  transform: translateY(3px) scale(1.05, 1.25);
 }
 .black_button a:active {
   left: 3px;
@@ -106,12 +103,12 @@ body {
   padding: 0;
   text-align: center;
   text-transform: uppercase;
-  transition: transform .5s ease;
+  transition: all 0.5s ease;
 }
 .black_button input[type="submit"]:hover {
   background-color: #e8e8e8;
   color: white;
-  transform: translateY(3px) scale(1.05, 1.25);
+  /* transform: translateY(3px) scale(1.05, 1.25); */
 }
 .black_button input[type="submit"]:focus {
   left: 3px;
@@ -126,8 +123,9 @@ body {
   display: block;
 }
 .miss :hover {
-  transform: scale(2) rotate(180deg);
-  transition: transform .5s ease;
+  /* transform: scale(2) rotate(180deg); */
+  transform: scale(1.7);
+  transition: all 0.5s ease;
 }
 /* кнопки изменяют цвет */
 /* ^^^^^^^^^^^^^^^^^^^^ */
@@ -141,10 +139,6 @@ body {
 .logo {
   height: 51px;
   width: 59px;
-}
-.logo :hover {
-  transform: scale(1.1) rotate(360deg);
-  transition: transform .5s ease;
 }
 .header_top {
   align-items: center;
@@ -669,6 +663,7 @@ body {
   text-align: center;
   background-color: white;
   color: #b2b2b2;
+  transition: all 0.5s ease;
 }
 .footer_right aside a:hover {
   color: #f7f7f8;
@@ -809,6 +804,7 @@ body {
   height: 364px;
   margin: 40px 0 0 0;
   position: relative;
+  transition: all 0.5s ease;
 }
 .fetured_item a {
   width: 263px;
@@ -822,6 +818,7 @@ body {
 .fetured_item img {
   width: 263px;
   height: 280px;
+  transition: all 0.5s ease;
 }
 .fetured_item p {
   font-size: 13px;
@@ -852,9 +849,11 @@ body {
 }
 .fetured_item:hover .add_basket {
   display: block;
+  transition: all 0.3s ease-in;
 }
 .fetured_item .add_basket:hover {
   text-decoration: underline;
+  transform: scale(1.1);
 }
 /* розовая кнопка */
 .all_products {
@@ -1059,12 +1058,14 @@ body {
   width: 37px;
   text-align: center;
   display: none;
+  transition: all 0.3s ease-in;
 }
 .fetured .fetured_item:hover .recicle {
   display: block;
 }
 .fetured .fetured_item .recicle:hover {
   font-size: 18px;
+  transform: scale(1.1);
   /* padding-bottom: 9px; */
 }
 .fetured .like {
@@ -1077,12 +1078,14 @@ body {
   width: 37px;
   text-align: center;
   display: none;
+  transition: all 0.3s ease-in;
 }
 .fetured .fetured_item:hover .like {
   display: block;
 }
 .fetured .fetured_item .like:hover {
   font-size: 18px;
+  transform: scale(1.1);
   /* padding-bottom: 9px; */
 }
 .product_stars {
@@ -1261,6 +1264,7 @@ body {
   text-align: center;
   color: #898989;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 .product_list a:hover {
   color: #ef5b70;
@@ -1338,6 +1342,7 @@ body {
   line-height: 47px;
   text-align: center;
   color: white;
+  transition: all 0.3s ease;
 }
 .single-next:hover {
   color: #ef5b70;
@@ -1564,6 +1569,7 @@ body {
 .table-details a {
   height: 115px;
   width: 100px;
+  transition: all 0.3s ease;
 }
 .table-details a {
   float: left;
@@ -1675,12 +1681,10 @@ body {
   padding: 25px 0 79px 0;
 }
 .checkout-menu__details {
-  transition: background-color 0.5s ease;
-  transition: transform .5s ease;
+  transition: all 0.5s ease;
 }
 .checkout-menu__details:hover {
   background-color: #f5f5f5;
-  transform: scale(1.1);
 }
 .checkout-menu__details summary::-webkit-details-marker {
   display: none;
@@ -1692,10 +1696,11 @@ body {
   line-height: 64px;
   text-align: left;
   text-transform: uppercase;
-  transition: transform .5s ease;
+  transition: all 0.5s ease;
 }
 .checkout-menu__details:hover summary {
-  transform: skew(-15deg) translateX(50px);
+  /* transform: translateX(30px); */
+  margin-left: 30px;
 }
 .checkout-menu__details summary:focus {
   outline: none;
