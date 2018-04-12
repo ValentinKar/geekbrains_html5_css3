@@ -111,3 +111,112 @@ ShowBasket.prototype.onPageIndex = function () {
     $basket.append($btnsLi);
 
 };
+
+
+ShowBasket.prototype.onPageShoppingCart = function () {
+    let $shopping = $('.shopping .table-shopping'); //.container 
+    // $shopping.empty();
+
+    let $tblRwHd = $('<div />', {
+        class: 'table-row table-row__head',
+    });
+
+    $tblRwHd.append($('<div />').append('Product Details'));
+    $tblRwHd.append($('<div />').append('unite Price'));
+    $tblRwHd.append($('<div />').append('Quantity'));
+    $tblRwHd.append($('<div />').append('shipping'));
+    $tblRwHd.append($('<div />').append('Subtotal'));
+    $tblRwHd.append($('<div />').append('ACTION'));
+    $shopping.append($tblRwHd);
+
+    for (let item of this.basketItems)
+    {
+        let $tblRwDiv = $('<div />', {
+            class: 'table-row'
+        });
+            let $fgre = $('<figure />', {
+                class: 'table-details'
+            });
+
+                let $imgA = $('<a />', {
+                    href: '#'
+                });
+                    let $img = $('<img />', {
+                        src: this.directorySmallImg + item.id_product + '.jpg',
+                        alt: item.product_name
+                    });
+                $imgA.append($img);
+
+                let $fgcptn = $('<figcaption />');
+                    $nmP = $('<p />', {
+                        class: 'name'
+                    });
+                    $nmP.append(item.product_name);
+                    $clurP = $('<p />');
+                    $clurP.append('Color:</span>');
+                    $clurP.append('&nbsp; Red');
+                    $szP = $('<p />');
+                    $szP.append('Size:</span>');
+                    $szP.append('&nbsp; Xll');
+                $fgcptn.append($nmP);
+                $fgcptn.append($clurP);
+                $fgcptn.append($szP);
+
+            $fgre.append($imgA);
+            $fgre.append($fgcptn);
+
+        $tblRwDiv.append($fgre);
+        $tblRwDiv.append($('<div />').append('$' + item.price));
+            $qunttyDiv = $('<input />', {
+                type: 'number',
+                value: item.quantity,
+                min: 1,
+                max: 10000
+            });
+        $tblRwDiv.append($('<div />').append($qunttyDiv));
+        $tblRwDiv.append($('<div />').append('FREE'));
+        $tblRwDiv.append($('<div />').append('$' + (item.price * item.quantity)));
+
+            // удалить товар из корзины
+            let $mssA = $('<a />', {
+                class: 'miss',
+                href: '#',
+                'good-id': 'item.id_product'
+            });
+            $mssA.append($('<i />', {
+                class: 'fa fa-times-circle',
+                'aria-hidden': true
+            }));
+
+        $tblRwDiv.append($('<div />').append($mssA));
+        $shopping.append($tblRwDiv);
+    }
+    let $tblRwBttom = $('<div />', {
+        class: 'table-shopping__bottom',
+    });
+        let $clrShppngDiv = $('<div />', {
+            class: 'black_button',
+        });
+            let $clrShppngA = $('<a />', {
+                href: '#'
+            });
+            $clrShppngA.append('cLEAR SHOPPING CART');
+        $clrShppngDiv.append($clrShppngA);
+    $tblRwBttom.append($clrShppngDiv);
+
+        let $cntnueShppngDiv = $('<div />', {
+            class: 'black_button',
+        });
+            let $cntnueShppngA = $('<a />', {
+                href: '#'
+            });
+            $cntnueShppngA.append('cONTINUE sHOPPING');
+        $cntnueShppngDiv.append($cntnueShppngA);
+    $tblRwBttom.append($cntnueShppngDiv);
+
+    $shopping.append($tblRwBttom);
+
+    let shoppingFormClasses = '.shopping-form .shopping-total ';
+    $(shoppingFormClasses + 'p:eq(0)').empty().append('Sub total &nbsp;&nbsp;&nbsp; $' + this.amount); 
+    $(shoppingFormClasses + '.grand span').empty().append('$' + this.amount); 
+};
