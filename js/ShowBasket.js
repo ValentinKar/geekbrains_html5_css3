@@ -128,7 +128,7 @@ ShowBasket.prototype.onPageIndex = function () {
  */
 ShowBasket.prototype.onPageShoppingCart = function () {
     let $shopping = $('.shopping .table-shopping'); //.container 
-    // $shopping.empty();
+    $shopping.empty();
 
     let $tblRwHd = $('<div />', {
         class: 'table-row table-row__head',
@@ -194,7 +194,7 @@ ShowBasket.prototype.onPageShoppingCart = function () {
             let $mssA = $('<a />', {
                 class: 'miss',
                 href: '#',
-                'good-id': 'item.id_product'
+                'good-id': item.id_product
             });
             $mssA.append($('<i />', {
                 class: 'fa fa-times-circle',
