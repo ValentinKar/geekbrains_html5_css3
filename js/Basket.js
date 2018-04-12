@@ -1,17 +1,9 @@
         $(document).ready(function () {
 
-            //Создаем товары
-            var $goods = $('#goods');
-
-            // var good1 = new Good(123, 'Клавиатура для ПК', 800);
-            // good1.render($goods);
-
-            // var good2 = new Good(124, 'Мышь для ПК1', 700);
-            // good2.render($goods);
 
             //Корзина
-            var basket = new Basket('basket');
-            basket.render($('#basket_wrapper'));
+            var basket = new Basket('1');
+            // basket.render($('#basket_wrapper'));
 
             // //Добавление товара в корзину
             // $('.good-buy').on('click', function () {
@@ -34,12 +26,11 @@
 /**
  * Класс корзины.
  * 
- * @property {string} idBasket - ID который будет добавляться в 
- * идентификаторы тегов.
+ * @property {string} idUser - ID пользователя. 
  */
-function Basket(idBasket) {
+function Basket(idUser) {
 
-    this.id = idBasket;
+    this.id = idUser;
 
     this.countGoods = 0; //Общее кол-во товаров
     this.amount = 0; //Общая стоимость товаров
@@ -48,29 +39,18 @@ function Basket(idBasket) {
 }
 
 /**
- * Метод добавляет контейнер для товаров на страницу.
+ * Метод 
  *
- * @param $root Коллекция jQuery - контейнер для товаров
+ * @param $root 
  * @return Значение типа String (не нужен, так как его нет в методе)
  */
 Basket.prototype.render = function ($root) {
-  var $basketDiv = $('<div />', {
-      id: this.id,
-      text: 'Корзина'
-  });
-
-  var $basketItemsDiv = $('<div />', {
-    id: this.id + '_items'
-  });
-
-  $basketItemsDiv.appendTo($basketDiv);
-  $basketDiv.appendTo($root);
 
 };
 
 /**
- * Метод запрашивает через ajax файл basket.json и получает 
- * корзину пользователя.
+ * Метод запрашивает через ajax файл getBasket.json, получает 
+ * корзину пользователя и отображает ее на страницах.
  *
  */
 Basket.prototype.getBasket = function () {
@@ -79,31 +59,27 @@ Basket.prototype.getBasket = function () {
     $.ajax({
         type: 'POST',
         url: './responses/getBasket.json',
-        // url: './basket.json',
         dataType: 'json',
+        // отправка id пользователя на сервер
+        data: { id: this.id },
+        // data: { name: "John", location: "Boston" },
         context: this,
         success: function (data) {
 
-            // var $basketData = $('<div />', {
-            //     id: 'basket_data'
-            // });
-
             this.countGoods = data.countGoods;
             this.amount = data.amount;
-
-            // $basketData.append('Всего товаров: ' + this.countGoods + '</p>');
-            // $basketData.append('Общая стоимость: ' + this.amount + '</p>');
-
-            // $basketData.appendTo(appendId);
 
             for (var itemKey in data.contents)
             {
                 this.basketItems.push(data.contents[itemKey]);
             }
+
+            // отображение товаров на странице
             let showBasket = new ShowBasket(this.countGoods, this.amount, this.basketItems);
+            // отображение на странице index.html
             showBasket.onPageIndex();
+            // отображение на странице shopping-cart.html
             showBasket.onPageShoppingCart();
-            // console.log(this.basketItems);
         }
     });
 };
