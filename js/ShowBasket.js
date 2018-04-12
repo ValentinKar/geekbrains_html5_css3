@@ -1,4 +1,10 @@
-
+/**
+ * Класс отображения корзины на страницах магазина.
+ * 
+ * @property countGoods - Колличество товаров на странице.
+ * @property amount - Сумма стоимостей товаров в магазине.
+ * @property basketItems - Массив с товарами в корзине.
+ */
 function ShowBasket(countGoods, amount, basketItems) {
     this.countGoods = countGoods;  //Общее кол-во товаров
     this.amount = amount;  //Общая стоимость товаров
@@ -7,6 +13,10 @@ function ShowBasket(countGoods, amount, basketItems) {
     this.directorySmallImg = 'img/small-img/';
 }
 
+/**
+ * Метод отображает корзину с товарами на странице index.html.
+ *
+ */
 ShowBasket.prototype.onPageIndex = function () {
     let $basket = $('.full_basket');
     $basket.empty();
@@ -112,7 +122,10 @@ ShowBasket.prototype.onPageIndex = function () {
 
 };
 
-
+/**
+ * Метод отображает корзину с товарами на странице shopping-cart.html.
+ *
+ */
 ShowBasket.prototype.onPageShoppingCart = function () {
     let $shopping = $('.shopping .table-shopping'); //.container 
     // $shopping.empty();
