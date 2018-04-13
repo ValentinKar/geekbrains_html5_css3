@@ -1,35 +1,3 @@
-        $(document).ready(function () {
-
-
-            //Корзина
-            var basket = new Basket('1');
-            // basket.render($('#basket_wrapper'));
-
-            // //Добавление товара в корзину
-            // $('.good-buy').on('click', function () {
-            //     var idProduct = parseInt($(this).attr('data-id'));
-            //     var price = parseInt($(this).parent().find('span.product-price').text());
-            //     basket.add(idProduct, price);
-            // });
-
-            // //Удаление товара из корзины
-            // $('.good-delete').on('click', function () {
-            //     var idProduct = parseInt($(this).attr('data-id'));
-            //     var price = parseInt($(this).parent().find('span.product-price').text());
-            //     basket.remove(idProduct, price);
-            // });
-
-            // 2. Для того, чтобы кнопки заработали, используйте делегаты.
-            //Удаление отзыва
-            $(document).on('click', '.miss', function () {
-                let idProduct = parseInt($(this).attr('good-id'));
-                // var price = parseInt($(this).parent().find('span.product-price').text());
-                basket.remove(idProduct);
-            });
-
-        });
-
-
 /**
  * Класс корзины.
  * 
@@ -42,6 +10,8 @@ function Basket(idUser) {
     this.countGoods = 0; //Общее кол-во товаров
     this.amount = 0; //Общая стоимость товаров
     this.basketItems = []; //Массив для хранения товаров
+    this.basketJsonAddr = './responses/getBasket.json';
+    this.deleteFromBasketAddr = './responses/deleteFromBasket.json';
     this.getBasket(); //Получаем уже добавленные товары в корзину
 }
 
@@ -70,7 +40,7 @@ Basket.prototype.getBasket = function () {
 
     $.ajax({
         type: 'POST',
-        url: './responses/getBasket.json',
+        url: this.basketJsonAddr,
         dataType: 'json',
         // отправка id пользователя на сервер
         data: { id: this.id },
@@ -105,7 +75,7 @@ Basket.prototype.getBasket = function () {
 Basket.prototype.remove = function (idProduct) {
     $.ajax({
         type: 'POST',
-        url: './responses/deleteFromBasket.json',
+        url: this.deleteFromBasketAddr,
         dataType: 'json',
         // отправка id пользователя на сервер
         data: { idUser: this.id, idGood: idProduct },
