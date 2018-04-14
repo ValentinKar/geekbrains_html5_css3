@@ -78,7 +78,8 @@ Goods.prototype.onPageIndex = function (arrayOfGoods) {
 
         let $addBscktA = $('<a />', {
             href: '#',
-            class: 'add_basket'
+            class: 'add_basket',
+            'good-id': item.id_product
         }).append($('<i />', {
             class: 'fa fa-shopping-cart',
             'aria-hidden': 'true'

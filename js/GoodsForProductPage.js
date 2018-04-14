@@ -78,7 +78,8 @@ GoodsForProductPage.prototype.onPageProduct = function (arrayOfGoods) {
         // кнопка "добавить в корзину" на картинке товара
         let $addBscktA = $('<a />', {
             href: '#',
-            class: 'add_basket'
+            class: 'add_basket',
+            'good-id': item.id_product
         }).append($('<i />', {
             class: 'fa fa-shopping-cart',
             'aria-hidden': 'true'
