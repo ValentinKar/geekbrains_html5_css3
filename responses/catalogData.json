@@ -1,15 +1,14 @@
 [
   {
     "id_product": 123,
-    "product_name": "Laptop",
+    "product_name": "Shirt",
     "price": 45600
   },
   {
     "id_product": 456,
-    "product_name": "Mouse",
+    "product_name": "Blouse",
     "price": 1000
   },
-
   {
     "id_product": 7,
     "product_name": "Куртка",
