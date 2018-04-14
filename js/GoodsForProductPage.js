@@ -3,7 +3,7 @@ function GoodsForProductPage(pageNumber, idCategory) {
     this.pageNumber = pageNumber;
     this.idCategory = idCategory;
     this.goodsItems = [];
-    this.imgCatalog = 'img/products/';
+    this.imgCatalog = 'img/Product/';
 }
 
 GoodsForProductPage.prototype.getGoods = function () {
