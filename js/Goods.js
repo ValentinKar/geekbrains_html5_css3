@@ -25,6 +25,7 @@ Goods.prototype.getGoods = function () {
 Goods.prototype.onPageIndex = function (arrayOfGoods) {
     // console.log(arrayOfGoods);
 
+    // $ftrdItmsDiv = $('.container .fetured_items');
     $ftrdItmsDiv = $('.fetured_items');
     // $ftrdItmsDiv.empty();
 
@@ -86,8 +87,4 @@ Goods.prototype.onPageIndex = function (arrayOfGoods) {
     $ftrdFigure.append($addBscktA);
     $ftrdItmsDiv.append($ftrdFigure);
     }
-}
-
-Goods.prototype.onPageProduct = function (arrayOfGoods) {
-    // console.log(arrayOfGoods);
 }
