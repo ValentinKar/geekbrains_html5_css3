@@ -10,6 +10,13 @@ $(document).ready(function () {
         // var price = parseInt($(this).parent().find('span.product-price').text());
         basket.remove(idProduct);
     });
+    $(document).on('click', '.add_basket', function () {
+        let idProduct = parseInt($(this).attr('good-id'));
+        // // var price = parseInt($(this).parent().find('span.product-price').text());
+        basket.add(idProduct);
+    });
+
+
     // basket.render($('#basket_wrapper'));
 
     // //Добавление товара в корзину
