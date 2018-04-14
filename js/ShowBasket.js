@@ -194,10 +194,12 @@ ShowBasket.prototype.onPageShoppingCart = function () {
         $tblRwDiv.append($fgre);
         $tblRwDiv.append($('<div />').append('$' + item.price));
             $qunttyDiv = $('<input />', {
+                class: 'quantity-of-good',
                 type: 'number',
                 value: item.quantity,
                 min: 1,
-                max: 10000
+                max: 10000,
+                'good-id': item.id_product
             });
         $tblRwDiv.append($('<div />').append($qunttyDiv));
         $tblRwDiv.append($('<div />').append('FREE'));
