@@ -7,15 +7,19 @@ $(document).ready(function () {
     //Удаление товара
     $(document).on('click', '.miss', function () {
         let idProduct = parseInt($(this).attr('good-id'));
-        // var price = parseInt($(this).parent().find('span.product-price').text());
         basket.remove(idProduct);
     });
     $(document).on('click', '.add_basket', function () {
         let idProduct = parseInt($(this).attr('good-id'));
-        // // var price = parseInt($(this).parent().find('span.product-price').text());
         basket.add(idProduct);
     });
-
+    // изменение кол-ва товара на странице shopping-cart.html в 
+    // в теге <input type = "number" ... >
+    $(document).on('change', '.quantity-of-good', function () {
+        let idProduct = parseInt($(this).attr('good-id'));
+        let quantity = parseInt($(this).val());
+        basket.changeQuantity(idProduct, quantity);
+    });
 
     // basket.render($('#basket_wrapper'));
 
