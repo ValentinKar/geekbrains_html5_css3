@@ -567,6 +567,11 @@
             let idProduct = parseInt($(this).attr('good-id'));
             basket.remove(idProduct);
         });
+        $(document).on('click', '.add_basket', function () {
+            let idProduct = parseInt($(this).attr('good-id'));
+            // // var price = parseInt($(this).parent().find('span.product-price').text());
+            basket.add(idProduct);
+        });
 
         // товары из магазина
         var productGoods = new GoodsForProductPage('1', '1');
