@@ -5,13 +5,26 @@
  * @property amount - Сумма стоимостей товаров в магазине.
  * @property basketItems - Массив с товарами в корзине.
  */
-function ShowBasket(countGoods, amount, basketItems) {
-    this.countGoods = countGoods;  //Общее кол-во товаров
-    this.amount = amount;  //Общая стоимость товаров
+function ShowBasket(basketItems) {
+    this.countGoods = 0;  //Общее кол-во товаров
+    this.amount = 0;  //Общая стоимость товаров
     this.basketItems = basketItems;  //Массив для хранения товаров
     this.directoryTinyImg = 'img/tiny-img/';
     this.directorySmallImg = 'img/small-img/';
+    this.summa();
 }
+
+/**
+ * Метод получает из корзины с товарами их кол-во и  
+ * суммарную стоимость.
+ *
+ */
+ShowBasket.prototype.summa = function () {
+    for (let item of this.basketItems) { 
+        this.countGoods += item.quantity;
+        this.amount += item.quantity * item.price;
+    }
+};
 
 /**
  * Метод отображает корзину с товарами на странице index.html.
