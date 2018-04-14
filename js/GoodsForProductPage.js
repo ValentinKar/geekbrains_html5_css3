@@ -1,12 +1,12 @@
 
-function Goods(pageNumber, idCategory) {
+function GoodsForProductPage(pageNumber, idCategory) {
     this.pageNumber = pageNumber;
     this.idCategory = idCategory;
     this.goodsItems = [];
     this.imgCatalog = 'img/products/';
 }
 
-Goods.prototype.getGoods = function () {
+GoodsForProductPage.prototype.getGoods = function () {
 
     $.ajax({
         type: 'POST',
@@ -17,12 +17,12 @@ Goods.prototype.getGoods = function () {
         // data: { name: "John", location: "Boston" },
         context: this,
         success: function (data) {
-            this.onPageIndex(data);
+            this.onPageProduct(data);
         }
     });
 };
 
-Goods.prototype.onPageIndex = function (arrayOfGoods) {
+GoodsForProductPage.prototype.onPageProduct = function (arrayOfGoods) {
     // console.log(arrayOfGoods);
     // $ftrdItmsDiv = $('.product_content .fetured_items');
     $ftrdItmsDiv = $('.fetured_items');
@@ -165,9 +165,5 @@ Goods.prototype.onPageIndex = function (arrayOfGoods) {
             $whteBttnDiv.append($vewAllA);
         $prductFtredDiv.append($whteBttnDiv);
 
-
     $ftrdItmsDiv.append($prductFtredDiv);
-
-
-
 }

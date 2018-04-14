@@ -1,10 +1,10 @@
 $(document).ready(function () {
 
 
-    //Корзина
+    // Корзина
     var basket = new Basket('1');
     // 2. Для того, чтобы кнопки заработали, используйте делегаты.
-    //Удаление отзыва
+    //Удаление товара
     $(document).on('click', '.miss', function () {
         let idProduct = parseInt($(this).attr('good-id'));
         // var price = parseInt($(this).parent().find('span.product-price').text());
@@ -27,7 +27,7 @@ $(document).ready(function () {
     // });
 
 
-    //Корзина
+    // Товары на странице
     var goods = new Goods('1', '1');
     goods.getGoods();
 

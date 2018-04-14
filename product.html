@@ -557,7 +557,24 @@
     <script src="js/ShowBasket.js"></script>
     <script src="js/GoodsForProductPage.js"></script>
 
-    <script src="js/load.js"></script>
+    <script>
+        $(document).ready(function () {
+
+        // Корзина
+        var basket = new Basket('1');
+        // Удаление товара (используются делегаты)
+        $(document).on('click', '.miss', function () {
+            let idProduct = parseInt($(this).attr('good-id'));
+            basket.remove(idProduct);
+        });
+
+        // товары из магазина
+        var productGoods = new GoodsForProductPage('1', '1');
+        // отображение товаров на странице product.html
+        productGoods.getGoods();
+
+    });
+    </script>
 
 
 </body>
