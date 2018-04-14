@@ -3,6 +3,7 @@ function Goods(pageNumber, idCategory) {
     this.pageNumber = pageNumber;
     this.idCategory = idCategory;
     this.goodsItems = [];
+    this.imgCatalog = 'img/products/';
 }
 
 Goods.prototype.getGoods = function () {
@@ -22,10 +23,12 @@ Goods.prototype.getGoods = function () {
 };
 
 Goods.prototype.onPageIndex = function (arrayOfGoods) {
-    console.log(arrayOfGoods);
+    // console.log(arrayOfGoods);
 
     $ftrdItmsDiv = $('.fetured_items');
     // $ftrdItmsDiv.empty();
+
+    for (let item of arrayOfGoods) {
 
     let $ftrdFigure = $('<figure />', {
         class: 'fetured_item'
@@ -37,7 +40,7 @@ Goods.prototype.onPageIndex = function (arrayOfGoods) {
         });
 
             let $img = $('<img />', {
-                src: 'img/product-1.jpg',
+                src: this.imgCatalog + item.id_product + '.jpg',
                 alt: ''
             });
 
@@ -61,9 +64,9 @@ Goods.prototype.onPageIndex = function (arrayOfGoods) {
 
             $redP = $('<p />', {
                 class: 'red'
-            }).append('$52.00');
+            }).append('$' + item.price);
 
-            $P = $('<p />').append('Mango  People  T-shirt');
+            $P = $('<p />').append(item.product_name);
 
         $ftrdA.append($img);
         $ftrdA.append($P);
@@ -82,7 +85,7 @@ Goods.prototype.onPageIndex = function (arrayOfGoods) {
 
     $ftrdFigure.append($addBscktA);
     $ftrdItmsDiv.append($ftrdFigure);
-
+    }
 }
 
 Goods.prototype.onPageProduct = function (arrayOfGoods) {

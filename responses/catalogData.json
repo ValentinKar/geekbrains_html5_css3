@@ -1,12 +1,43 @@
 [
   {
     "id_product": 123,
-    "product_name": "Ноутбук",
+    "product_name": "Laptop",
     "price": 45600
   },
   {
     "id_product": 456,
-    "product_name": "Мышка",
+    "product_name": "Mouse",
     "price": 1000
+  },
+
+  {
+    "id_product": 7,
+    "product_name": "Куртка",
+    "price": 250
+  },
+  {
+    "id_product": 8,
+    "product_name": "Платье",
+    "price": 150
+  },
+  {
+    "id_product": 9,
+    "product_name": "Dress",
+    "price": 200
+  },
+  {
+    "id_product": 10,
+    "product_name": "Костюм",
+    "price": 300
+  },
+  {
+    "id_product": 11,
+    "product_name": "Брюки",
+    "price": 150
+  },
+  {
+    "id_product": 12,
+    "product_name": "Sweater",
+    "price": 200
   }
 ]
