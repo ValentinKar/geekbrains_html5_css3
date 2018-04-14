@@ -136,11 +136,6 @@ Basket.prototype.add = function (idProduct) {
 
 
 /**
- * Метод добавляет товар в корзину, изменяет на странице кол-во товаров, 
- * общую стоимость, также метод создает массив обьектов basketItem в который 
- * вноситься идентификаторы товаров и их цены.
- *
- * @param idProduct Идентификатор товара
  */
 Basket.prototype.extractFromCatalog = function (id) {
 
@@ -177,3 +172,13 @@ Basket.prototype.addBasket = function (product) {
     // Перерисовка корзины
     this.render();
 };
+
+Basket.prototype.changeQuantity = function (idProduct, quantityProduct) {
+    for (let number in this.basketItems) { 
+        if(this.basketItems[number].id_product === idProduct) {
+            this.basketItems[number].quantity = quantityProduct;
+        }
+    }
+    // Перерисовка корзины
+    this.render();
+}
