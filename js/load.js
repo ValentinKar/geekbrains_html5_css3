@@ -21,25 +21,11 @@ $(document).ready(function () {
         basket.changeQuantity(idProduct, quantity);
     });
 
-    // basket.render($('#basket_wrapper'));
-
-    // //Добавление товара в корзину
-    // $('.good-buy').on('click', function () {
-    //     var idProduct = parseInt($(this).attr('data-id'));
-    //     var price = parseInt($(this).parent().find('span.product-price').text());
-    //     basket.add(idProduct, price);
-    // });
-
-    // //Удаление товара из корзины
-    // $('.good-delete').on('click', function () {
-    //     var idProduct = parseInt($(this).attr('data-id'));
-    //     var price = parseInt($(this).parent().find('span.product-price').text());
-    //     basket.remove(idProduct, price);
-    // });
 
 
     // Товары на странице
     var goods = new Goods('1', '1');
     goods.getGoods();
+
 
 });
