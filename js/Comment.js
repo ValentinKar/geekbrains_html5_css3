@@ -13,7 +13,6 @@ function Comment(idReviews) {
     this.id = idReviews;  // Первая часть идентификатора тегов
     this.idDivForReviews = 'reviews'; // Идентификатор дива в который вставляются комментарии
     this.commentsArray = []; //Массив для хранения комментариев
-    // this.getReviews(); //Получаем уже добавленные на сайт комментарии
 }
 
 /**
@@ -26,61 +25,36 @@ Comment.prototype.render = function ($root) {
 
   let $commentDiv = $('<div />', {
       id: this.id,
-      text: 'Добавить отзыв от пользователя с id = '
+      text: 'Добавить отзыв:'
   });
-
-      let $idUserInput = $('<input />', {
-        id: this.id + '_user',
-        value: '12'
-      });
 
           let $newReviewTextarea = $('<div />');
           $('<textarea />', {
             id: this.id + '_review',
             cols: 80,
-            rows: 10
+            rows: 10,
+            'user-id': '123'
           }).appendTo($newReviewTextarea);
 
   let $reviewButtonAdd = $('<button />', {
       class: 'add-comment',
-      text: 'добавить',
-      'data-id': this.id + '_add'
+      text: 'добавить'//,
+      // 'data-id': this.id + '_add'
   });
 
       let $reviewsDiv = $('<div />', {
           id: this.idDivForReviews
       });
 
-  $idUserInput.appendTo($commentDiv);
-  $newReviewTextarea.appendTo($commentDiv);
-  $reviewButtonAdd.appendTo($commentDiv);
+      $newReviewTextarea.appendTo($commentDiv);
+      $reviewButtonAdd.appendTo($commentDiv);
 
-  $commentDiv.appendTo($root);
+    $commentDiv.appendTo($root);
 
   $root.append('<hr />');
   $root.append($('<div />', { class: 'reviews-h3' }).append('Отзывы:'));
   $reviewsDiv.appendTo($root);
 };
-
-/**
- * Метод запрашивает файл reviews.json и получает из него уже 
- * существующие комментарии.
- *
- */
-// Comment.prototype.getReviews = function () {
-//     $.ajax({
-//         type: 'GET',
-//         url: './reviews.json',
-//         dataType: 'json',
-//         context: this,
-//         success: function (data) {
-//           if (data.result === 1) {
-//             this.reviewsArray(data.comments);
-//             this.showReviews();
-//           }
-//         }
-//     });
-// };
 
 /**
  * Метод формирует массив с комментариями из массива полученного из  
@@ -108,6 +82,10 @@ Comment.prototype.showReviews = function () {
       let $comentDiv = $('<div />', {
           class: 'review-div'
       });
+      // если отзыв одобрен, добавляем класс (изменяем цвет отзыва)
+      if (comment.result === 2) {
+        $comentDiv.addClass('approve-review');
+      }
 
         // кнопка удалить комментарий
         let $goodBtnDelete = $('<button />', {
@@ -123,11 +101,11 @@ Comment.prototype.showReviews = function () {
               'review-id-for-approve': comment.id_comment
           });
 
-      $comentDiv.append('id comment: ' + comment.id_comment + '</p>');
-      $comentDiv.append('result: ' + comment.result + '</p>');
-      $comentDiv.append('id пользователя: ' + comment.id_user + '</p>');
-      $comentDiv.append('текст комментария: ' + comment.text + '</p>');
-      $comentDiv.append('состояние отзыва: ' + comment.error_message + '</p>');
+      $comentDiv.append($('<p />').append('id comment: ' + comment.id_comment));
+      $comentDiv.append($('<p />').append('result: ' + comment.result));
+      $comentDiv.append($('<p />').append('id пользователя: ' + comment.id_user));
+      $comentDiv.append($('<p />').append('текст комментария: ' + comment.text));
+      $comentDiv.append($('<p />').append('состояние отзыва: ' + comment.error_message));
       $comentDiv.append($goodBtnDelete);
       $comentDiv.append($reviewApprove);
       $dataDiv.append($comentDiv);
