@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Отзывы</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <style>
+        .review-div {
+            display: inline-block;
+            padding: 7px;
+            margin: 7px;
+            border: 2px solid green;
+            min-width: 1100px;
+        }
+        .review-div button {
+            margin: 5px 20px;
+        }
+        #comments div {
+            padding: 5px 0;
+        }
+        .add-comment {
+            margin-bottom: 20px;
+        }
+        .reviews-h3 {
+            color: #222;
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 0.7px;
+            line-height: 1.19;
+            margin-left: 37px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+           <div class="container header_top">
+               <a class="logo" href="comments.html" title="Отзывы">
+                   <img src="img/logo.png" alt="логотип">
+               </a>
+               <p>BRAN<span>D</span></p>
+               <div class="header_forms">
+                   <form class="header_browse" action="#">
+                        <select name="brand" onchange>
+                            <option class="head_select" value="">
+                                Women
+                            </option>
+                            <option value="">
+                                Dresses
+                            </option>
+                            <option value="">
+                                Tops
+                            </option>
+                            <option value="">
+                                Sweaters/Knits
+                            </option>
+                            <option value="">
+                                Jackets/Coats
+                            </option>
+                            <option value="">
+                                Blazers
+                            </option>
+                            <option value="">
+                                Denim
+                            </option>
+                            <option value="">
+                                Leggings/Pants
+                            </option>
+                            <option value="">
+                                Skirts/Shorts
+                            </option>
+                            <option value="">
+                                Accessories 
+                            </option>
+                            <option value="">
+                                Bags/Purses
+                            </option>
+                            <option value="">
+                                Swimwear/Underwear
+                            </option>
+                            <option value="">
+                                Nightwear
+                            </option>
+                            <option value="">
+                                Shoes
+                            </option>
+                            <option value="">
+                                Beauty
+                            </option>
+                            <option class="head_select" value="">
+                                Men
+                            </option>
+                            <option value="">
+                                Tees/Tank tops
+                            </option>
+                            <option value="">
+                                Shirts/Polos
+                            </option>
+                            <option value="">
+                                Sweaters
+                            </option>
+                            <option value="">
+                                Sweatshirts/Hoodies
+                            </option>
+                            <option value="">
+                                Blazers
+                            </option>
+                            <option value="">
+                                Jackets/vests
+                            </option>
+                            <option selected disabled>
+                                Browse
+                            </option>
+                        </select>
+                        <input type="text" placeholder="Search for Item..." pattern="^[0-9a-zA-Z\s]+$" title="eng + numb">
+                        <input type="submit" value="">
+                   </form>
+
+                   <div class="header_my_account">   
+                        <ul class="my_basket">
+                            <li>
+                                <img class="basket" src="img/basket.jpg" alt="">
+                                <ul class="full_basket">
+                                    <li>
+                                        <img src="img/Layer-43.jpg" alt="">
+                                        <div>
+                                            <p>Rebox Zane</p>
+                                            <span class="stars">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span>1 &nbsp; x &nbsp; $250</span>
+                                        </div>
+                                        <a class="miss"  href="#">
+                                            <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <img src="img/Layer-44.jpg" alt="">
+                                        <div>
+                                            <p>Rebox Zane</p>
+                                            <span class="stars">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                            </span>
+                                            <span>1 &nbsp; x &nbsp; $250</span>
+                                        </div>
+                                        <a class="miss" href="#">
+                                            <i class="fa fa-times-circle" aria-hidden="true"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <p>TOTAL</p>
+                                        <p class="summa">$500.00</p>
+                                    </li>
+                                    <li>
+                                        <div class="white_button">
+                                            <a class="checkout" href="checkout.html">Checkout</a>
+                                        </div>
+                                        
+                                        <div class="black_button">
+                                            <a class="go_to_cart" href="#">Go to cart</a>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                            </li>
+                        </ul>
+                        
+                        <div class="red_button">
+                            <a class="my_account" href="#">My Account &#9660;</a>
+                        </div>
+                   </div>
+               </div>
+            </div>
+        </div>
+    
+        <nav class="container">
+            <ul class="nav_flex">
+                <li><a class="link_active" href="index.html">Home</a></li>
+                <li><a href="product.html">Man</a>
+                    <div class="mega-menu">
+                        <div class="angle"></div>
+                        <div class="flex">
+                            <div class="mega-menu__list">
+                                <h3 class="mega-menu__heading">Women</h3>
+                                <ul class="mega-menu__items">
+                                    <li>
+                                        <a href="#">Dresses</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tops</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sweaters/Knits</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Jackets/Coats</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Blazers</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Denim</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Leggings/Pants</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Skirts/Shorts</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Accessories</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="mega-menu__list">
+                                <h3 class="mega-menu__heading">Women</h3>
+                                <ul class="mega-menu__items">
+                                    <li>
+                                        <a href="#">Dresses</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tops</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sweaters/Knits</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Jackets/Coats</a>
+                                    </li>
+                                </ul>
+
+                                <h3 class="mega-menu__heading">Women</h3>
+                                <ul class="mega-menu__items">
+                                    <li>
+                                        <a href="#">Dresses</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tops</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sweaters/Knits</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <div class="mega-menu__list">
+                                <h3 class="mega-menu__heading">Women</h3>
+                                <ul class="mega-menu__items">
+                                    <li>
+                                        <a href="#">Dresses</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tops</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Sweaters/Knits</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Jackets/Coats</a>
+                                    </li>
+                                </ul>
+                                <img src="img/mega-menu-42.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="shopping-cart.html">Women</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Accoseriese</a></li>
+                <li><a href="#">Featured</a></li> 
+                <li><a href="#">Hot Deals</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <hr>
+        <div id="users-comments"></div>
+        <hr>
+    </div>
+
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous">
+    </script>
+    <script src="libraries/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/Comment.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //Отзывы
+            let idReview = 'comments';
+            var comment = new Comment(idReview);
+            comment.render($('#users-comments'));
+            //Добавление отзыва
+            $('.add-comment').on('click', function () {
+                let idUser = parseInt($(`#${idReview}_user`).val());
+                let text = $(`#${idReview}_review`).val();
+                comment.add(idUser, text);
+            });
+
+                //Удаление отзыва
+                $(document).on('click', '.comment-delete', function () {
+                    var idComment = parseInt($(this).attr('review-id-for-delete'));
+                    comment.remove(idComment);
+                });
+                //Одобрение отзыва
+                $(document).on('click', '.comment-approve', function () {
+                    var idComment = parseInt($(this).attr('review-id-for-approve'));
+                    comment.approve(idComment);
+                });
+        });
+    </script>
+</body>
+</html>
