@@ -22,10 +22,8 @@ $(document).ready(function () {
     });
 
 
-
     // Товары на странице
     var goods = new Goods('1', '1');
     goods.getGoods();
-
 
 });
