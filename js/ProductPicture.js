@@ -1,12 +1,13 @@
 
-function ProductPicture(item, catalog) {
+function ProductPicture(item, catalog, necessaryOfButtons) {
     this.item = item;
     this.catalog = catalog;
+    this.boolean = necessaryOfButtons;
     // this.goodsItems = [];
     // this.imgCatalog = 'img/Product/';
 }
 
-ProductPicture.prototype.getWith3Buttons = function () {
+ProductPicture.prototype.getWithButtons = function () {
     let $ftrdFigure = $('<figure />', {
         class: 'fetured_item'
     });
@@ -62,6 +63,10 @@ ProductPicture.prototype.getWith3Buttons = function () {
             'aria-hidden': 'true'
         })).append('Add to Cart');
 
+    $ftrdFigure.append($addBscktA);
+
+        if (this.boolean) {
+
             // кнопка "обновить" на картинке товара
             let $rcicleA = $('<a />', {
                 href: '#',
@@ -80,8 +85,10 @@ ProductPicture.prototype.getWith3Buttons = function () {
                     'aria-hidden': 'true'
                 }));
 
-    $ftrdFigure.append($addBscktA);
-    $ftrdFigure.append($rcicleA);
-    $ftrdFigure.append($likeA);
+        // $ftrdFigure.append($addBscktA);
+        $ftrdFigure.append($rcicleA);
+        $ftrdFigure.append($likeA);
+        }
+
     return $ftrdFigure;
 }
