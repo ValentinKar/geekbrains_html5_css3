@@ -4,7 +4,10 @@ function Goods(pageNumber, idCategory) {
     this.idCategory = idCategory;
     this.goodsItems = [];
     this.imgCatalog = 'img/products/';
+    this.imgProductCatalog = 'img/Product/';
+    this.imgSingleCatalog = 'img/SinglePage/';
 }
+
 
 Goods.prototype.getGoods = function () {
 
@@ -18,74 +21,111 @@ Goods.prototype.getGoods = function () {
         context: this,
         success: function (data) {
             this.onPageIndex(data);
+            this.onPageProduct(data);
+            this.onPageSinglePage(data);
         }
     });
 };
 
-Goods.prototype.onPageIndex = function (arrayOfGoods) {
-    // console.log(arrayOfGoods);
 
-    // $ftrdItmsDiv = $('.container .fetured_items');
-    $ftrdItmsDiv = $('.fetured_items');
+Goods.prototype.onPageIndex = function (arrayOfGoods) {
+    let catalogOfImage = this.imgCatalog;
+    $ftrdItmsDiv = $('.home .fetured_items');
+    if ($ftrdItmsDiv.length > 0) {
+    // $ftrdItmsDiv = $('.fetured_items');
     // $ftrdItmsDiv.empty();
 
-    for (let item of arrayOfGoods) {
+        for (let i = 0; i < 8; i++) {
+            let $ftrdFigure = new ProductPicture(arrayOfGoods[i], catalogOfImage, false);
+            $ftrdItmsDiv.append($ftrdFigure.getWithButtons());
+        }
+    }
+}
 
-    let $ftrdFigure = $('<figure />', {
-        class: 'fetured_item'
-    });
 
-        let $ftrdA = $('<a />', {
-            href: 'single-page.html',
-            class: 'fetured_product'
-        });
+Goods.prototype.onPageProduct = function (arrayOfGoods) {
+    let catalogOfImage = this.imgProductCatalog;
+    $ftrdItmsDiv = $('.product_content .fetured_items');
+    if ($ftrdItmsDiv.length > 0) {
+    // $ftrdItmsDiv = $('.fetured_items');
+    // $ftrdItmsDiv.empty();
 
-            let $img = $('<img />', {
-                src: this.imgCatalog + item.id_product + '.jpg',
-                alt: ''
+        for (let i = 0; i < 9; i++) {
+        // for (let item of arrayOfGoods) {
+            let $ftrdFigure = new ProductPicture(arrayOfGoods[i], catalogOfImage, true);
+            $ftrdItmsDiv.append($ftrdFigure.getWithButtons());
+        }
+
+            let $prductFtredDiv = $('<div />', {
+                class: 'product_fetured'
             });
-
-                let $prductStrsSpan = $('<span />', {
-                    class: 'product_stars'
+                let $prductLstUl = $('<ul />', {
+                    class: 'product_list'
                 });
-                    let $imgSpan = $('<span />', {
-                        class: 'img'
-                    });
-                    for (let j = 0; j < 4; j++) {
-                        $imgSpan.append($('<i />', {
-                            class: 'fa fa-star',
-                            'aria-hidden': 'true'
-                        }));
+
+                    // прокрутка страниц с товарами <
+                    let $prductLeftLstLi = $('<li />');
+                    $prductLeftLstLi.append($('<a />', {
+                            href: '#'
+                        }).append('&lt;'));
+                    $prductLstUl.append($prductLeftLstLi);
+                    for (let i = 1; i <= 6; i++) {
+                        let $prductLstLi = $('<li />');
+                            let $prductLstA = $('<a />', {
+                                href: '#'
+                            }).append(i);
+                        $prductLstLi.append($prductLstA);
+                        $prductLstUl.append($prductLstLi);
                     }
-                    $imgSpan.append($('<i />', {
-                        class: 'fa fa-star-half-o',
-                        'aria-hidden': 'true'
-                    }));
-                $prductStrsSpan.append($imgSpan);
 
-            $redP = $('<p />', {
-                class: 'red'
-            }).append('$' + item.price);
+                    // прокрутка: другие страницы с товарами ...
+                    let $prductLstCenterLi = $('<li />');
+                    $prductLstCenterLi.append($('<a />', {
+                            href: '#'
+                        }).append('...'));
+                    $prductLstUl.append($prductLstCenterLi);
 
-            $P = $('<p />').append(item.product_name);
+                        // прокрутка: последняя страница с товарами 20
+                        let $prductLstLastLi = $('<li />');
+                        $prductLstLastLi.append($('<a />', {
+                                href: '#'
+                            }).append('20'));
+                        $prductLstUl.append($prductLstLastLi);
 
-        $ftrdA.append($img);
-        $ftrdA.append($P);
-        $ftrdA.append($prductStrsSpan);
-        $ftrdA.append($redP);
+                    // прокрутка: прокрутка страниц с товарами >
+                    let $prductLstRightLi = $('<li />');
+                    $prductLstRightLi.append($('<a />', {
+                            href: '#'
+                        }).append('&gt;'));
+                    $prductLstUl.append($prductLstRightLi);
 
-    $ftrdFigure.append($ftrdA);
+                $prductFtredDiv.append($prductLstUl);
 
-        let $addBscktA = $('<a />', {
-            href: '#',
-            class: 'add_basket',
-            'good-id': item.id_product
-        }).append($('<i />', {
-            class: 'fa fa-shopping-cart',
-            'aria-hidden': 'true'
-        })).append('Add to Cart');
 
-    $ftrdFigure.append($addBscktA);
-    $ftrdItmsDiv.append($ftrdFigure);
+                let $whteBttnDiv = $('<div />', {
+                    class: 'white_button'
+                });
+                    let $vewAllA = $('<a />', {
+                        class: 'view_all',
+                        href: '#'
+                    }).append('View All');
+                $whteBttnDiv.append($vewAllA);
+            $prductFtredDiv.append($whteBttnDiv);
+        $ftrdItmsDiv.append($prductFtredDiv);
+    }
+}
+
+
+Goods.prototype.onPageSinglePage = function (arrayOfGoods) {
+    let catalogOfImage = this.imgSingleCatalog;
+    $ftrdItmsDiv = $('.single .fetured_items');
+    if ($ftrdItmsDiv.length > 0) {
+    // $ftrdItmsDiv = $('.fetured_items');
+    // $ftrdItmsDiv.empty();
+
+        for (let i = 0; i < 4; i++) {
+            let $ftrdFigure = new ProductPicture(arrayOfGoods[i], catalogOfImage, true);
+            $ftrdItmsDiv.append($ftrdFigure.getWithButtons());
+        }
     }
 }
