@@ -58,7 +58,7 @@ Comment.prototype.render = function ($root) {
 
 /**
  * Метод формирует массив с комментариями из массива полученного из  
- * из json файла
+ * из json файла (с сервера)
  *
  * @param reviews Массив с комментариями уже добавленными в json
  */
@@ -118,7 +118,7 @@ Comment.prototype.showReviews = function () {
  * Метод находит id последнего комментария в массиве, добавляет 
  * единицу к найденному и возвращает.
  *
- * @return Значение id последнего комментария плюс единица
+ * @return Значение id комментария для добавления
  */
 Comment.prototype.findIndComment = function () {
   if (this.commentsArray.length > 0) {
