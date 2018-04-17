@@ -1,4 +1,10 @@
-
+/**
+ * Класс товаров (отображает группы товаров на страницах 
+ * index.html, product.html, single-page).
+ * 
+ * @property {string} pageNumber - Номер страницы (в ajax запросе).
+ * @property {string} idCategory - Категория товаров (в ajax запросе).
+ */
 function Goods(pageNumber, idCategory) {
     this.pageNumber = pageNumber;
     this.idCategory = idCategory;
@@ -13,14 +19,16 @@ function Goods(pageNumber, idCategory) {
     this.dataType = 'json';
 }
 
-
+/** Метод запрашивает сервер (через ajax), получает массив товаров и 
+ * передает из для отображения на страницах
+ *
+ */
 Goods.prototype.getGoods = function () {
-
     $.ajax({
         type: 'POST',
         url: this.catalogData,
         dataType: this.dataType,
-        // отправка id пользователя на сервер
+        // отправка номера страницы и категории товаров на сервер
         data: { number: this.pageNumber, id: this.idCategory },
         context: this,
         success: function (data) {
@@ -31,14 +39,14 @@ Goods.prototype.getGoods = function () {
     });
 };
 
-
+/** Метод отображает группу товаров на странице index.html
+ *
+ * @param arrayOfGoods Массив товаров полученный с сервера
+ */
 Goods.prototype.onPageIndex = function (arrayOfGoods) {
     let catalogOfImage = this.imgCatalog;
     $ftrdItmsDiv = $('.home .fetured_items');
     if ($ftrdItmsDiv.length > 0) {
-    // $ftrdItmsDiv = $('.fetured_items');
-    // $ftrdItmsDiv.empty();
-
         for (let i = 0; i < 8; i++) {
             let $ftrdFigure = new ProductPicture(arrayOfGoods[i], catalogOfImage, false);
             $ftrdItmsDiv.append($ftrdFigure.getWithButtons());
@@ -46,7 +54,10 @@ Goods.prototype.onPageIndex = function (arrayOfGoods) {
     }
 }
 
-
+/** Метод отображает группу товаров на странице product.html
+ *
+ * @param arrayOfGoods Массив товаров полученный с сервера через ajax
+ */
 Goods.prototype.onPageProduct = function (arrayOfGoods) {
     let catalogOfImage = this.imgProductCatalog;
     $ftrdItmsDiv = $('.product_content .fetured_items');
@@ -119,7 +130,11 @@ Goods.prototype.onPageProduct = function (arrayOfGoods) {
     }
 }
 
-
+/** Метод отображает товар на странице single-page.html и группу товаров
+ *
+ * @param arrayOfGoods Массив товаров полученный с сервера через ajax.
+ * @param id Идентификатор товара.
+ */
 Goods.prototype.onPageSinglePage = function (arrayOfGoods, id) {
 
     $.ajax({
@@ -146,7 +161,12 @@ Goods.prototype.onPageSinglePage = function (arrayOfGoods, id) {
     }
 }
 
-
+/** Метод отображает большое изображение товара на странице single-page.html,  
+ * его цену и кнопку "добавить в корзину"
+ *
+ * @param good Обьект товара (содержит свойства product_price и др.).
+ * @param id Идентификатор товара.
+ */
 Goods.prototype.onGoodById = function (good, id) {
 
     let singleImageCatal = this.singleImageCatal;
