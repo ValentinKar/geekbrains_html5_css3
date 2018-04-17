@@ -1,8 +1,6 @@
 /**
  * Класс отображения корзины на страницах магазина.
  * 
- * @property countGoods - Колличество товаров на странице.
- * @property amount - Сумма стоимостей товаров в магазине.
  * @property basketItems - Массив с товарами в корзине.
  */
 function ShowBasket(basketItems) {
@@ -142,7 +140,7 @@ ShowBasket.prototype.onPageIndex = function () {
 ShowBasket.prototype.onPageShoppingCart = function () {
     let $shopping = $('.shopping .table-shopping'); //.container 
     if ($shopping.length > 0) {
-        // $shopping.empty();
+        $shopping.empty();
 
         let $tblRwHd = $('<div />', {
             class: 'table-row table-row__head',
