@@ -1,12 +1,22 @@
-
+/**
+ * Класс картинки товара (для отображения групп товаров с кнопками).
+ * 
+ * @property {object} item - Обьект товара, содержащий цену, id ...
+ * @property {string} catalog - Директория, откуда беруться изображения товара.
+ * @property {boolean} necessaryOfButtons - Переменная, определяющая 
+ * необходимость добавления кнопок "recikle" и "like" поверх картинки с товаром.
+ */
 function ProductPicture(item, catalog, necessaryOfButtons) {
     this.item = item;
     this.catalog = catalog;
     this.boolean = necessaryOfButtons;
-    // this.goodsItems = [];
-    // this.imgCatalog = 'img/Product/';
 }
 
+/** Метод отображает картинки с товарами, на страницах, картинки 
+ * содержат кнопки "добавить в корзину", "recicle" и "like"
+ *
+ * @return Тег <figure>, содержащий теги с картинкой и другими тегами
+ */
 ProductPicture.prototype.getWithButtons = function () {
     let $ftrdFigure = $('<figure />', {
         class: 'fetured_item'
