@@ -6,9 +6,6 @@
 function Basket(idUser) {
 
     this.id = idUser;
-
-    // this.countGoods = 0; //Общее кол-во товаров
-    // this.amount = 0; //Общая стоимость товаров
     this.basketItems = []; //Массив для хранения товаров
     this.basketJsonAddr = './responses/getBasket.json';
     this.deleteFromBasketAddr = './responses/deleteFromBasket.json';
@@ -17,15 +14,14 @@ function Basket(idUser) {
     this.getBasket(); //Получаем уже добавленные товары в корзину
 }
 
-/** Метод отображает корзину пользователя на страницах
- *
- * @param $root 
- * @return Значение типа String (не нужен, так как его нет в методе)
+/** 
+ * Метод отображает корзину пользователя на страницах
  */
 Basket.prototype.render = function () {
     // отображение товаров на странице
     let showBasket = new ShowBasket(this.basketItems);
-    // отображение на странице index.html
+    // отображение на странице index.html, и др. в 
+    // правом верхнем углу
     showBasket.onPageIndex();
     // отображение на странице shopping-cart.html
     showBasket.onPageShoppingCart();
@@ -37,15 +33,12 @@ Basket.prototype.render = function () {
  *
  */
 Basket.prototype.getBasket = function () {
-    // var appendId = '#' + this.id + '_items';
-
     $.ajax({
         type: 'POST',
         url: this.basketJsonAddr,
         dataType: 'json',
         // отправка id пользователя на сервер
         data: { id: this.id },
-        // data: { name: "John", location: "Boston" },
         context: this,
         success: function (data) {
             for (var itemKey in data.contents)
@@ -113,9 +106,7 @@ Basket.prototype.find = function (id) {
 };
 
 /**
- * Метод добавляет товар в корзину, изменяет на странице кол-во товаров, 
- * общую стоимость, также метод создает массив обьектов basketItem в который 
- * вноситься идентификаторы товаров и их цены.
+ * Метод сообщает серверу, что товар добавляется в корзину. 
  *
  * @param idProduct Идентификатор товара
  */
@@ -125,7 +116,7 @@ Basket.prototype.add = function (idProduct) {
         type: 'POST',
         url: this.addToBasket,
         dataType: 'json',
-        // отправка id пользователя на сервер
+        // отправка id корзины на сервер
         data: { id_product: idProduct, quantity: 1 },
         context: this,
         success: function (data) {
@@ -136,9 +127,13 @@ Basket.prototype.add = function (idProduct) {
 
 
 /**
+ * Метод запрашивает каталог товаров из .json(с сервера), из предоставленного 
+ * сервером массива выбирает товар и передает его в метод addBasket 
+ * для отображения. 
+ *
+ * @param id Идентификатор товара
  */
 Basket.prototype.extractFromCatalog = function (id) {
-
     $.ajax({
         type: 'POST',
         url: this.catalogData,
@@ -155,6 +150,12 @@ Basket.prototype.extractFromCatalog = function (id) {
     });
 };
 
+/**
+ * Метод добавляет обьект товара в массив товаров this.basketItems,  
+ * который затем используется для отображения на странице. 
+ *
+ * @param product Объект товара
+ */
 Basket.prototype.addBasket = function (product) {
     let addProduct = product;
     addProduct.quantity = 1;
@@ -173,6 +174,13 @@ Basket.prototype.addBasket = function (product) {
     this.render();
 };
 
+/**
+ * Метод изменения кол-ва товара на странице shopping-cart.html в 
+ * в теге <input type = "number" ... >. 
+ *
+ * @param idProduct Идентификатор товара
+ * @param quantityProduct Кол-во товара
+ */
 Basket.prototype.changeQuantity = function (idProduct, quantityProduct) {
     for (let number in this.basketItems) { 
         if(this.basketItems[number].id_product === idProduct) {
